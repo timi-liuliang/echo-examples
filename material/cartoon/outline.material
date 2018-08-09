@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res name="" class="Material" Path="Res://cartoon/outline.material" Shader="Res://cartoon/outline.shader" Stage="Opaque" Uniforms.u_OutlineWidthCM="2.0" />

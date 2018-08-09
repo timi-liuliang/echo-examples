@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<GameSettings name="GameSettings" class="GameSettings" Width="1366" Height="768" LaunchScene="Res://cartoon/cartoon.scene" />
+</settings>

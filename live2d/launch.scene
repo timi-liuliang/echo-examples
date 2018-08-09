@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="Live2dCubism" class="Live2dCubism" Active="true" Position="0 0 0" Rotation="0 0 0" Scale="0.3 0.3 1" Script="Res://lua/move.lua" Texture="Res://Koharu/Koharu.png" Moc="Res://Koharu/Koharu.moc3" Motion="Res://Koharu/Koharu.motion3.json" />

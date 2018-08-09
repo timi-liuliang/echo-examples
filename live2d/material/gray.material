@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res name="" class="Material" Shader="Res://material/gray.shader" Stage="Opaque" Macros.GRAY_ENABLE="true" Uniforms.u_BaseColorTexture="Res://Koharu/Koharu.png" />

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res name="" class="Material" Path="Res://transparent/write_depth.material" Shader="Res://transparent/write_depth_only.shader" Stage="Transparent" />

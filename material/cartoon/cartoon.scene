@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="cartoon" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="base" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="n31_nvren2" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/woman/woman.gltf" Mesh="0" Primitive="0" />
+	</node>
+	<node name="outline" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="n31_nvren2" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/woman/woman.gltf" Mesh="0" Primitive="0">
+			<property name="Material" path="Res://cartoon/outline.material" />
+		</node>
+	</node>
+</node>
