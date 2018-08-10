@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res name="" class="Material" Path="Res://cartoon/celshader.material" Shader="Res://cartoon/celshader.shader" Stage="Opaque" Uniforms.u_OutlineWidthCM="0.0" />
