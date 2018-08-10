@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="celshader_nvren" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/woman/woman.gltf" Mesh="0" Primitive="0">
+<node name="celshader_nvren" class="GltfMesh" path="" Enable="true" Position="0 0 1.5" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/woman/woman.gltf" Mesh="0" Primitive="0">
 	<property name="Material" path="Res://cartoon/celshader.material" />
 </node>
