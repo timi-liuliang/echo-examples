@@ -6,13 +6,13 @@
 		attribute vec2 a_UV;
 		attribute vec3 a_Normal;
 
-		uniform mat4 u_WVPMatrix;
+		uniform mat4 u_WorldViewProjMatrix;
 
 		varying vec2 v_TexCoord;
 
 		void main(void)
 		{
-			vec4 position = u_WVPMatrix * vec4(a_Position, 1.0);
+			vec4 position = u_WorldViewProjMatrix * vec4(a_Position, 1.0);
 			gl_Position = position;
 
 			v_TexCoord = a_UV;

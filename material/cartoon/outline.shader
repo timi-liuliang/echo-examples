@@ -7,7 +7,7 @@
 		attribute vec2 a_UV;
 		attribute vec3 a_Normal;
 
-		uniform mat4  u_WVPMatrix;
+		uniform mat4  u_WorldViewProjMatrix;
 		uniform float u_OutlineWidthCM;
 
 		varying vec2 v_TexCoord;
@@ -15,7 +15,7 @@
 
 		void main(void)
 		{
-			gl_Position = u_WVPMatrix * vec4(a_Position + a_Normal * 0.01 * u_OutlineWidthCM, 1.0);
+			gl_Position = u_WorldViewProjMatrix * vec4(a_Position + a_Normal * 0.01 * u_OutlineWidthCM, 1.0);
 
 			v_TexCoord = a_UV;
 			v_Normal = a_Normal;
