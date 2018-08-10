@@ -6,6 +6,7 @@
 		attribute vec2 a_UV;
 		attribute vec3 a_Normal;
 
+		uniform mat4  u_WorldMatrix;
 		uniform mat4  u_WorldViewProjMatrix;
 
 		varying vec2 v_TexCoord;
@@ -16,7 +17,7 @@
 			gl_Position = u_WorldViewProjMatrix * vec4(a_Position, 1.0);
 
 			v_TexCoord = a_UV;
-			v_Normal = a_Normal;
+			v_Normal = mat3(u_WorldMatrix) * a_Normal;
 		}
 	</VS>
 	<PS>#version 100
