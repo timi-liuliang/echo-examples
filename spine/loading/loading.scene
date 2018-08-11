@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="Spine" class="Spine" path="" Enable="true" Position="0 -480 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Spin="Res://loading/loading.json" Atlas="Res://loading/loading.atlas" Anim="animation" />
+<node name="Spine" class="Spine" path="" Enable="true" Position="0 -481 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Spin="Res://loading/loading.json" Atlas="Res://loading/loading.atlas" Anim="animation" />
