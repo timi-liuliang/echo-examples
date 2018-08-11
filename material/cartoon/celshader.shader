@@ -24,18 +24,10 @@
 
 		precision mediump float;
 
-		#define saturate(x) clamp( x, 0.0, 1.0)
-
-		float smoothStep( float edge0, float edge1, float x)
-		{
-			float t = saturate( (x-edge0) / (edge1-edge0));
-			return t * t * ( 3.0 - 2.0 * t);
-		}
-
-		uniform vec4 	u_DarkColor;
-		uniform vec4 	u_BrightColor;
-		uniform float 	u_DarkFence;
-		uniform float	u_DarkFenceWidth;
+		// uniforms
+		uniform vec3		u_CameraDirection;
+		uniform sampler2D 	u_CelShaderSampler;
+		uniform float		u_SpecularExp;
 
 		// varying
 		varying vec2 	  v_TexCoord;
@@ -48,12 +40,18 @@
 			// N - normal direction from surface to out
 			// L - light direction from surface to light
 			vec3 N = normalize(v_Normal);
-			vec3 L = normalize(vec3(1.0, 1.0, 1.0));
+			vec3 L = normalize(vec3(1.0, 0.5, 0.0));
+			vec3 V = normalize(-u_CameraDirection);
+			vec3 H = normalize(V + L);
 
 			// df - diffuse factor
-			float df     = saturate( dot(N, L));
-			vec3 dfColor = mix( u_DarkColor.xyz, u_BrightColor.xyz, smoothStep( u_DarkFence, u_DarkFence + u_DarkFenceWidth, df));
-			vec3 finalColor = dfColor * baseColor.xyz;
+			float df =  ( dot(N, L) + 1.0) * 0.5;
+			
+			// specular
+			float sf = pow(dot( N, H), u_SpecularExp);
+			
+			vec3 celColor = texture2D( u_CelShaderSampler, vec2( df, 0.5)).xyz;
+			vec3 finalColor = celColor * baseColor.xyz + sf;
 			
 			gl_FragColor = vec4( finalColor, baseColor.a);
 		}

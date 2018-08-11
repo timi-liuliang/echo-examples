@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<res name="" class="Material" Path="Res://cartoon/celshader.material" Shader="Res://cartoon/celshader.shader" Stage="Opaque" Uniforms.u_BrightColor="0.839216 0.839216 0.839216 0 " Uniforms.u_DarkColor="0.454902 0.45098 0.490196 0 " Uniforms.u_DarkFence="0.3" Uniforms.u_DarkFenceWidth="0.1" />
+<res name="" class="Material" Path="Res://cartoon/celshader.material" Shader="Res://cartoon/celshader.shader" Stage="Opaque" Uniforms.u_CameraDirection="0 0 0" Uniforms.u_CelShaderSampler="Res://cartoon/celshader.png" Uniforms.u_SpecularExp="16.0" />
