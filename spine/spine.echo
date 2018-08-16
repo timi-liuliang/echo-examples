@@ -2,4 +2,5 @@
 <settings>
 	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
 	<GameSettings name="GameSettings" class="GameSettings" Background="0.301961 0.301961 0.301961 1 " DesignWidth="1280" DesignHeight="768" Aspect="keep width" LaunchScene="Res://loading/loading.scene" />
+	<Input name="Input" class="Input" />
 </settings>
