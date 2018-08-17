@@ -6,21 +6,30 @@ local Move =
 
 -- start
 function Move:start()
-	log:info("start node live2dcubism")
+	--Log:error(type(Log))
+	--Log:error(type(Log.error))
+
+	--for k,v in pairs(getmetatable(Log)) do
+		--Log:error( k .. "->" .. type(v))
+	--end
+	
 end
 
 -- update
 function Move:update()
-	if self.posX > 250 then
-		self.posX = 10
-	end
+	Log:error("----")
+	--if self.posX > 250 then
+	--	self.posX = 10
+	--end
 	
-	if Input:getMouseButtonDown(0) then
-		self.step = -self.step
-	end
+	--if Input:getMouseButtonDown(0) then
+	--	self.step = -self.step
+	--end
 
-	self.posX = self.posX + self.step
-	self:setPosX(self.posX)
+	--self.posX = self.posX + self.step
+	--self:setPosX(self.posX)
+	
+	--self:setEnable(false)
 end
 
 return Move
