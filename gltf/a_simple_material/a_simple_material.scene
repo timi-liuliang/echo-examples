@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<node name="GltfMesh" class="GltfMesh" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Gltf="Res://a_simple_material/minimal.gltf" Mesh="0" Primitive="0" />

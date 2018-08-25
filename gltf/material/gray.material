@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<res name="" class="Material" Path="Res://material/gray.material" Shader="Res://material/gray.shader" Stage="Opaque" Macros.GRAY_ENABLE="false" Uniforms.u_BaseColorTexture="" />
