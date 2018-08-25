@@ -17,19 +17,18 @@ end
 
 -- update
 function Move:update()
-	Log:error("----")
-	--if self.posX > 250 then
-	--	self.posX = 10
-	--end
+	if self.posX > 250 then
+		self.posX = 10
+	end
 	
-	--if Input:getMouseButtonDown(0) then
-	--	self.step = -self.step
-	--end
+	if Input:getMouseButtonDown(0) then
+		self.step = -self.step
+	end
 
-	--self.posX = self.posX + self.step
-	--self:setPosX(self.posX)
+	self.posX = self.posX + self.step
+	self:setPosX(self.posX)
 	
-	--self:setEnable(false)
+	self:setEnable(false)
 end
 
 return Move

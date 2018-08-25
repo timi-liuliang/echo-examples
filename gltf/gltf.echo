@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
 	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
-	<GameSettings name="GameSettings" class="GameSettings" Background="0.247059 0.321569 0.27451 1 " DesignWidth="1366" DesignHeight="768" Aspect="stretch" LaunchScene="Res://DamagedHelmet/damage_helmet.scene" />
+	<GameSettings name="GameSettings" class="GameSettings" Background="0.337255 0.337255 0.352941 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://DamagedHelmet/damage_helmet.scene" />
+	<Input name="Input" class="Input" />
+	<Log name="Log" class="Log" />
 </settings>
