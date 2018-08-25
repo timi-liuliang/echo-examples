@@ -4,4 +4,6 @@
 	<node name="Triangle" class="Node" path="" Enable="true" Position="-2.5 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="GLTFMesh" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/Triangle/Triangle.gltf" Mesh="0" Primitive="0" />
 	</node>
+	<node name="AnimatedTriangle" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node name="WaterBottle" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
 </node>
