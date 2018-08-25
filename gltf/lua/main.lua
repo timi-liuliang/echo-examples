@@ -1,4 +1,5 @@
 local main ={}
+local cameraPos = vec3(0, 0, 0)
 
 -- start
 function main:start()
