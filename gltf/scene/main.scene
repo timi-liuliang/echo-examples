@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="2.0" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+<node name="2.0" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/main.lua" />
