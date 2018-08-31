@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="RiggedFigure" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="Proxy" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/RiggedFigure/RiggedFigure.gltf" Mesh="0" Primitive="0" Skeleton="../skeleton" />
+	<node name="skeleton" class="GltfSkeleton" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Gltf="Res://gltf/RiggedFigure/RiggedFigure.gltf" Anim="anim_0" />
+</node>

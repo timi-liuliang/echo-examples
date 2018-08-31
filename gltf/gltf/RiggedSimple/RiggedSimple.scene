@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="RiggedSimple" class="Node" path="" Enable="true" Position="0 0 0" Rotation="-89.98 0 0" Scale="0.3 0.3 0.3" Script="">
+	<node name="node_1" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/RiggedSimple/RiggedSimple.gltf" Mesh="0" Primitive="0" Skeleton="../skeleton" />
+	<node name="skeleton" class="GltfSkeleton" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Gltf="Res://gltf/RiggedSimple/RiggedSimple.gltf" Anim="anim_0" />
+</node>
