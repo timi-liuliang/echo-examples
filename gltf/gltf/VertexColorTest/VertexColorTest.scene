@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="VertexColorTest" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="LabelMesh" class="GltfMesh" path="" Enable="true" Position="0 0 0.912" Rotation="89.999 179.998 179.998" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/VertexColorTest/VertexColorTest.gltf" Mesh="0" Primitive="0" Skeleton="../skeleton" />
+	<node name="VertexColorTestMesh" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 0.074" Script="" Is2D="false" Gltf="Res://gltf/VertexColorTest/VertexColorTest.gltf" Mesh="1" Primitive="0" Skeleton="../skeleton" />
+</node>
