@@ -10,13 +10,13 @@
 		<node name="WaterBottle" class="GltfMesh" path="" Enable="true" Position="0 0.4 0" Rotation="0 0 0" Scale="3 3 3" Script="" Is2D="false" Gltf="Res://gltf/WaterBottle/WaterBottle.gltf" Mesh="0" Primitive="0" Skeleton="" />
 	</node>
 	<node name="Avocado" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="Avocado" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 179.936 0" Scale="10 10 10" Script="" Is2D="false" Gltf="Res://gltf/Avocado/Avocado.gltf" Mesh="0" Primitive="0" Skeleton="" />
+		<node name="Avocado" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 179.935 0" Scale="10 10 10" Script="" Is2D="false" Gltf="Res://gltf/Avocado/Avocado.gltf" Mesh="0" Primitive="0" Skeleton="" />
 	</node>
 	<node name="AnimatedTriangle" class="Node" path="" Enable="true" Position="2.5 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="node_0" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 12.598" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/AnimatedTriangle/AnimatedTriangle.gltf" Mesh="0" Primitive="0" Skeleton="../skeleton" />
+		<node name="node_0" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 -10.798" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/AnimatedTriangle/AnimatedTriangle.gltf" Mesh="0" Primitive="0" Skeleton="../skeleton" />
 		<node name="skeleton" class="GltfSkeleton" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Gltf="Res://gltf/AnimatedTriangle/AnimatedTriangle.gltf" Anim="anim_0" />
 	</node>
-	<node name="RiggedSimple" class="Node" path="" Enable="true" Position="-2 1 2" Rotation="-89.999 1.01 0" Scale="0.2 0.2 0.2" Script="">
+	<node name="RiggedSimple" class="Node" path="" Enable="true" Position="-2 1 2" Rotation="-89.999 1.007 0" Scale="0.2 0.2 0.2" Script="">
 		<node name="node_1" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/RiggedSimple/RiggedSimple.gltf" Mesh="0" Primitive="0" Skeleton="../skeleton" />
 		<node name="skeleton" class="GltfSkeleton" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Gltf="Res://gltf/RiggedSimple/RiggedSimple.gltf" Anim="anim_0" />
 	</node>
@@ -90,4 +90,5 @@
 		<node name="Figure_2_geometry59" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" Gltf="Res://gltf/BrainStem/BrainStem.gltf" Mesh="0" Primitive="58" Skeleton="../skeleton" />
 		<node name="skeleton" class="GltfSkeleton" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Gltf="Res://gltf/BrainStem/BrainStem.gltf" Anim="anim_0" />
 	</node>
+	<node name="MainCamera" class="Camera3D" path="" Enable="true" Position="0 2 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 </node>
