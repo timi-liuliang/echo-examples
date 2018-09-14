@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="NeuralNetwork" class="NeuralNetwork" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="Neuron" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+	<node name="Neuron2" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+</node>
