@@ -2,8 +2,12 @@ local object ={}
 
 -- start
 function object:start()
-	local x = nn.sigmoid(0)
-	Log:info(x)
+	Log:info(nn.sigmoid(0))
+	Log:info(nn.sigmoid(1))
+	Log:info(nn.sigmoid(2))
+	Log:info(nn.sigmoid(3))
+	Log:info(nn.sigmoid(4))
+	Log:info(nn.sigmoid(5))
 end
 
 -- update

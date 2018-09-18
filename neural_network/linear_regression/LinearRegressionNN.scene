@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="NeuralNetwork" class="NeuralNetwork" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="InputLayer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="Neuron0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron2" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron3" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron4" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+	</node>
+	<node name="HiddenLayer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="Neuron0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron2" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron3" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+	</node>
+	<node name="OutputLayer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="Neuron0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		<node name="Neuron1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+	</node>
+</node>
