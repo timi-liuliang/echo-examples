@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="NeuralNetwork" class="NeuralNetwork" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node name="InputLayer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="Neuron0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron2" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron3" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron4" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-	</node>
-	<node name="HiddenLayer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="Neuron0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron2" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron3" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-	</node>
-	<node name="OutputLayer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="Neuron0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
-		<node name="Neuron1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+<node name="train" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://linear_regression/train.lua">
+	<node name="data" class="Gizmos" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" />
+	<node name="neural_net_work" class="NeuralNetwork" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" LearningRate="0.001">
+		<node name="input_layer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+			<node name="neuron" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		</node>
+		<node name="hidden_layer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+			<node name="neuron_0" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+			<node name="neuron_1" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		</node>
+		<node name="output_layer" class="NeuralLayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+			<node name="neuron" class="Neuron" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Bias="0.0" />
+		</node>
 	</node>
 </node>
