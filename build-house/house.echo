@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="All" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" LaunchScene="Res://scene/launch.scene" />
+	<Input name="Input" class="Input" />
+	<Log name="Log" class="Log" />
+</settings>
