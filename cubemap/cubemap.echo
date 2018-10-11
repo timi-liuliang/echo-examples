@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
+	<Input name="Input" class="Input" />
+	<Log name="Log" class="Log" />
+	<SRPScreen name="SRPScreen" class="SRPScreen" />
+</settings>
