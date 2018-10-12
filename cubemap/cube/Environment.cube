@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<res name="" class="TextureCube" Path="Res://cube/Environment.cube" MipMap="true" PositiveX="Res://cube/specular_right_0.png" NegativeX="Res://cube/specular_left_0.png" PositiveY="Res://cube/specular_top_0.png" NegativeY="Res://cube/specular_bottom_0.png" PositiveZ="Res://cube/specular_back_0.png" NegativeZ="Res://cube/specular_front_0.png" />

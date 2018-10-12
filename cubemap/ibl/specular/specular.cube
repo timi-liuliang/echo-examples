@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res name="" class="TextureCube" Path="Res://ibl/specular/specular.cube" MipMap="true" PositiveX="Res://ibl/specular/specular_right_0.png" NegativeX="Res://ibl/specular/specular_left_0.png" PositiveY="Res://ibl/specular/specular_top_0.png" NegativeY="Res://ibl/specular/specular_bottom_0.png" PositiveZ="Res://ibl/specular/specular_back_0.png" NegativeZ="Res://ibl/specular/specular_front_0.png" />
