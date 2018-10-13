@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="DamagedHelmet" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="89.999 179.993 179.993" Scale="1 1 1" Script="" Is2D="false" Visible="true" Gltf="Res://models/DamagedHelmet/glTF/DamagedHelmet.gltf" Mesh="0" Primitive="0" Skeleton="skeleton">
+<node name="DamagedHelmet" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="89.999 0 179.991" Scale="1 1 1" Script="" Is2D="false" Visible="true" Gltf="Res://models/DamagedHelmet/glTF/DamagedHelmet.gltf" Mesh="0" Primitive="0" Skeleton="skeleton">
 	<node name="Diffuse" class="CubeLightCustom" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Usage="Diffuse" CubeMap="Res://ibl/diffuse/diffuse.cube" />
 	<node name="Specular" class="CubeLightCustom" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Usage="Specular" CubeMap="Res://ibl/specular/specular.cube" />
 </node>
