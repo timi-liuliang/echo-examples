@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="Example_0" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="Sprite" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="128" Height="120" Texture="Res://move_sprite/dinosaur.png" />
+	<node name="Timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Anim="" AnimData="" />
+</node>
