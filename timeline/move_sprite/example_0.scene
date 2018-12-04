@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node name="Example_0" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 	<node name="Sprite" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="128" Height="120" Texture="Res://move_sprite/dinosaur.png" />
-	<node name="Timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Anim="" AnimData="" />
+	<node name="Timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Anim="play" AnimData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGNsaXBzPgoJPGNsaXAgbmFtZT0icGxheSIgbGVuZ3RoPSIzIj4KCQk8b2JqZWN0IHR5cGU9Ik5vZGUiIHBhdGg9Ii4uL1Nwcml0ZSI+CgkJCTxwcm9wZXJ0eSBuYW1lPSJQb3NpdGlvbiIgdHlwZT0iVmVjdG9yMyIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGtleSB0aW1lPSIwIiB2YWx1ZT0iMC4wMDAwMDAgMC4wMDAwMDAgMC4wMDAwMDAgIiAvPgoJCQkJPGtleSB0aW1lPSIzIiB2YWx1ZT0iNTAwLjAwMDAwMCAwLjAwMDAwMCAwLjAwMDAwMCAiIC8+CgkJCQk8a2V5IHRpbWU9IjAiIHZhbHVlPSIwLjAwMDAwMCAwLjAwMDAwMCAwLjAwMDAwMCAiIC8+CgkJCQk8a2V5IHRpbWU9IjMiIHZhbHVlPSI1MDAuMDAwMDAwIDAuMDAwMDAwIDAuMDAwMDAwICIgLz4KCQkJPC9wcm9wZXJ0eT4KCQk8L29iamVjdD4KCTwvY2xpcD4KPC9jbGlwcz4K" />
 </node>
