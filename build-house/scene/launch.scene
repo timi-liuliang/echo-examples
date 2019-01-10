@@ -9,10 +9,10 @@
 	<node name="houses" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
 	<node name="camera" class="Camera2D" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/camera_rotate.lua" />
 	<node name="crane" class="Node" path="" Enable="true" Position="0 250 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="crane" class="Node" path="" Enable="true" Position="76.678 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="crane" class="Node" path="" Enable="true" Position="-320 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 			<node name="crane" class="Sprite" path="" Enable="true" Position="0 180 -1" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="30" Height="300" Texture="Res://texture/crane.png" />
 			<node name="dropHouse" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="150" Height="100" Texture="Res://texture/house01.png" />
-			<node name="timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Anim="Anim 0" AnimData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGNsaXBzPgoJPGNsaXAgbmFtZT0iQW5pbSAwIiBsZW5ndGg9IjEwMDAiPgoJCTxvYmplY3QgdHlwZT0iTm9kZSIgcGF0aD0iLi4vIj4KCQkJPHByb3BlcnR5IG5hbWU9IlBvc2l0aW9uIiB0eXBlPSJWZWN0b3IzIiBpbnRlcnBvbGF0aW9uX3R5cGU9IkxpbmVhciI+CgkJCQk8Y3VydmUgaW5kZXg9IjAiPgoJCQkJCTxrZXkgdGltZT0iMCIgdmFsdWU9Ii0zMjAiIC8+CgkJCQkJPGtleSB0aW1lPSIzIiB2YWx1ZT0iMzIiIC8+CgkJCQkJPGtleSB0aW1lPSI1MjQiIHZhbHVlPSI5MS4yOTk5OTU0IiAvPgoJCQkJCTxrZXkgdGltZT0iMTAxMyIgdmFsdWU9IjM0LjA5OTk5ODUiIC8+CgkJCQk8L2N1cnZlPgoJCQkJPGN1cnZlIGluZGV4PSIxIiAvPgoJCQkJPGN1cnZlIGluZGV4PSIyIiAvPgoJCQk8L3Byb3BlcnR5PgoJCTwvb2JqZWN0PgoJPC9jbGlwPgo8L2NsaXBzPgo=" />
+			<node name="timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Anim="" AnimData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGNsaXBzPgoJPGNsaXAgbmFtZT0iQW5pbSAwIiBsZW5ndGg9IjMwMDAiPgoJCTxvYmplY3QgdHlwZT0iTm9kZSIgcGF0aD0iLi4vIj4KCQkJPHByb3BlcnR5IG5hbWU9IlBvc2l0aW9uIiB0eXBlPSJWZWN0b3IzIiBpbnRlcnBvbGF0aW9uX3R5cGU9IkxpbmVhciI+CgkJCQk8Y3VydmUgaW5kZXg9IjAiIC8+CgkJCQk8Y3VydmUgaW5kZXg9IjEiIC8+CgkJCQk8Y3VydmUgaW5kZXg9IjIiIC8+CgkJCTwvcHJvcGVydHk+CgkJPC9vYmplY3Q+Cgk8L2NsaXA+CjwvY2xpcHM+Cg==" />
 		</node>
 	</node>
 	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
