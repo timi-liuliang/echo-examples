@@ -5,6 +5,7 @@ local bgs = nil
 local camera = nil
 local craneNode = nil
 local dropNode = nil
+local craneTimeline = nil
 local currentHouse = nil
 local preHouse = nil
 local preHouseYHeight = -420.0
@@ -16,12 +17,16 @@ local cameraCraneOffsetY = nil
 
 -- start
 function main:start()
-	uiFailed    = self:getNode("ui/failed")
-	craneNode 	= self:getNode("crane")
-	dropNode	= self:getNode("crane/dropHouse")
-	houses 		= self:getNode("houses")
-	bgs    		= self:getNode("bgs")
-	camera 		= self:getNode("camera")
+	uiFailed    	= self:getNode("ui/failed")
+	craneNode 		= self:getNode("crane")
+	dropNode		= self:getNode("crane/dropHouse")
+	houses 			= self:getNode("houses")
+	bgs    			= self:getNode("bgs")
+	camera 		 	= self:getNode("camera")
+	craneTimeline	= self:getNode("crane/crane/timeline")
+	if craneTimeline ~= nil then
+		craneTimeline:play("move")
+	end
 end
 
 -- update
