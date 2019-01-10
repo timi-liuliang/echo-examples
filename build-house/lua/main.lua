@@ -19,7 +19,7 @@ local cameraCraneOffsetY = nil
 function main:start()
 	uiFailed    	= self:getNode("ui/failed")
 	craneNode 		= self:getNode("crane")
-	dropNode		= self:getNode("crane/dropHouse")
+	dropNode		= self:getNode("crane/crane/dropHouse")
 	houses 			= self:getNode("houses")
 	bgs    			= self:getNode("bgs")
 	camera 		 	= self:getNode("camera")
