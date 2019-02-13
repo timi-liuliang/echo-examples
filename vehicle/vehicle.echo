@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
 	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
-	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
+	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://scene/four_wheels.scene" />
 	<Input name="Input" class="Input" />
 	<Light name="Light" class="Light" ImageBasedLighting="true" Brdf="" />
 	<Log name="Log" class="Log" />
-	<PhysxWorld name="PhysxWorld" class="PhysxWorld" />
-	<SRPScreen name="SRPScreen" class="SRPScreen" />
+	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="All" />
 </settings>
