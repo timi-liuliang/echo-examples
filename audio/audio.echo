@@ -7,4 +7,5 @@
 	<Light name="Light" class="Light" ImageBasedLighting="true" Brdf="" />
 	<Log name="Log" class="Log" />
 	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="Editor" />
+	<PluginSettings name="PluginSettings" class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;E:/github/echo-plugins/;" />
 </settings>
