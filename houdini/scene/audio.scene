@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="Audio" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="AudioPlayer" class="AudioPlayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Audio="Res://audio/ding.mp3">
+		<node name="UiImage" class="UiImage" path="" Enable="true" Position="100 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="128" Height="128" Texture="Res://texture/BLUE_MASK.png" />
+		<node name="UiText" class="UiText" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="0" Height="0" Texture="" />
+	</node>
+</node>
