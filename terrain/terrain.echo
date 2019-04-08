@@ -8,4 +8,5 @@
 	<Log name="Log" class="Log" />
 	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="All" />
 	<PluginSettings name="PluginSettings" class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
+	<SRayDevice name="SRayDevice" class="SRayDevice" />
 </settings>
