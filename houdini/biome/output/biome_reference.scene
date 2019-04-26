@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="biome" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="pinetree_a" class="GltfMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="100 100 100" Script="" Is2D="false" Visible="true" Gltf="Res://tree/pinetree/pinetree_a.gltf" Mesh="0" Primitive="0" Skeleton="skeleton" />
+</node>
