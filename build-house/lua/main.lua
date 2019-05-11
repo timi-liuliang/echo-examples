@@ -104,7 +104,8 @@ end
 
 -- on faile
 function main:onFail()
-	--isFailed = true
+	isFailed = true
+	uiFailed:setVisible(true)
 end
 
 return setmetatable(main, Node)
