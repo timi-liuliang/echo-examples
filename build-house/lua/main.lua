@@ -96,6 +96,7 @@ function main:dropHouse()
 		isWaitingResult = true
 		
 		if preHouse ~= nil then
+			preHouse:setType("Static")
 			preHouseYHeight = preHouse:getPositionY()
 		end
 	end
