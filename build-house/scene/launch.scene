@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node name="main" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/main.lua">
-	<node name="ground" class="Box2DBody" path="Res://scene/ground.scene" Enable="true" Position="0 -445 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" />
+	<node name="ground" class="Box2DBody" path="Res://scene/ground.scene" Enable="true" Position="0 -445 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" GravityScale="1.0" />
 	<node name="bgs" class="Node" path="" Enable="true" Position="0 0 -2" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="bg0" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_01.PNG" />
 		<node name="bg1" class="Sprite" path="" Enable="true" Position="0 959 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_02.PNG" />

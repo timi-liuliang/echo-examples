@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="Joints" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="Node" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="Box2DBody" class="Box2DBody" path="" Enable="true" Position="0 128 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic" FixRotation="false" GravityScale="1.0">
+			<node name="Box2DShapeBox" class="Box2DShapeBox" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" Width="128.0" Height="128.0" />
+		</node>
+		<node name="Box2DBody2" class="Box2DBody" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" GravityScale="1.0">
+			<node name="Box2DShapeBox" class="Box2DShapeBox" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" Width="128.0" Height="128.0" />
+		</node>
+		<node name="Box2DJointRevolute" class="Box2DJointRevolute" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" BodyA="../Box2DBody" BodyB="../Box2DBody2" Anchor="0 0" />
+	</node>
+</node>
