@@ -14,6 +14,7 @@ local isWaitingResult = false
 local waitingResultTime = 0.0
 local destCraneHeightY = 0.0
 local cameraCraneOffsetY = nil
+local housesQueue = require("lua/util/queue")
 
 -- start
 function main:start()
@@ -96,8 +97,12 @@ function main:dropHouse()
 		isWaitingResult = true
 		
 		if preHouse ~= nil then
-			preHouse:setType("Static")
+			--preHouse:setType("Static")
 			preHouseYHeight = preHouse:getPositionY()
+			
+			-- rememer pre house
+			housesQueue:push(preHouse)
+			Log:error(housesQueue:size())
 		end
 	end
 end
