@@ -2,21 +2,21 @@
 <node name="main" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/main.lua">
 	<node name="ground" class="Box2DBody" path="Res://scene/ground.scene" Enable="true" Position="0 -445 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" GravityScale="1.0" />
 	<node name="bgs" class="Node" path="" Enable="true" Position="0 0 -2" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="bg0" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_01.PNG" />
-		<node name="bg1" class="Sprite" path="" Enable="true" Position="0 959 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_02.PNG" />
-		<node name="bg2" class="Sprite" path="" Enable="true" Position="0 1918 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_03.PNG" />
+		<node name="bg0" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_01.PNG" />
+		<node name="bg1" class="Sprite" path="" Enable="true" Position="0 959 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_02.PNG" />
+		<node name="bg2" class="Sprite" path="" Enable="true" Position="0 1918 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_03.PNG" />
 	</node>
 	<node name="houses" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
 	<node name="camera" class="Camera2D" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/camera_rotate.lua" />
 	<node name="crane" class="Node" path="" Enable="true" Position="0 250 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="crane" class="Node" path="" Enable="true" Position="500 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-			<node name="crane" class="Sprite" path="" Enable="true" Position="0 180 -1" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="30" Height="300" Texture="Res://texture/crane.png" />
-			<node name="dropHouse" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="150" Height="100" Texture="Res://texture/house01.png" />
+			<node name="crane" class="Sprite" path="" Enable="true" Position="0 180 -1" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="30" Height="300" Texture="Res://texture/crane.png" />
+			<node name="dropHouse" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="150" Height="100" Texture="Res://texture/house01.png" />
 			<node name="timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Anim="move" AnimData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGNsaXBzPgoJPGNsaXAgbmFtZT0ibW92ZSIgbGVuZ3RoPSIzMDAwIj4KCQk8b2JqZWN0IHR5cGU9Ik5vZGUiIHBhdGg9Ii4uLyI+CgkJCTxwcm9wZXJ0eSBuYW1lPSJQb3NpdGlvbiIgdHlwZT0iVmVjdG9yMyIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGN1cnZlIGluZGV4PSIwIj4KCQkJCQk8a2V5IHRpbWU9IjEiIHZhbHVlPSItNTAwIiAvPgoJCQkJCTxrZXkgdGltZT0iMjk5NSIgdmFsdWU9IjUwMCIgLz4KCQkJCTwvY3VydmU+CgkJCQk8Y3VydmUgaW5kZXg9IjEiIC8+CgkJCQk8Y3VydmUgaW5kZXg9IjIiIC8+CgkJCTwvcHJvcGVydHk+CgkJPC9vYmplY3Q+CgkJPG9iamVjdCB0eXBlPSJOb2RlIiBwYXRoPSIuLi9kcm9wSG91c2UiPgoJCQk8cHJvcGVydHkgbmFtZT0iVmlzaWJsZSIgdHlwZT0iQm9vbCIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGtleSB0aW1lPSI4IiB2YWx1ZT0idHJ1ZSIgLz4KCQkJPC9wcm9wZXJ0eT4KCQk8L29iamVjdD4KCTwvY2xpcD4KPC9jbGlwcz4K" />
 		</node>
 	</node>
 	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="failed" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="false" Width="232" Height="174" Texture="Res://texture/ui/begin_button01.PNG" />
-		<node name="score" class="UiText" path="" Enable="true" Position="140 380 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Visible="true" Width="144" Height="48" Text="123" Font="Res://font/CREDC.ttf" FontSize="48" />
+		<node name="score" class="UiText" path="" Enable="true" Position="140 380 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="144" Height="48" Text="123" Font="Res://font/CREDC.ttf" FontSize="48" />
+		<node name="failed" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Width="232" Height="174" Texture="Res://texture/ui/begin_button01.PNG" />
 	</node>
 </node>
