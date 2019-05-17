@@ -20,7 +20,7 @@ end
 -- pop 
 function queue:pop ()
 	-- check
-	if self.first > list.last then 
+	if self.first > self.last then 
 		error("list is empty") 
 	end
 		

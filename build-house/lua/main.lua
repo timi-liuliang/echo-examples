@@ -38,9 +38,7 @@ function main:update()
 		self:dropHouse()
 	end
 
-	if currentHouse ~= nil then
-		Log:error(currentHouse:getWorldPositionY())
-		
+	if currentHouse ~= nil then	
 		if currentHouse:getWorldPositionY() < preHouseYHeight then
 			self:onFail()
 		end
@@ -80,6 +78,10 @@ end
 function main:dropHouse()
 	if isFailed then
 		return
+	end
+
+	if currentHouse~=nil then
+		Log:error(currentHouse:getWorldPositionY())
 	end
 
 	local newHouse = Node.load("Res://scene/house.scene")
@@ -131,8 +133,8 @@ end
 
 -- on faile
 function main:onFail()
-	isFailed = true
-	uiFailed:setVisible(true)
+	--isFailed = true
+	--uiFailed:setVisible(true)
 end
 
 return setmetatable(main, Node)
