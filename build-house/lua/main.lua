@@ -14,6 +14,7 @@ local isWaitingResult = false
 local waitingResultTime = 0.0
 local destCraneHeightY = 0.0
 local cameraCraneOffsetY = nil
+local maxHousesCount = 10
 local housesQueue = require("lua/util/queue")
 
 -- start
@@ -38,7 +39,9 @@ function main:update()
 	end
 
 	if currentHouse ~= nil then
-		if currentHouse:getPositionY() < preHouseYHeight then
+		Log:error(currentHouse:getWorldPositionY())
+		
+		if currentHouse:getWorldPositionY() < preHouseYHeight then
 			self:onFail()
 		end
 	
@@ -50,24 +53,24 @@ function main:update()
 		end
 
 		-- update crane node position
-		if craneNode:getPositionY() < destCraneHeightY then
-			local stepLen = (destCraneHeightY - craneNode:getPositionY()) * 0.004
+		if craneNode:getWorldPositionY() < destCraneHeightY then
+			local stepLen = (destCraneHeightY - craneNode:getWorldPositionY()) * 0.004
 			
 			-- move crane
-			craneNode:setPositionY(craneNode:getPositionY() + stepLen)
+			craneNode:setWorldPositionY(craneNode:getWorldPositionY() + stepLen)
 			
 			-- move camera based on crane posY
 			if cameraCraneOffsetY == nil then
 				-- get the initialize camera crane offset
-				cameraCraneOffsetY = camera:getPositionY() - craneNode:getPositionY()
+				cameraCraneOffsetY = camera:getWorldPositionY() - craneNode:getWorldPositionY()
 			else
-				local cameraY = craneNode:getPositionY() + cameraCraneOffsetY
-				camera:setPositionY(cameraY)
+				local cameraY = craneNode:getWorldPositionY() + cameraCraneOffsetY
+				camera:setWorldPositionY(cameraY)
 			
 				-- move bgs based on camera position(linear and logrithm function)
 				local moveThreshold = 500
 				local bgsY = math.max(cameraY - moveThreshold, 0.0) * 0.85
-				bgs:setPositionY(bgsY)
+				bgs:setWorldPositionY(bgsY)
 			end
 		end
 	end
@@ -82,7 +85,7 @@ function main:dropHouse()
 	local newHouse = Node.load("Res://scene/house.scene")
 	if newHouse~=nil then
 		newHouse:setParent(houses)
-		newHouse:setPosition(dropNode:getPosition())
+		newHouse:setWorldPosition(dropNode:getWorldPosition())
 		
 		-- hidden drop node
 		dropNode:setVisible(false)
@@ -97,13 +100,32 @@ function main:dropHouse()
 		isWaitingResult = true
 		
 		if preHouse ~= nil then
-			--preHouse:setType("Static")
-			preHouseYHeight = preHouse:getPositionY()
-			
-			-- rememer pre house
-			housesQueue:push(preHouse)
-			Log:error(housesQueue:size())
+			preHouseYHeight = preHouse:getWorldPositionY()
+				
+			-- process pre house
+			self:processPreHouses(preHouse)
 		end
+	end
+end
+
+-- remove pre house
+function main:processPreHouses(preHouse)
+	-- push to tail
+	housesQueue:push(preHouse)
+	
+	-- remove house
+	if housesQueue:size() > maxHousesCount then
+		-- pop and delete
+		local housePoped = housesQueue:pop()
+		
+		-- set static body
+		local house = housesQueue:front()
+		if house ~= nil then
+			house:setType("Static")
+		end
+
+		-- free poped house
+		housePoped:queueFree()
 	end
 end
 
