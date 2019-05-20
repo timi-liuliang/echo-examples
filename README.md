@@ -10,3 +10,6 @@ Spine 2d animation
 ### Cubemap
 gltf and light prob test   
 ![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/cubemap.png?raw=true)
+
+### Live2d
+![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/live2d.gif?raw=true)
