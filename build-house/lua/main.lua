@@ -8,6 +8,8 @@ local dropNode = nil
 local craneTimeline = nil
 local currentHouse = nil
 local preHouse = nil
+local uiScoreNumber = 0
+local uiScoreText = nil
 local preHouseYHeight = -420.0
 local isFailed = false
 local isWaitingResult = false
@@ -19,6 +21,7 @@ local housesQueue = require("lua/util/queue")
 
 -- start
 function main:start()
+	uiScoreText		= self:getNode("ui/score")
 	uiFailed    	= self:getNode("ui/failed")
 	craneNode 		= self:getNode("crane")
 	dropNode		= self:getNode("crane/crane/dropHouse")
@@ -45,9 +48,15 @@ function main:update()
 	
 		-- waiting result state
 		if isWaitingResult then
-			
-			isWaitingResult = false
-			waitingResultTime = 0.0
+			waitingResultTime = waitingResultTime - 0.02
+			if waitingResultTime < 0.0 then
+				isWaitingResult = false
+				waitingResultTime = 0.0
+				
+				-- update score display
+				uiScoreNumber = uiScoreNumber + 1	
+				uiScoreText:setText(tostring(uiScoreNumber))
+			end
 		end
 
 		-- update crane node position
@@ -100,6 +109,7 @@ function main:dropHouse()
 		currentHouse = newHouse
 		
 		isWaitingResult = true
+		waitingResultTime = 2.5
 		
 		if preHouse ~= nil then
 			preHouseYHeight = preHouse:getWorldPositionY()
