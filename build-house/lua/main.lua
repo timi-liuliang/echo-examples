@@ -89,10 +89,6 @@ function main:dropHouse()
 		return
 	end
 
-	if currentHouse~=nil then
-		Log:error(currentHouse:getWorldPositionY())
-	end
-
 	local newHouse = Node.load("Res://scene/house.scene")
 	if newHouse~=nil then
 		newHouse:setParent(houses)
