@@ -143,4 +143,8 @@ function main:onFail()
 	uiFailed:setVisible(true)
 end
 
+function main:onMouseButtonDown_UiEventRegionRect()
+	Log:error("on restart game")
+end
+
 return setmetatable(main, Node)
