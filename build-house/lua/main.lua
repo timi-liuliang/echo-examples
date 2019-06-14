@@ -143,7 +143,7 @@ function main:onFail()
 	uiFailed:setVisible(true)
 end
 
-function main:onMouseButtonDown_UiEventRegionRect()
+function main:on_clicked_restart()
 	Log:error("on restart game")
 end
 
