@@ -32,6 +32,12 @@ function main:start()
 	if craneTimeline ~= nil then
 		craneTimeline:play("move")
 	end
+
+	--local Enable = self:getPropertyValue("Enable")
+
+	-- test ch
+	--local gravityScale = self:ch("ground", "GravityScale")
+	--Log:error(gravityScale)
 end
 
 -- update
