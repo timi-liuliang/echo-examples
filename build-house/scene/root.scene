@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="root" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/root.lua">
+	<node name="scenes" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="main" class="Node" path="Res://scene/game.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/game.lua" />
+	</node>
+</node>

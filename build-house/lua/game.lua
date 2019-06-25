@@ -1,4 +1,5 @@
 local main = { }
+local root = nil
 local uiFailed = nil
 local houses = nil
 local bgs = nil
@@ -21,6 +22,7 @@ local housesQueue = require("lua/util/queue")
 
 -- start
 function main:start()
+	root			= self:getNode("/root")
 	uiScoreText		= self:getNode("ui/score")
 	uiFailed    	= self:getNode("ui/failed")
 	craneNode 		= self:getNode("crane")
@@ -32,12 +34,6 @@ function main:start()
 	if craneTimeline ~= nil then
 		craneTimeline:play("move")
 	end
-
-	--local Enable = self:getPropertyValue("Enable")
-
-	-- test ch
-	--local gravityScale = self:ch("ground", "GravityScale")
-	--Log:error(gravityScale)
 end
 
 -- update
@@ -150,7 +146,8 @@ function main:onFail()
 end
 
 function main:on_clicked_restart()
-	Log:error("on restart game")
+	root:onRestartGame()
+	Log:info("on restart game")
 end
 
 return setmetatable(main, Node)
