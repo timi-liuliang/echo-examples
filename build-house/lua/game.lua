@@ -34,6 +34,11 @@ function main:start()
 	if craneTimeline ~= nil then
 		craneTimeline:play("move")
 	end
+
+	Log:error(self:getId())
+    --for k, v in pairs(nodes) do
+    --    Log:error(k)
+    --end
 end
 
 -- update

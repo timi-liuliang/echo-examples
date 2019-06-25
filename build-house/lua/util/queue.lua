@@ -1,7 +1,7 @@
 local queue = { first = 0,  last = -1,  data = {}}
 
 -- push 
- function queue:push (value)
+function queue:push (value)
  	local last = self.last + 1
       	self.last = last
       	self.data[last] = value

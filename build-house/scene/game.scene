@@ -7,7 +7,7 @@
 		<node name="bg2" class="Sprite" path="" Enable="true" Position="0 1918 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_03.PNG" />
 	</node>
 	<node name="houses" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
-	<node name="camera" class="Camera2D" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/camera_rotate.lua" />
+	<node name="camera" class="Camera2D" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
 	<node name="crane" class="Node" path="" Enable="true" Position="0 250 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="crane" class="Node" path="" Enable="true" Position="500 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 			<node name="crane" class="Sprite" path="" Enable="true" Position="0 180 -1" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="30" Height="300" Texture="Res://texture/crane.png" />
@@ -16,7 +16,7 @@
 		</node>
 	</node>
 	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="score" class="UiText" path="" Enable="true" Position="-260 380 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Width="48" Height="48" Text="0" Font="Res://font/zig.ttf" FontSize="48" />
+		<node name="score" class="UiText" path="" Enable="true" Position="-260 380 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="48" Height="48" Text="0" Font="Res://font/zig.ttf" FontSize="48" />
 		<node name="failed" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Width="232" Height="174" Texture="Res://texture/ui/begin_button01.PNG">
 			<node name="restart" class="UiEventRegionRect" path="" Enable="false" Position="0 -20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="ui" Width="194" Height="108">
 				<signal name="clicked">
