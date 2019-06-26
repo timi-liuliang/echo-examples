@@ -1,44 +1,43 @@
 local main = { }
-local root = nil
-local uiFailed = nil
-local houses = nil
-local bgs = nil
-local camera = nil
-local craneNode = nil
-local dropNode = nil
-local craneTimeline = nil
-local currentHouse = nil
-local preHouse = nil
-local uiScoreNumber = 0
-local uiScoreText = nil
-local preHouseYHeight = -420.0
-local isFailed = false
-local isWaitingResult = false
-local waitingResultTime = 0.0
-local destCraneHeightY = 0.0
-local cameraCraneOffsetY = nil
-local maxHousesCount = 10
-local housesQueue = require("lua/util/queue")
+main.root = nil
+main.uiFailed = nil
+main.houses = nil
+main.bgs = nil
+main.camera = nil
+main.craneNode = nil
+main.dropNode = nil
+main.craneTimeline = nil
+main.currentHouse = nil
+main.preHouse = nil
+main.uiScoreNumber = 0
+main.uiScoreText = nil
+main.preHouseYHeight = -420.0
+main.isFailed = false
+main.isWaitingResult = false
+main.waitingResultTime = 0.0
+main.destCraneHeightY = 0.0
+main.cameraCraneOffsetY = nil
+main.maxHousesCount = 10
+main.housesQueue = new(require("lua/util/queue"))
 
 -- start
 function main:start()
-	root			= self:getNode("/root")
-	uiScoreText		= self:getNode("ui/score")
-	uiFailed    	= self:getNode("ui/failed")
-	craneNode 		= self:getNode("crane")
-	dropNode		= self:getNode("crane/crane/dropHouse")
-	houses 			= self:getNode("houses")
-	bgs    			= self:getNode("bgs")
-	camera 		 	= self:getNode("camera")
-	craneTimeline	= self:getNode("crane/crane/timeline")
-	if craneTimeline ~= nil then
-		craneTimeline:play("move")
+	self.root			= self:getNode("/root")
+	self.uiScoreText	= self:getNode("ui/score")
+	self.uiFailed    	= self:getNode("ui/failed")
+	self.craneNode 		= self:getNode("crane")
+	self.dropNode		= self:getNode("crane/crane/dropHouse")
+	self.houses 		= self:getNode("houses")
+	self.bgs    		= self:getNode("bgs")
+	self.camera 		= self:getNode("camera")
+	self.craneTimeline	= self:getNode("crane/crane/timeline")
+	if self.craneTimeline ~= nil then
+		self.craneTimeline:play("move")
 	end
 
-	Log:error(self:getId())
-    --for k, v in pairs(nodes) do
-    --    Log:error(k)
-    --end
+	--Log:error(self:getId())
+	--Log:error(tostring(main.housesQueue))
+	Log:error(tostring(self.housesQueue))
 end
 
 -- update
@@ -48,43 +47,43 @@ function main:update()
 		self:dropHouse()
 	end
 
-	if currentHouse ~= nil then	
-		if currentHouse:getWorldPositionY() < preHouseYHeight then
+	if self.currentHouse ~= nil then	
+		if self.currentHouse:getWorldPositionY() < self.preHouseYHeight then
 			self:onFail()
 		end
 	
 		-- waiting result state
-		if isWaitingResult then
-			waitingResultTime = waitingResultTime - 0.02
-			if waitingResultTime < 0.0 then
-				isWaitingResult = false
-				waitingResultTime = 0.0
+		if self.isWaitingResult then
+			self.waitingResultTime = self.waitingResultTime - 0.02
+			if self.waitingResultTime < 0.0 then
+				self.isWaitingResult = false
+				self.waitingResultTime = 0.0
 				
 				-- update score display
-				uiScoreNumber = uiScoreNumber + 1	
-				uiScoreText:setText(tostring(uiScoreNumber))
+				self.uiScoreNumber = self.uiScoreNumber + 1	
+				self.uiScoreText:setText(tostring(self.uiScoreNumber))
 			end
 		end
 
 		-- update crane node position
-		if craneNode:getWorldPositionY() < destCraneHeightY then
-			local stepLen = (destCraneHeightY - craneNode:getWorldPositionY()) * 0.004
+		if self.craneNode:getWorldPositionY() < self.destCraneHeightY then
+			local stepLen = (self.destCraneHeightY - self.craneNode:getWorldPositionY()) * 0.004
 			
 			-- move crane
-			craneNode:setWorldPositionY(craneNode:getWorldPositionY() + stepLen)
+			self.craneNode:setWorldPositionY(self.craneNode:getWorldPositionY() + stepLen)
 			
 			-- move camera based on crane posY
-			if cameraCraneOffsetY == nil then
+			if self.cameraCraneOffsetY == nil then
 				-- get the initialize camera crane offset
-				cameraCraneOffsetY = camera:getWorldPositionY() - craneNode:getWorldPositionY()
+				self.cameraCraneOffsetY = self.camera:getWorldPositionY() - self.craneNode:getWorldPositionY()
 			else
-				local cameraY = craneNode:getWorldPositionY() + cameraCraneOffsetY
-				camera:setWorldPositionY(cameraY)
+				local cameraY = self.craneNode:getWorldPositionY() + self.cameraCraneOffsetY
+				self.camera:setWorldPositionY(cameraY)
 			
 				-- move bgs based on camera position(linear and logrithm function)
 				local moveThreshold = 500
 				local bgsY = math.max(cameraY - moveThreshold, 0.0) * 0.85
-				bgs:setWorldPositionY(bgsY)
+				self.bgs:setWorldPositionY(bgsY)
 			end
 		end
 	end
@@ -92,33 +91,33 @@ end
 
 -- drop house
 function main:dropHouse()
-	if isFailed then
+	if self.isFailed then
 		return
 	end
 
 	local newHouse = Node.load("Res://scene/house.scene")
 	if newHouse~=nil then
-		newHouse:setParent(houses)
-		newHouse:setWorldPosition(dropNode:getWorldPosition())
+		newHouse:setParent(self.houses)
+		newHouse:setWorldPosition(self.dropNode:getWorldPosition())
 		
 		-- hidden drop node
-		dropNode:setVisible(false)
+		self.dropNode:setVisible(false)
 		
 		-- move up crane
-		destCraneHeightY = preHouseYHeight + 700
+		self.destCraneHeightY = self.preHouseYHeight + 700
 		
 		-- remember nodes
-		preHouse = currentHouse
-		currentHouse = newHouse
+		self.preHouse = self.currentHouse
+		self.currentHouse = newHouse
 		
-		isWaitingResult = true
-		waitingResultTime = 2.5
+		self.isWaitingResult = true
+		self.waitingResultTime = 2.5
 		
-		if preHouse ~= nil then
-			preHouseYHeight = preHouse:getWorldPositionY()
+		if self.preHouse ~= nil then
+			self.preHouseYHeight = self.preHouse:getWorldPositionY()
 				
 			-- process pre house
-			self:processPreHouses(preHouse)
+			self:processPreHouses(self.preHouse)
 		end
 	end
 end
@@ -126,15 +125,15 @@ end
 -- remove pre house
 function main:processPreHouses(preHouse)
 	-- push to tail
-	housesQueue:push(preHouse)
+	self.housesQueue:push(preHouse)
 	
 	-- remove house
-	if housesQueue:size() > maxHousesCount then
+	if self.housesQueue:size() > self.maxHousesCount then
 		-- pop and delete
-		local housePoped = housesQueue:pop()
+		local housePoped = self.housesQueue:pop()
 		
 		-- set static body
-		local house = housesQueue:front()
+		local house = self.housesQueue:front()
 		if house ~= nil then
 			house:setType("Static")
 		end
@@ -146,12 +145,12 @@ end
 
 -- on faile
 function main:onFail()
-	isFailed = true
-	uiFailed:setVisible(true)
+	self.isFailed = true
+	self.uiFailed:setVisible(true)
 end
 
 function main:on_clicked_restart()
-	root:onRestartGame()
+	self.root:onRestartGame()
 	Log:info("on restart game")
 end
 
