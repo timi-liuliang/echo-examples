@@ -18,7 +18,7 @@ main.waitingResultTime = 0.0
 main.destCraneHeightY = 0.0
 main.cameraCraneOffsetY = nil
 main.maxHousesCount = 10
-main.housesQueue = new(require("lua/util/queue"))
+main.housesQueue = require("lua/util/queue"):new()
 
 -- start
 function main:start()
@@ -37,7 +37,10 @@ function main:start()
 
 	--Log:error(self:getId())
 	--Log:error(tostring(main.housesQueue))
-	Log:error(tostring(self.housesQueue))
+	for k, v in pairs(package.loaded) do
+		Log:error(k)
+		Log:error(v)
+	end
 end
 
 -- update

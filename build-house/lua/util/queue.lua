@@ -1,5 +1,15 @@
 local queue = { first = 0,  last = -1,  data = {}}
 
+-- new
+function queue:new()
+	local result = {}
+	for k, v in pairs(self) do
+		result[k] = v
+	end
+	
+	return result
+end
+
 -- push 
 function queue:push (value)
  	local last = self.last + 1
