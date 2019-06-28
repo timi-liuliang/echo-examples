@@ -24,4 +24,4 @@ function object:onRestartGame()
 	end
 end
 
-return setmetatable(object, Object)
+return setmetatable(object, Node)

@@ -35,21 +35,12 @@ function main:start()
 		self.craneTimeline:play("move")
 	end
 
-	--Log:error(self:getId())
-	--Log:error(tostring(main.housesQueue))
-	for k, v in pairs(package.loaded) do
-		Log:error(k)
-		Log:error(v)
-	end
+	-- connect
+	Object.connect(Input, "clicked", self, "dropHouse")
 end
 
 -- update
 function main:update()
-	-- drop house when click screen
-	if(Input:getMouseButtonDown(0)) then
-		self:dropHouse()
-	end
-
 	if self.currentHouse ~= nil then	
 		if self.currentHouse:getWorldPositionY() < self.preHouseYHeight then
 			self:onFail()
@@ -98,6 +89,8 @@ function main:dropHouse()
 		return
 	end
 
+	Log:info("dropHouse")
+
 	local newHouse = Node.load("Res://scene/house.scene")
 	if newHouse~=nil then
 		newHouse:setParent(self.houses)
@@ -122,6 +115,8 @@ function main:dropHouse()
 			-- process pre house
 			self:processPreHouses(self.preHouse)
 		end
+	else
+		Log:error("new house is nil")
 	end
 end
 
