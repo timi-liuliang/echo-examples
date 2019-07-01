@@ -89,8 +89,6 @@ function main:dropHouse()
 		return
 	end
 
-	Log:info("dropHouse")
-
 	local newHouse = Node.load("Res://scene/house.scene")
 	if newHouse~=nil then
 		newHouse:setParent(self.houses)
@@ -149,7 +147,6 @@ end
 
 function main:on_clicked_restart()
 	self.root:onRestartGame()
-	Log:info("on restart game")
 end
 
 return setmetatable(main, Node)
