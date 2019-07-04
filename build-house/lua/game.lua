@@ -113,6 +113,9 @@ function main:dropHouse()
 			-- process pre house
 			self:processPreHouses(self.preHouse)
 		end
+
+		-- connect collison event
+		Object.connect(newHouse, "beginContact", self, "onHouseBeginContact")
 	else
 		Log:error("new house is nil")
 	end
@@ -122,6 +125,9 @@ end
 function main:processPreHouses(preHouse)
 	-- push to tail
 	self.housesQueue:push(preHouse)
+	
+	-- disconnect collision event
+	Object.disconnect(preHouse, "beginContact", self, "onHouseBeginContact")
 	
 	-- remove house
 	if self.housesQueue:size() > self.maxHousesCount then
@@ -147,6 +153,11 @@ end
 
 function main:on_clicked_restart()
 	self.root:onRestartGame()
+end
+
+-- on house collision event
+function main:onHouseBeginContact()
+	Log:error(" on house collision")
 end
 
 return setmetatable(main, Node)
