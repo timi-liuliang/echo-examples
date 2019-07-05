@@ -8,4 +8,6 @@
 	<Log name="Log" class="Log" />
 	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="Editor" />
 	<PluginSettings name="PluginSettings" class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;E:/github/echo-plugins/;" />
+	<SRayDevice name="SRayDevice" class="SRayDevice" />
+	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
 </settings>
