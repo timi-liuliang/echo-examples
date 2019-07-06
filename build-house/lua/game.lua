@@ -11,6 +11,7 @@ main.currentHouse = nil
 main.preHouse = nil
 main.uiScoreNumber = 0
 main.uiScoreText = nil
+main.audioPlayer = nil
 main.preHouseYHeight = -420.0
 main.isFailed = false
 main.isWaitingResult = false
@@ -29,6 +30,7 @@ function main:start()
 	self.dropNode		= self:getNode("crane/crane/dropHouse")
 	self.houses 		= self:getNode("houses")
 	self.bgs    		= self:getNode("bgs")
+	self.audioPlayer    = self:getNode("audio/bg_music")
 	self.camera 		= self:getNode("camera")
 	self.craneTimeline	= self:getNode("crane/crane/timeline")
 	if self.craneTimeline ~= nil then
@@ -157,6 +159,7 @@ end
 
 -- on house collision event
 function main:onHouseBeginContact()
+	self.audioPlayer:playOneShot("Res://audio/collision.mp3")
 	Log:error(" on house collision")
 end
 
