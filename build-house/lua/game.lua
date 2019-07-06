@@ -160,7 +160,6 @@ end
 -- on house collision event
 function main:onHouseBeginContact()
 	self.audioPlayer:playOneShot("Res://audio/collision.mp3")
-	Log:error(" on house collision")
 end
 
 return setmetatable(main, Node)
