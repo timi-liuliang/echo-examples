@@ -151,6 +151,8 @@ end
 function main:onFail()
 	self.isFailed = true
 	self.uiFailed:setVisible(true)
+	
+	self.audioPlayer:playOneShot("Res://audio/failed.mp3")
 end
 
 function main:on_clicked_restart()

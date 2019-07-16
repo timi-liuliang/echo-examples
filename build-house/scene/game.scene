@@ -27,6 +27,6 @@
 		</node>
 	</node>
 	<node name="audio" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="bg_music" class="AudioPlayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Loop="true" PlayOnAwake="true" Audio="Res://audio/bg_main.mp3" />
+		<node name="bg_music" class="AudioPlayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Loop="true" PlayOnAwake="true" Volume="1.0" Audio="Res://audio/bg_main.mp3" />
 	</node>
 </node>
