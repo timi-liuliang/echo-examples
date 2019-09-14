@@ -39,6 +39,9 @@ function main:start()
 
 	-- connect
 	Object.connect(Input, "clicked", self, "dropHouse")
+	
+	-- load score
+	self:loadScore()
 end
 
 -- update
@@ -162,6 +165,13 @@ end
 -- on house collision event
 function main:onHouseBeginContact()
 	self.audioPlayer:playOneShot("Res://audio/collision.mp3")
+end
+
+function main:loadScore()
+	local dataStream = IO:open("User://score.xml")
+	if dataStream ~= nil then
+		dataStream:test()
+	end
 end
 
 return setmetatable(main, Node)
