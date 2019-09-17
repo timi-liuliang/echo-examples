@@ -168,9 +168,11 @@ function main:onHouseBeginContact()
 end
 
 function main:loadScore()
-	local dataStream = IO:open("User://score.xml")
+	local dataStream = IO:open("User://score.xml", 3)
 	if dataStream ~= nil then
 		dataStream:test()
+	else
+		Log:error("xxxxx")
 	end
 end
 
