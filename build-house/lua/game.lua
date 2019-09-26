@@ -83,7 +83,7 @@ function main:update()
 				self.camera:setWorldPositionY(cameraY)
 			
 				-- move bgs based on camera position(linear and logrithm function)
-				local moveThreshold = 500
+				local moveThreshold = 250 + self.score * 0.1
 				local bgsY = math.max(cameraY - moveThreshold, 0.0) * 0.85
 				self.bgs:setWorldPositionY(bgsY)
 			end
@@ -205,6 +205,12 @@ function main:saveScore()
 	Log:info("game over")
 	Log:info("score :" .. self.score)
 	Log:info("bestScore :" .. self.bestScore)
+	
+	-- update ui display
+	local uiScoreText     = self:getNode("ui/failed/scores_bg/score")
+	local uiBestScoreText = self:getNode("ui/failed/scores_bg/bestscore")
+	uiScoreText:setText("score " .. tostring(self.score))
+	uiBestScoreText:setText("best  " .. tostring(self.bestScore)) 
 end
 
 return setmetatable(main, Node)
