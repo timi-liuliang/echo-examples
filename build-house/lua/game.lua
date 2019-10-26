@@ -9,7 +9,6 @@ main.dropNode = nil
 main.craneTimeline = nil
 main.currentHouse = nil
 main.preHouse = nil
-main.uiScoreNumber = 0
 main.uiScoreText = nil
 main.audioPlayer = nil
 main.preHouseYHeight = -420.0
@@ -20,6 +19,10 @@ main.destCraneHeightY = 0.0
 main.cameraCraneOffsetY = nil
 main.maxHousesCount = 10
 main.housesQueue = require("lua/util/queue"):new()
+
+-- score
+main.score = 0
+main.bestScore = 0
 
 -- start
 function main:start()
@@ -39,6 +42,9 @@ function main:start()
 
 	-- connect
 	Object.connect(Input, "clicked", self, "dropHouse")
+	
+	-- load score
+	self:loadScore()
 end
 
 -- update
@@ -56,8 +62,8 @@ function main:update()
 				self.waitingResultTime = 0.0
 				
 				-- update score display
-				self.uiScoreNumber = self.uiScoreNumber + 1	
-				self.uiScoreText:setText(tostring(self.uiScoreNumber))
+				self.score = self.score + 1	
+				self.uiScoreText:setText(tostring(self.score))
 			end
 		end
 
@@ -77,7 +83,7 @@ function main:update()
 				self.camera:setWorldPositionY(cameraY)
 			
 				-- move bgs based on camera position(linear and logrithm function)
-				local moveThreshold = 500
+				local moveThreshold = 250 + self.score * 0.1
 				local bgsY = math.max(cameraY - moveThreshold, 0.0) * 0.85
 				self.bgs:setWorldPositionY(bgsY)
 			end
@@ -149,10 +155,16 @@ end
 
 -- on faile
 function main:onFail()
-	self.isFailed = true
-	self.uiFailed:setVisible(true)
+	if self.isFailed == false then
+		self.isFailed = true
+		self.uiFailed:setVisible(true)
 	
-	self.audioPlayer:playOneShot("Res://audio/failed.mp3")
+		-- save score
+		self:saveScore()
+	
+		-- play music
+		self.audioPlayer:playOneShot("Res://audio/failed.mp3")
+	end
 end
 
 function main:on_clicked_restart()
@@ -162,6 +174,43 @@ end
 -- on house collision event
 function main:onHouseBeginContact()
 	self.audioPlayer:playOneShot("Res://audio/collision.mp3")
+end
+
+function main:loadScore()
+	if IO:isExist("User://score.json") then	
+		local content = IO:loadFileToString("User://score.json")
+		if content ~= nil then
+			local table = require("lua/util/json").decode(content)
+			if table ~= nil then
+				self.bestScore = table.score
+				Log:info("bsetScore : " .. self.bestScore)
+			end
+		end
+	else
+		Log:info("file [score.json] doesn't exist.")
+	end
+end
+
+function main:saveScore()
+	if(self.score > self.bestScore) then
+		self.bestScore = self.score
+	
+		local json = require("lua/util/json")	
+		local content = json.encode({ score=self.bestScore })
+	
+		IO:saveStringToFile("User://score.json", content)
+	end
+
+	-- output score info
+	Log:info("game over")
+	Log:info("score :" .. self.score)
+	Log:info("bestScore :" .. self.bestScore)
+	
+	-- update ui display
+	local uiScoreText     = self:getNode("ui/failed/scores_bg/score")
+	local uiBestScoreText = self:getNode("ui/failed/scores_bg/bestscore")
+	uiScoreText:setText("score " .. tostring(self.score))
+	uiBestScoreText:setText("best  " .. tostring(self.bestScore)) 
 end
 
 return setmetatable(main, Node)

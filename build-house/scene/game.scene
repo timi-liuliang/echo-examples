@@ -17,12 +17,17 @@
 	</node>
 	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="score" class="UiText" path="" Enable="true" Position="-260 380 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="48" Height="48" Text="0" Font="Res://font/zig.ttf" FontSize="48" />
-		<node name="failed" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Width="232" Height="174" Texture="Res://texture/ui/begin_button01.PNG">
+		<node name="failed" class="UiImage" path="" Enable="true" Position="0 50 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Width="232" Height="174" Texture="Res://texture/ui/begin_button01.PNG">
 			<node name="restart" class="UiEventRegionRect" path="" Enable="false" Position="0 -20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="ui" Width="194" Height="108">
 				<signal name="clicked">
 					<connect target="../../../" method="on_clicked_restart" />
 				</signal>
 				<channel name="Enable" expression="ch(&quot;../&quot;, &quot;Visible&quot;)" />
+			</node>
+			<node name="scores_bg" class="UiImage" path="" Enable="false" Position="0 -25 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="0" Height="0" Texture="">
+				<channel name="Enable" expression="ch(&quot;../&quot;, &quot;Visible&quot;)" />
+				<node name="score" class="UiText" path="" Enable="true" Position="-135 -140 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="36" Height="36" Text="0" Font="Res://font/zig.ttf" FontSize="36" />
+				<node name="bestscore" class="UiText" path="" Enable="true" Position="-135 -210 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="36" Height="36" Text="0" Font="Res://font/zig.ttf" FontSize="36" />
 			</node>
 		</node>
 	</node>
