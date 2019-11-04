@@ -2,7 +2,7 @@
 <node name="main" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/game.lua">
 	<node name="ground" class="Box2DBody" path="Res://scene/ground.scene" Enable="true" Position="0 -445 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" GravityScale="1.0" />
 	<node name="bgs" class="Node" path="" Enable="true" Position="0 0 -2" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="bg0" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_01.PNG" />
+		<node name="bg0" class="Sprite" path="" Enable="true" Position="0 -60 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="1080" Texture="Res://texture/backgroud01_01.PNG" />
 		<node name="bg1" class="Sprite" path="" Enable="true" Position="0 959 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_02.PNG" />
 		<node name="bg2" class="Sprite" path="" Enable="true" Position="0 1918 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_03.PNG" />
 	</node>

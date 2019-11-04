@@ -14,5 +14,5 @@
 	<SRayDevice name="SRayDevice" class="SRayDevice" />
 	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
 	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" Icon="" />
-	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="Build House" Icon="" />
+	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="house" Identifier="com.echo.house" Version="1.0.0" Icon="" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>
