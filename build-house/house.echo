@@ -3,7 +3,7 @@
 	<AndroidBuildSettings name="AndroidBuildSettings" class="AndroidBuildSettings" Icon="" />
 	<AudioDevice name="AudioDevice" class="AudioDevice" />
 	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
-	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" LaunchScene="Res://scene/root.scene" />
+	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep out" LaunchScene="Res://scene/root.scene" />
 	<IO name="IO" class="IO" />
 	<Input name="Input" class="Input" />
 	<Light name="Light" class="Light" ImageBasedLighting="true" Brdf="" />
@@ -14,5 +14,5 @@
 	<SRayDevice name="SRayDevice" class="SRayDevice" />
 	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
 	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" Icon="" />
-	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="house" Identifier="com.echo.house" Version="1.0.0" Icon="" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
+	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="house" Identifier="com.echo.house" Version="1.0.0" Icon="" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="false" LandscapeRight="false" />
 </settings>
