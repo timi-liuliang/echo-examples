@@ -45,6 +45,10 @@ function main:start()
 	
 	-- load score
 	self:loadScore()
+	
+	-- init camera Y position
+	self:initCameraYPos()
+	self:initCraneNodeYPos()
 end
 
 -- update
@@ -211,6 +215,21 @@ function main:saveScore()
 	local uiBestScoreText = self:getNode("ui/failed/scores_bg/bestscore")
 	uiScoreText:setText("score " .. tostring(self.score))
 	uiBestScoreText:setText("best  " .. tostring(self.bestScore)) 
+end
+
+function main:initCameraYPos()
+	local halfDesignHeight = GameSettings.getDesignHeight() * 0.5
+	local halfCameraHeight = self.camera:getHeight() * 0.5
+	
+	self.camera:setWorldPositionY(halfCameraHeight - halfDesignHeight)
+end
+
+-- 8/10 positin in camera y space
+function main:initCraneNodeYPos()
+	local offset = self.camera:getHeight() * 0.27
+	local cameraY = self.camera:getWorldPositionY()
+	
+	self.craneNode:setWorldPositionY(cameraY + offset)
 end
 
 return setmetatable(main, Node)
