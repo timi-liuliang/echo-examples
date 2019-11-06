@@ -73,7 +73,7 @@ function main:update()
 
 		-- update crane node position
 		if self.craneNode:getWorldPositionY() < self.destCraneHeightY then
-			local stepLen = (self.destCraneHeightY - self.craneNode:getWorldPositionY()) * 0.004
+			local stepLen = (self.destCraneHeightY - self.craneNode:getWorldPositionY()) * 0.04
 			
 			-- move crane
 			self.craneNode:setWorldPositionY(self.craneNode:getWorldPositionY() + stepLen)
@@ -87,7 +87,7 @@ function main:update()
 				self.camera:setWorldPositionY(cameraY)
 			
 				-- move bgs based on camera position(linear and logrithm function)
-				local moveThreshold = 250 + self.score * 0.1
+				local moveThreshold = 250 / 960 * self.camera:getHeight() + self.score * 0.1
 				local bgsY = math.max(cameraY - moveThreshold, 0.0) * 0.85
 				self.bgs:setWorldPositionY(bgsY)
 			end
@@ -110,7 +110,8 @@ function main:dropHouse()
 		self.dropNode:setVisible(false)
 		
 		-- move up crane
-		self.destCraneHeightY = self.preHouseYHeight + 700
+		local offset = self.camera:getHeight() * 0.73
+		self.destCraneHeightY = self.preHouseYHeight + offset
 		
 		-- remember nodes
 		self.preHouse = self.currentHouse
@@ -218,7 +219,7 @@ function main:saveScore()
 end
 
 function main:initCameraYPos()
-	local halfDesignHeight = GameSettings.getDesignHeight() * 0.5
+	local halfDesignHeight = GameSettings:getDesignHeight() * 0.5
 	local halfCameraHeight = self.camera:getHeight() * 0.5
 	
 	self.camera:setWorldPositionY(halfCameraHeight - halfDesignHeight)
