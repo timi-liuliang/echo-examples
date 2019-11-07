@@ -73,7 +73,7 @@ function main:update()
 
 		-- update crane node position
 		if self.craneNode:getWorldPositionY() < self.destCraneHeightY then
-			local stepLen = (self.destCraneHeightY - self.craneNode:getWorldPositionY()) * 0.04
+			local stepLen = (self.destCraneHeightY - self.craneNode:getWorldPositionY()) * 0.005
 			
 			-- move crane
 			self.craneNode:setWorldPositionY(self.craneNode:getWorldPositionY() + stepLen)
