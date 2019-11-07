@@ -68,6 +68,9 @@ function main:update()
 				-- update score display
 				self.score = self.score + 1	
 				self.uiScoreText:setText(tostring(self.score))
+				
+				-- update move speed
+				self:updateCraneMoveSpeed()
 			end
 		end
 
@@ -231,6 +234,12 @@ function main:initCraneNodeYPos()
 	local cameraY = self.camera:getWorldPositionY()
 	
 	self.craneNode:setWorldPositionY(cameraY + offset)
+end
+
+-- control crane speed
+function main:updateCraneMoveSpeed()
+	local timeScale = math.floor(self.score / 5.0) * 0.1 + 1.0
+	self.craneTimeline:setTimeScale(timeScale)
 end
 
 return setmetatable(main, Node)
