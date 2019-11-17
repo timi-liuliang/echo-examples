@@ -19,6 +19,7 @@ main.destCraneHeightY = 0.0
 main.cameraCraneOffsetY = nil
 main.maxHousesCount = 10
 main.housesQueue = require("lua/util/queue"):new()
+main.cd = require("lua/cd/cd"):new()
 
 -- score
 main.score = 0
@@ -42,33 +43,41 @@ function main:start()
 
 	-- connect
 	Object.connect(Input, "clicked", self, "dropHouse")
-	
+
 	-- load score
 	self:loadScore()
-	
+
 	-- init camera Y position
 	self:initCameraYPos()
 	self:initCraneNodeYPos()
+
+	-- cool down setting
+	self.cd:add("dropHouse", 1)
 end
 
 -- update
 function main:update()
-	if self.currentHouse ~= nil then	
+	local elapsedTime = 0.02
+ 
+    -- update cd
+    self.cd:update(elapsedTime)
+
+	if self.currentHouse ~= nil then
 		if self.currentHouse:getWorldPositionY() < self.preHouseYHeight then
 			self:onFail()
 		end
-	
+
 		-- waiting result state
 		if self.isWaitingResult then
-			self.waitingResultTime = self.waitingResultTime - 0.02
+			self.waitingResultTime = self.waitingResultTime - elapsedTime
 			if self.waitingResultTime < 0.0 then
 				self.isWaitingResult = false
 				self.waitingResultTime = 0.0
-				
+
 				-- update score display
-				self.score = self.score + 1	
+				self.score = self.score + 1
 				self.uiScoreText:setText(tostring(self.score))
-				
+
 				-- update move speed
 				self:updateCraneMoveSpeed()
 			end
@@ -77,10 +86,10 @@ function main:update()
 		-- update crane node position
 		if self.craneNode:getWorldPositionY() < self.destCraneHeightY then
 			local stepLen = (self.destCraneHeightY - self.craneNode:getWorldPositionY()) * 0.005
-			
+
 			-- move crane
 			self.craneNode:setWorldPositionY(self.craneNode:getWorldPositionY() + stepLen)
-			
+
 			-- move camera based on crane posY
 			if self.cameraCraneOffsetY == nil then
 				-- get the initialize camera crane offset
@@ -88,7 +97,7 @@ function main:update()
 			else
 				local cameraY = self.craneNode:getWorldPositionY() + self.cameraCraneOffsetY
 				self.camera:setWorldPositionY(cameraY)
-			
+
 				-- move bgs based on camera position(linear and logrithm function)
 				local moveThreshold = 250 / 960 * self.camera:getHeight() + self.score * 0.1
 				local bgsY = math.max(cameraY - moveThreshold, 0.0) * 0.85
@@ -104,28 +113,37 @@ function main:dropHouse()
 		return
 	end
 
+	if self.cd:isReady("dropHouse") then
+		self:dropHouseInternal()
+		self.cd:reset("dropHouse")
+    else
+        Log:error("dropHouse skill not ready wait time : " .. self.cd:waitTime("dropHouse"))
+	end
+end
+
+function main:dropHouseInternal()
 	local newHouse = Node.load("Res://scene/house.scene")
 	if newHouse~=nil then
 		newHouse:setParent(self.houses)
 		newHouse:setWorldPosition(self.dropNode:getWorldPosition())
-		
+
 		-- hidden drop node
 		self.dropNode:setVisible(false)
-		
+
 		-- move up crane
 		local offset = self.camera:getHeight() * 0.73
 		self.destCraneHeightY = self.preHouseYHeight + offset
-		
+
 		-- remember nodes
 		self.preHouse = self.currentHouse
 		self.currentHouse = newHouse
-		
+
 		self.isWaitingResult = true
 		self.waitingResultTime = 2.5
-		
+
 		if self.preHouse ~= nil then
 			self.preHouseYHeight = self.preHouse:getWorldPositionY()
-				
+
 			-- process pre house
 			self:processPreHouses(self.preHouse)
 		end
@@ -141,15 +159,15 @@ end
 function main:processPreHouses(preHouse)
 	-- push to tail
 	self.housesQueue:push(preHouse)
-	
+
 	-- disconnect collision event
 	Object.disconnect(preHouse, "beginContact", self, "onHouseBeginContact")
-	
+
 	-- remove house
 	if self.housesQueue:size() > self.maxHousesCount then
 		-- pop and delete
 		local housePoped = self.housesQueue:pop()
-		
+
 		-- set static body
 		local house = self.housesQueue:front()
 		if house ~= nil then
@@ -166,10 +184,10 @@ function main:onFail()
 	if self.isFailed == false then
 		self.isFailed = true
 		self.uiFailed:setVisible(true)
-	
+
 		-- save score
 		self:saveScore()
-	
+
 		-- play music
 		self.audioPlayer:playOneShot("Res://audio/failed.mp3")
 	end
@@ -185,7 +203,7 @@ function main:onHouseBeginContact()
 end
 
 function main:loadScore()
-	if IO:isExist("User://score.json") then	
+	if IO:isExist("User://score.json") then
 		local content = IO:loadFileToString("User://score.json")
 		if content ~= nil then
 			local table = require("lua/util/json").decode(content)
@@ -202,10 +220,10 @@ end
 function main:saveScore()
 	if(self.score > self.bestScore) then
 		self.bestScore = self.score
-	
-		local json = require("lua/util/json")	
+
+		local json = require("lua/util/json")
 		local content = json.encode({ score=self.bestScore })
-	
+
 		IO:saveStringToFile("User://score.json", content)
 	end
 
@@ -213,18 +231,18 @@ function main:saveScore()
 	Log:info("game over")
 	Log:info("score :" .. self.score)
 	Log:info("bestScore :" .. self.bestScore)
-	
+
 	-- update ui display
 	local uiScoreText     = self:getNode("ui/failed/scores_bg/score")
 	local uiBestScoreText = self:getNode("ui/failed/scores_bg/bestscore")
 	uiScoreText:setText("score " .. tostring(self.score))
-	uiBestScoreText:setText("best  " .. tostring(self.bestScore)) 
+	uiBestScoreText:setText("best  " .. tostring(self.bestScore))
 end
 
 function main:initCameraYPos()
 	local halfDesignHeight = GameSettings:getDesignHeight() * 0.5
 	local halfCameraHeight = self.camera:getHeight() * 0.5
-	
+
 	self.camera:setWorldPositionY(halfCameraHeight - halfDesignHeight)
 end
 
@@ -232,7 +250,7 @@ end
 function main:initCraneNodeYPos()
 	local offset = self.camera:getHeight() * 0.27
 	local cameraY = self.camera:getWorldPositionY()
-	
+
 	self.craneNode:setWorldPositionY(cameraY + offset)
 end
 
