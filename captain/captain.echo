@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<AndroidBuildSettings name="AndroidBuildSettings" class="AndroidBuildSettings" Icon="" />
+	<AudioDevice name="AudioDevice" class="AudioDevice" />
+	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
+	<IO name="IO" class="IO" />
+	<Input name="Input" class="Input" />
+	<Light name="Light" class="Light" ImageBasedLighting="true" Brdf="" />
+	<Log name="Log" class="Log" />
+	<MacBuildSettings name="MacBuildSettings" class="MacBuildSettings" Icon="" />
+	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="Editor" />
+	<PluginSettings name="PluginSettings" class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
+	<SRayDevice name="SRayDevice" class="SRayDevice" />
+	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
+	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" Icon="" />
+	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="captain" Identifier="com.echo.captain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
+</settings>
