@@ -5,7 +5,7 @@
 			<node name="left" class="Node" path="" Enable="true" Position="-400 -150 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua">
 				<node name="UiEventRegionRect" class="UiEventRegionRect" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="ui" Width="64" Height="64" />
 				<node name="bg" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png">
-					<node name="ball" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_ball.png" />
+					<node name="ball" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" />
 				</node>
 			</node>
 			<node name="right" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
