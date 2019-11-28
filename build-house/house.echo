@@ -11,7 +11,7 @@
 	<CameraModule name="CameraModule" class="CameraModule" Enable="true" />
 	<EffectModule name="EffectModule" class="EffectModule" Enable="true" />
 	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" LaunchScene="Res://scene/root.scene" />
-	<GeomModule name="GeomModule" class="GeomModule" Enable="true" />
+	<GeomModule name="GeomModule" class="GeomModule" Enable="false" />
 	<GltfModule name="GltfModule" class="GltfModule" Enable="false" />
 	<IO name="IO" class="IO" />
 	<Input name="Input" class="Input" />
