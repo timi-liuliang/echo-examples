@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
+	<AIModule name="AIModule" class="AIModule" Enable="true" />
+	<AndroidBuildSettings name="AndroidBuildSettings" class="AndroidBuildSettings" Icon="" />
+	<AnimModule name="AnimModule" class="AnimModule" Enable="true" />
 	<AudioDevice name="AudioDevice" class="AudioDevice" />
+	<AudioModule name="AudioModule" class="AudioModule" Enable="true" />
+	<Box2DModule name="Box2DModule" class="Box2DModule" Enable="true" />
 	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<BuildModule name="BuildModule" class="BuildModule" Enable="true" />
+	<CameraModule name="CameraModule" class="CameraModule" Enable="true" />
+	<EffectModule name="EffectModule" class="EffectModule" Enable="true" />
 	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://scene/four_wheels.scene" />
+	<GeomModule name="GeomModule" class="GeomModule" Enable="true" />
+	<GltfModule name="GltfModule" class="GltfModule" Enable="true" />
+	<IO name="IO" class="IO" />
 	<Input name="Input" class="Input" />
 	<Light name="Light" class="Light" ImageBasedLighting="true" Brdf="" />
+	<LightModule name="LightModule" class="LightModule" Enable="true" />
+	<Live2DModule name="Live2DModule" class="Live2DModule" Enable="true" />
 	<Log name="Log" class="Log" />
+	<MacBuildSettings name="MacBuildSettings" class="MacBuildSettings" Icon="" />
+	<PhysxModule name="PhysxModule" class="PhysxModule" Enable="true" />
 	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="All" />
 	<PluginSettings name="PluginSettings" class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
 	<SRayDevice name="SRayDevice" class="SRayDevice" />
+	<SRayModule name="SRayModule" class="SRayModule" Enable="true" />
+	<SpineModule name="SpineModule" class="SpineModule" Enable="true" />
+	<TerrainModule name="TerrainModule" class="TerrainModule" Enable="true" />
+	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
+	<UiModule name="UiModule" class="UiModule" Enable="true" />
+	<VideoModule name="VideoModule" class="VideoModule" Enable="true" />
+	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" Icon="" />
+	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="terrain" Identifier="com.echo.terrain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>
