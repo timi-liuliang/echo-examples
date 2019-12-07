@@ -20,4 +20,7 @@
 			</node>
 		</node>
 	</node>
+	<node name="terminator" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node name="Sprite" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://icon.png" />
+	</node>
 </node>
