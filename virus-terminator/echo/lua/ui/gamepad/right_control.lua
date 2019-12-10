@@ -11,7 +11,7 @@ end
 function object:update()
 end
 
-function object:on_clicked_UiEventRegionRect()
+function object:on_clicked_right()
 	-- change bg position
 	Log:error("a")
 	local localPos = self.bg:getLocalPosition()
