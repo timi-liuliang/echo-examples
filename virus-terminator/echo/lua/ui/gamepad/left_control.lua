@@ -1,6 +1,7 @@
 local object ={}
 
 object.bg = nil
+object.clickPos = nil
 
 -- start
 function object:start()
@@ -13,13 +14,10 @@ end
 
 function object:on_clicked()
 	-- change bg position
-	Log:error("a")
-	local localPos = self.bg:getLocalPosition()
-	Log:error("b")
-	localPos.x = localPos.x + 10
-	Log:error("c")
-	self.bg:setLocalPosition(localPos)
-	Log:error("d")
+	local event = self:getMouseEvent()
+	
+	self.clickPos = event:getLocalPosition()
+	self.bg:setLocalPosition(self.clickPos)
 end
 
 return setmetatable(object, Node)
