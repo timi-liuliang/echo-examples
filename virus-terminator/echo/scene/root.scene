@@ -3,17 +3,20 @@
 	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="gamepad" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 			<node name="left" class="UiEventRegionRect" path="" Enable="true" Position="-360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua" Type="ui" Width="600" Height="520">
-				<signal name="clicked">
-					<connect target="" method="on_clicked" />
+				<signal name="onMouseButtonDown">
+					<connect target="" method="onMouseButtonDown_left" />
+				</signal>
+				<signal name="onMouseButtonMove">
+					<connect target="" method="onMouseButtonMove_left" />
+				</signal>
+				<signal name="onMouseButtonUp">
+					<connect target="" method="onMouseButtonUp_left" />
 				</signal>
 				<node name="bg" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="256" Height="256" Alpha="0.2" Texture="Res://imagesets/ui/left_control_bg.png">
 					<node name="ball" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="80" Height="80" Alpha="0.69998" Texture="Res://imagesets/ui/left_control_ball.png" />
 				</node>
 			</node>
 			<node name="right" class="UiEventRegionRect" path="" Enable="true" Position="360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/right_control.lua" Type="ui" Width="600" Height="520">
-				<signal name="clicked">
-					<connect target="" method="on_clicked_right" />
-				</signal>
 				<node name="bg" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="256" Height="256" Alpha="0.2" Texture="Res://imagesets/ui/left_control_bg.png">
 					<node name="ball" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="80" Height="80" Alpha="0.69998" Texture="Res://imagesets/ui/left_control_ball.png" />
 				</node>
