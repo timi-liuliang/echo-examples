@@ -3,11 +3,13 @@ local object ={}
 object.bg = nil
 object.ball =nil
 object.clickPos = nil
+object.terminator = nil
 
 -- start
 function object:start()
 	self.bg = self:getNode("bg")
 	self.ball = self:getNode("bg/ball")
+	self.terminator = self:getNode("/root/terminator")
 end
 
 -- update
@@ -35,6 +37,9 @@ function object:onMouseButtonMove_left()
 		offset.y = curPos.y-self.clickPos.y
 		offset.z = curPos.z-self.clickPos.z
 		self.ball:setLocalPosition(offset)
+
+		-- move terminator
+		self.terminator:move(offset)
 	end
 end
 
