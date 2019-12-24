@@ -4,6 +4,8 @@ object.bg = nil
 object.ball =nil
 object.clickPos = nil
 object.terminator = nil
+object.isMoveing = false
+object.moveDir = nil
 
 -- start
 function object:start()
@@ -14,6 +16,9 @@ end
 
 -- update
 function object:update()
+	if self.isMoveing then
+		self.terminator:move(self.moveDir)
+	end
 end
 
 -- on click region
@@ -23,6 +28,8 @@ function object:onMouseButtonDown_left()
 	
 	self.clickPos = event:getLocalPosition()
 	self.bg:setLocalPosition(self.clickPos)
+	
+	self.isMoveing = true
 end
 
 -- on mouse moved
@@ -31,23 +38,30 @@ function object:onMouseButtonMove_left()
 		-- change ball position
 		local event = self:getMouseEvent()
 	
-		local curPos = event:getLocalPosition()
-		local offset = {}
-		offset.x = curPos.x-self.clickPos.x
-		offset.y = curPos.y-self.clickPos.y
-		offset.z = curPos.z-self.clickPos.z
-		self.ball:setLocalPosition(offset)
-
+		local curPos = event:getLocalPosition()	
+		local offset = curPos - self.clickPos	
+		
 		-- move terminator
-		self.terminator:move(offset)
+		if offset:length() > 3.0 then
+			self.moveDir = offset:normalize()
+		end
+		
+		-- modify ball position
+		if offset:length() > 70.0 then
+			offset = offset:normalize() * 70.0			
+		end
+		self.ball:setLocalPosition(offset)
 	end
 end
 
 -- on mouse up
 function object:onMouseButtonUp_left()
-	local zeroPosition = { x=0.0, y=0.0, z=0.0}
+	local zeroPosition = vec3(0.0, 0.0, 0.0)
 	self.bg:setLocalPosition(zeroPosition)
 	self.ball:setLocalPosition(zeroPosition)
+
+	self.isMoveing = false
+	self.moveDir = vec3(0.0, 0.0, 0.0)
 end
 
 return setmetatable(object, Node)

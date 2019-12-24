@@ -11,9 +11,7 @@ end
 -- move
 function object:move(offset)
 	local curPos = self:getLocalPosition()
-	curPos.x = curPos.x + offset.x
-	curPos.y = curPos.y + offset.y
-	curPos.z = curPos.z + offset.z
+	curPos = curPos + offset
 	
 	self:setLocalPosition(curPos)
 end
