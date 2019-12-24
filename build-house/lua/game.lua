@@ -42,7 +42,7 @@ function main:start()
 	end
 
 	-- connect
-	Object.connect(Input, "clicked", self, "dropHouse")
+	Object.connect(Input, "onMouseButtonDown", self, "dropHouse")
 
 	-- load score
 	self:loadScore()

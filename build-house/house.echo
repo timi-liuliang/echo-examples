@@ -9,6 +9,8 @@
 	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
 	<BuildModule name="BuildModule" class="BuildModule" Enable="true" />
 	<CameraModule name="CameraModule" class="CameraModule" Enable="true" />
+	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" MoveSpeed="1.0" />
+	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" Enable="true" />
 	<EffectModule name="EffectModule" class="EffectModule" Enable="true" />
 	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" LaunchScene="Res://scene/root.scene" />
 	<GeomModule name="GeomModule" class="GeomModule" Enable="false" />
