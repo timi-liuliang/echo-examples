@@ -18,9 +18,10 @@ end
 
 -- direction
 function object:setDir(inDir)
-	if inDir ~= nil then
-		local dir = inDir:normalize()
-		local quat = quaternionx.fromVec3ToVec3(vec3(1.0, 0.0, 0.0), dir)
+	if inDir ~= nil and inDir:length() > 0.5 then
+		local fromDir = vec3(1.0, 0.0, 0.0)
+		local toDir = inDir:normalize()
+		local quat = quaternionx.fromVec3ToVec3(fromDir, toDir)
 		self:setLocalOrientation(quat)
 	end
 end
