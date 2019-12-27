@@ -16,4 +16,13 @@ function object:move(offset)
 	self:setLocalPosition(curPos)
 end
 
+-- direction
+function object:setDir(inDir)
+	if inDir ~= nil then
+		local dir = inDir:normalize()
+		local quat = quaternionx.fromVec3ToVec3(vec3(1.0, 0.0, 0.0), dir)
+		self:setLocalOrientation(quat)
+	end
+end
+
 return setmetatable(object, Object)
