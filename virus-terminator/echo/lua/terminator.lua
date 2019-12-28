@@ -1,11 +1,29 @@
 local object ={}
 
+-- direction
+object.leftDir = vec3(-1.0, 0.0, 0.0)
+object.rightDir = vec3(1.0, 0.0, 0.0)
+object.upDir = vec3(0.0, 1.0, 0.0)
+object.downDir = vec3(0.0, -1.0, 0.0)
+
 -- start
 function object:start()
 end
 
 -- update
 function object:update()
+	if Input:isKeyDown(65) then
+		self:move(self.leftDir)
+	end
+	if Input:isKeyDown(68) then
+		self:move(self.rightDir)
+	end
+	if Input:isKeyDown(87) then
+		self:move(self.upDir)
+	end
+	if Input:isKeyDown(83) then
+		self:move(self.downDir)
+	end
 end
 
 -- move

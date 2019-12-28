@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node name="root" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="ui" class="Node" path="" Enable="true" Position="0 0 200" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node name="gamepad" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 			<node name="left" class="UiEventRegionRect" path="" Enable="true" Position="-360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua" Type="ui" Width="600" Height="520">
 				<signal name="onMouseButtonDown">
