@@ -22,6 +22,10 @@ end
 -- set move direction
 function object:setMoveDir(moveDir)
 	self.moveDir = moveDir:normalize()
+	
+	-- orientation
+	local orient = quaternion.fromVec3ToVec3(vec3(1.0, 0.0, 0.0), self.moveDir)
+	self:setLocalOrientation(orient)	
 end
 
 -- update life
