@@ -12,6 +12,7 @@
 	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" MoveSpeed="1.0" />
 	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" Enable="true" />
 	<EffectModule name="EffectModule" class="EffectModule" Enable="true" />
+	<Engine name="Engine" class="Engine" />
 	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://scene/root.scene" />
 	<GeomModule name="GeomModule" class="GeomModule" Enable="true" />
 	<GltfModule name="GltfModule" class="GltfModule" Enable="true" />
