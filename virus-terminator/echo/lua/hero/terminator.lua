@@ -41,6 +41,7 @@ function object:fire()
 	if newBullet ~= nil then
 		newBullet:setParent(self.bullets)
 		newBullet:setWorldPosition(self:getWorldPosition())
+		
 		newBullet:setMoveDir(self.faceDir)
 	end
 end
