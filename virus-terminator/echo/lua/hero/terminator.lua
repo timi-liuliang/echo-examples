@@ -1,8 +1,11 @@
 local object ={}
 object.moveSpeed = 1.0
+object.bullets = nil
+object.faceDir = vec3(0.0, 0.0, 0.0)
 
 -- start
 function object:start()
+	self.bullets = self:getNode("/root/bullets")
 end
 
 -- update
@@ -27,7 +30,18 @@ function object:setDir(inDir)
 		local fromDir = vec3(1.0, 0.0, 0.0)
 		local toDir = inDir:normalize()
 		local quat = quaternion.fromVec3ToVec3(fromDir, toDir)
-		self:setLocalOrientation(quat)
+		self:setLocalOrientation(quat)	
+		self.faceDir = toDir
+	end
+end
+
+-- fire
+function object:fire()
+	local newBullet = Node.load("Res://scene/bullet/bullet_a.scene")
+	if newBullet ~= nil then
+		newBullet:setParent(self.bullets)
+		newBullet:setWorldPosition(self:getWorldPosition())
+		newBullet:setMoveDir(self.faceDir)
 	end
 end
 

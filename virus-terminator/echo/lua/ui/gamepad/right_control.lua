@@ -18,6 +18,7 @@ end
 function object:update()
 	if self.isMoveing then
 		self.terminator:setDir(self.moveDir)
+		self.terminator:fire()
 	end
 end
 
