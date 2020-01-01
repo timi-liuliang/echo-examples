@@ -2,16 +2,24 @@ local object ={}
 object.moveSpeed = 1.0
 object.bullets = nil
 object.faceDir = vec3(0.0, 0.0, 0.0)
+object.cd = require("lua/util/cd"):new()
 
 -- start
 function object:start()
 	self.bullets = self:getNode("/root/bullets")
+	
+	self.cd:add("weapon_0", 0.15)
 end
 
 -- update
 function object:update()
+	-- frame time
+	local elapsedTime = Engine:getFrameTime()
+	
 	-- move by key event
 	self:moveByKeyEvent()
+	
+	self.cd:update(elapsedTime)
 end
 
 -- move
@@ -37,12 +45,16 @@ end
 
 -- fire
 function object:fire()
-	local newBullet = Node.load("Res://scene/bullet/bullet_a.scene")
-	if newBullet ~= nil then
-		newBullet:setParent(self.bullets)
-		newBullet:setWorldPosition(self:getWorldPosition())
+	if self.cd:isReady("weapon_0") then
+		local newBullet = Node.load("Res://scene/bullet/bullet_a.scene")
+		if newBullet ~= nil then
+			newBullet:setWorldPosition(self:getWorldPosition())
+			newBullet:setParent(self.bullets)
 		
-		newBullet:setMoveDir(self.faceDir)
+			newBullet:setMoveDir(self.faceDir)
+		end
+
+		self.cd:reset("weapon_0")
 	end
 end
 
