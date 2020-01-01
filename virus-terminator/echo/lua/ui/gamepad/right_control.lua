@@ -11,7 +11,7 @@ object.moveDir = nil
 function object:start()
 	self.bg = self:getNode("bg")
 	self.ball = self:getNode("bg/ball")
-	self.terminator = self:getNode("/root/terminator")
+	self.terminator = self:getNode("/root/hero")
 end
 
 -- update
