@@ -32,6 +32,7 @@
 	<TerrainModule name="TerrainModule" class="TerrainModule" Enable="true" />
 	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
 	<UiModule name="UiModule" class="UiModule" Enable="true" />
+	<VideoModule name="VideoModule" class="VideoModule" Enable="true" />
 	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" Icon="" />
 	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="captain" Identifier="com.echo.captain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>
