@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="monster" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="120" Height="120" Texture="Res://imagesets/monster/monster_a.png" />
