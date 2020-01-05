@@ -1,11 +1,14 @@
 local object = {}
 object.elapsedTime = 0.0
+object.hero = nil
 object.monsters = nil
 
 -- start
 function object:start()
 	-- load level monster configs
 	self:loadLevelMonsters()
+	
+	self.hero = self:getNode("/root/hero")
 end
 
 -- update
@@ -21,7 +24,13 @@ function object:spawnMonsters(elapsedTime)
 	for k, v in pairs(self.monsters) do
 		local monster = self.monsters[k]
 		if self.elapsedTime > monster.time then
-			self:spawnMonster()
+			-- calc position
+			local range = monster.angle_range
+			local angle = math.rad(monster.angle + math.random(-range, range))
+			local dir   = vec3(math.cos(angle), math.sin(angle), 0.0)
+			local pos   = dir:normalize() * monster.distance + self.hero:getWorldPosition()
+			
+			self:spawnMonster(pos)
 			
 			self.monsters[k] = nil
 		end
@@ -29,10 +38,10 @@ function object:spawnMonsters(elapsedTime)
 end
 
 -- spawn monster
-function object:spawnMonster()
+function object:spawnMonster(pos)
 	local newMonster = Node.load("Res://scene/monster/monster_a.scene")
 	if newMonster ~= nil then
-		newMonster:setWorldPosition(self:getWorldPosition())
+		newMonster:setWorldPosition(pos)
 		newMonster:setParent(self)
 	end
 end
@@ -46,7 +55,10 @@ function object:loadLevelMonsters()
 		self.monsters = spawnMonstersConfig.monsters:children()
 		for i = 1, #self.monsters do
 			local monster = self.monsters[i]
-			monster.time = tonumber(monster["@time"])
+			monster.time 			= tonumber(monster["@time"])
+			monster.angle 			= tonumber(monster["@angle"])
+			monster.angle_range 	= tonumber(monster["@anglerange"])
+			monster.distance 		= tonumber(monster["@distance"])
 		end	
 	end
 end
