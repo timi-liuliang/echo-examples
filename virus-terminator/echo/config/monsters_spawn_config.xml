@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<monsters>
+	<!-- wave 1 -->
+	<monster time="1.0" path="Res://scene/monster/monster_a.scene" direction="0" length="1000" count="1" />
+	<monster time="2.0" path="Res://scene/monster/monster_a.scene" direction="45" length="1000" count="1" />
+	<monster time="3.0" path="Res://scene/monster/monster_a.scene" direction="-45" length="1000" count="1" />
+	<monster time="4.0" path="Res://scene/monster/monster_a.scene" direction="180" length="1000" count="1" />
+
+	<!-- wave 2 -->
+	<monster time="5.0" path="Res://scene/monster/monster_a.scene" direction="0" length="1000" count="1" />
+	<monster time="6.0" path="Res://scene/monster/monster_a.scene" direction="45" length="1000" count="1" />
+	<monster time="7.0" path="Res://scene/monster/monster_a.scene" direction="-45" length="1000" count="1" />
+	<monster time="8.0" path="Res://scene/monster/monster_a.scene" direction="180" length="1000" count="1" />
+</monsters>
