@@ -18,6 +18,7 @@ function object:update()
 		if dirWithLen:length() > 3.0 then
 			local nextPos = curPos + dirWithLen:normalize() * self.moveSpeed
 			self:setWorldPosition(nextPos)
+			self:syncTransformTob2Body()
 		else
 			self:queueFree()
 		end
@@ -29,6 +30,10 @@ function object:initTarget()
 	if self.target == nil then
 		self.target = self:getNode("/root/hero")	
 	end
+end
+
+function object:beginContact()
+	self:queueFree()
 end
 
 return setmetatable(object, Object)

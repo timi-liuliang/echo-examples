@@ -14,6 +14,7 @@ function object:update()
 	curPos = curPos + self.moveDir * self.moveSpeed
 	
 	self:setLocalPosition(curPos)
+	self:syncTransformTob2Body()
 	
 	-- update life
 	self:updateLife()
