@@ -1,6 +1,6 @@
 local object ={}
 object.moveDir = vec3(0.0, 0.0, 0.0)
-object.moveSpeed = 2.0
+object.moveSpeed = 150.0
 object.life = 3.5
 
 -- start
@@ -10,11 +10,7 @@ end
 -- update
 function object:update()
 	-- update position
-	local curPos = self:getLocalPosition()
-	curPos = curPos + self.moveDir * self.moveSpeed
-	
-	self:setLocalPosition(curPos)
-	self:syncTransformTob2Body()
+	self:setLinearVelocity(self.moveDir * self.moveSpeed)
 	
 	-- update life
 	self:updateLife()

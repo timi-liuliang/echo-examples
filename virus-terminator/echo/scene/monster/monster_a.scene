@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="monster" class="Box2DBody" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/monster/monster_ai.lua" Type="Kinematic" FixRotation="false" GravityScale="1.0">
+<node name="monster" class="Box2DBody" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/monster/monster_ai.lua" Type="Dynamic" FixRotation="false" GravityScale="0.0">
 	<signal name="beginContact">
 		<connect target="" method="beginContact" />
 	</signal>

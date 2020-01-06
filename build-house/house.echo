@@ -12,6 +12,7 @@
 	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" MoveSpeed="1.0" />
 	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" Enable="true" />
 	<EffectModule name="EffectModule" class="EffectModule" Enable="true" />
+	<Engine name="Engine" class="Engine" />
 	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" LaunchScene="Res://scene/root.scene" />
 	<GeomModule name="GeomModule" class="GeomModule" Enable="false" />
 	<GltfModule name="GltfModule" class="GltfModule" Enable="false" />
@@ -31,7 +32,6 @@
 	<TerrainModule name="TerrainModule" class="TerrainModule" Enable="false" />
 	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" />
 	<UiModule name="UiModule" class="UiModule" Enable="true" />
-	<VideoModule name="VideoModule" class="VideoModule" Enable="false" />
 	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" Icon="" />
 	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" AppName="Build House" Identifier="com.echo.house" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="false" LandscapeRight="false" />
 </settings>

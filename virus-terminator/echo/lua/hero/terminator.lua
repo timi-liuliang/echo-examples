@@ -8,7 +8,7 @@ object.cd = require("lua/util/cd"):new()
 function object:start()
 	self.bullets = self:getNode("/root/bullets")
 	
-	self.cd:add("weapon_0", 0.15)
+	self.cd:add("weapon_0", 1.2)
 end
 
 -- update
