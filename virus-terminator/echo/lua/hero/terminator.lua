@@ -1,7 +1,6 @@
 local object ={}
 object.moveSpeed = 1.0
 object.bullets = nil
-object.faceDir = vec3(0.0, 0.0, 0.0)
 object.cd = require("lua/util/cd"):new()
 
 -- start
@@ -38,8 +37,7 @@ function object:setDir(inDir)
 		local fromDir = vec3(1.0, 0.0, 0.0)
 		local toDir = inDir:normalize()
 		local quat = quaternion.fromVec3ToVec3(fromDir, toDir)
-		self:setLocalOrientation(quat)	
-		self.faceDir = toDir
+		self:setLocalOrientation(quat)
 	end
 end
 
@@ -51,7 +49,9 @@ function object:fire()
 			newBullet:setWorldPosition(self:getWorldPosition())
 			newBullet:setParent(self.bullets)
 		
-			newBullet:setMoveDir(self.faceDir)
+			local orient = self:getWorldOrientation()
+			local faceDir = orient:rotateVec3(vec3(0.0, 1.0, 0.0))
+			newBullet:setMoveDir(faceDir)
 		end
 
 		self.cd:reset("weapon_0")
