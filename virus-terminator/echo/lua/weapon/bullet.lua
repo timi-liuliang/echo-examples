@@ -34,4 +34,9 @@ function object:updateLife()
 	end
 end
 
+-- begin contact
+function object:beginContact()
+	self:queueFree()
+end
+
 return setmetatable(object, Object)
