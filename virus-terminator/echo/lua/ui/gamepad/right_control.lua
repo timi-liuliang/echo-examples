@@ -65,4 +65,8 @@ function object:onMouseButtonUp()
 	self.moveDir = vec3(0.0, 0.0, 0.0)
 end
 
+function object:onMouseButtonLeave()
+	self:onMouseButtonUp()
+end
+
 return setmetatable(object, Node)

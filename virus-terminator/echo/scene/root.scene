@@ -12,6 +12,9 @@
 				<signal name="onMouseButtonDown">
 					<connect target="" method="onMouseButtonDown_left" />
 				</signal>
+				<signal name="onMouseButtonLeave">
+					<connect target="" method="onMouseButtonLeave" />
+				</signal>
 				<signal name="onMouseButtonMove">
 					<connect target="" method="onMouseButtonMove_left" />
 				</signal>
@@ -25,6 +28,9 @@
 			<node name="right" class="UiEventRegionRect" path="" Enable="true" Position="360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/right_control.lua" Type="ui" Width="600" Height="520">
 				<signal name="onMouseButtonDown">
 					<connect target="" method="onMouseButtonDown" />
+				</signal>
+				<signal name="onMouseButtonLeave">
+					<connect target="" method="onMouseButtonLeave" />
 				</signal>
 				<signal name="onMouseButtonMove">
 					<connect target="" method="onMouseButtonMove" />
