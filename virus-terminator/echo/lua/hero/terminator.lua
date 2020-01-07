@@ -1,5 +1,6 @@
 local object ={}
-object.moveSpeed = 1.0
+object.moveSpeed = 100.0
+object.moveDir = vec3(0.0, 0.0, 0.0)
 object.bullets = nil
 object.cd = require("lua/util/cd"):new()
 
@@ -23,11 +24,9 @@ end
 
 -- move
 function object:move(moveDir)
-	if moveDir~=nil and moveDir:length() > 0.5 then
-		local curPos = self:getLocalPosition()
-		curPos = curPos + moveDir:normalize() * self.moveSpeed
-	
-		self:setLocalPosition(curPos)
+	if moveDir~=nil then
+		self.moveDir = moveDir:normalize()	
+		self:setLinearVelocity(self.moveDir * self.moveSpeed)
 	end	
 end
 
@@ -48,6 +47,7 @@ function object:fire()
 		if newBullet ~= nil then
 			newBullet:setWorldPosition(self:getWorldPosition())
 			newBullet:setParent(self.bullets)
+			newBullet:setInitMoveState(self.moveDir, self.moveSpeed * 0.3)
 		
 			local orient = self:getWorldOrientation()
 			local faceDir = orient:rotateVec3(vec3(0.0, 1.0, 0.0))

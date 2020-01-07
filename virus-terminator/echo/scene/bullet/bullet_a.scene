@@ -4,5 +4,5 @@
 		<connect target="" method="beginContact" />
 	</signal>
 	<node name="Sprite" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="35" Height="35" Texture="Res://imagesets/bullet/bullet.png" />
-	<node name="Box2DShapeBox" class="Box2DShapeBox" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Width="35.0" Height="35.0" />
+	<node name="Box2DShapeCircle" class="Box2DShapeCircle" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="16.0" />
 </node>

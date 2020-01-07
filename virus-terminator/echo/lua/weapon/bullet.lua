@@ -1,6 +1,8 @@
 local object ={}
+object.initDir = vec3(0.0, 0.0, 0.0)
+object.initSpeed = 0.0
 object.moveDir = vec3(0.0, 0.0, 0.0)
-object.moveSpeed = 150.0
+object.moveSpeed = 350.0
 object.life = 3.5
 
 -- start
@@ -10,10 +12,17 @@ end
 -- update
 function object:update()
 	-- update position
-	self:setLinearVelocity(self.moveDir * self.moveSpeed)
+	local finalLinearVelocity = self.initDir * self.initSpeed + self.moveDir * self.moveSpeed
+	self:setLinearVelocity(finalLinearVelocity)
 	
 	-- update life
 	self:updateLife()
+end
+
+-- set init move state
+function object:setInitMoveState(dir, speed)
+	self.initDir = dir:normalize()
+	self.initSpeed = speed
 end
 
 -- set move direction
