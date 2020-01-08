@@ -1,116 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <monsters>
 	<!-- wave 1 -->
-	<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<!--monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="45" anglerange="0" distance="1000" count="1" /-->
-	<!--monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="-45" anglerange="0" distance="1000" count="1" /-->
-	<!--monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="270" anglerange="0" distance="1000" count="1" /-->
+	<wave>
+		<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="180" distance="600" count="3" />
+		<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	</wave>
 
 	<!-- wave 2 -->
-	<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-	<!--monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="45" anglerange="0" distance="1000" count="1" /-->
-	<!--monster time="7.0" path="Res://scene/monster/monster_a.scene" angle="-45" anglerange="0" distance="1000" count="1" /-->
-	<!--monster time="8.0" path="Res://scene/monster/monster_a.scene" angle="270" anglerange="0" distance="1000" count="1" /-->
+	<wave>
+		<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	</wave>
 
 	<!-- wave 3 -->
-	<monster time="10.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	<wave>
+		<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	</wave>
 
 	<!-- wave 4 -->
-	<monster time="15.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	<wave>
+		<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	</wave>
 
 	<!-- wave 5 -->
-	<monster time="20.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	<wave>
+		<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	</wave>
 
 	<!-- wave 6 -->
-	<monster time="25.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 7 -->
-	<monster time="30.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 8 -->
-	<monster time="35.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 9 -->
-	<monster time="40.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 10 -->
-	<monster time="45.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 11 -->
-	<monster time="50.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 12 -->
-	<monster time="55.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 13 -->
-	<monster time="60.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 14 -->
-	<monster time="65.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 15 -->
-	<monster time="70.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 16 -->
-	<monster time="75.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 17 -->
-	<monster time="80.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 18 -->
-	<monster time="85.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 19 -->
-	<monster time="90.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 20 -->
-	<monster time="95.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 21 -->
-	<monster time="100.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 22 -->
-	<monster time="105.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 23 -->
-	<monster time="110.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 24 -->
-	<monster time="115.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 25 -->
-	<monster time="120.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 26 -->
-	<monster time="125.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 27 -->
-	<monster time="130.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 28 -->
-	<monster time="135.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 29 -->
-	<monster time="140.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 30 -->
-	<monster time="145.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 31 -->
-	<monster time="150.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 32 -->
-	<monster time="155.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 33 -->
-	<monster time="160.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
-
-	<!-- wave 34 -->
-	<monster time="165.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	<wave>
+		<monster time="1.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="2.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="3.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="4.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="5.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+		<monster time="6.0" path="Res://scene/monster/monster_a.scene" angle="90" anglerange="20" distance="600" count="1" />
+	</wave>
 
 </monsters>
