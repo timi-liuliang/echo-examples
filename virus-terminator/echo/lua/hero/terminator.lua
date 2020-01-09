@@ -2,24 +2,26 @@ local object ={}
 object.moveSpeed = 100.0
 object.moveDir = vec3(0.0, 0.0, 0.0)
 object.bullets = nil
-object.cd = require("lua/util/cd"):new()
 
 -- start
 function object:start()
 	self.bullets = self:getNode("/root/bullets")
-	
-	self.cd:add("weapon_0", 1.2)
 end
 
 -- update
-function object:update()
-	-- frame time
-	local elapsedTime = Engine:getFrameTime()
-	
+function object:update()	
 	-- move by key event
 	self:moveByKeyEvent()
-	
-	self.cd:update(elapsedTime)
+end
+
+-- fire
+function object:fire()
+	for i=0, self:getChildNum()-1 do
+		local platform = self:getChildByIndex(i)
+		local weapon = platform:getNode("weapon")
+		
+		weapon:fire(self.moveDir, self.moveSpeed)
+	end
 end
 
 -- move
@@ -37,24 +39,6 @@ function object:setDir(inDir)
 		local toDir = inDir:normalize()
 		local quat = quaternion.fromVec3ToVec3(fromDir, toDir)
 		self:setLocalOrientation(quat)
-	end
-end
-
--- fire
-function object:fire()
-	if self.cd:isReady("weapon_0") then
-		local newBullet = Node.load("Res://scene/bullet/bullet_a.scene")
-		if newBullet ~= nil then
-			newBullet:setWorldPosition(self:getWorldPosition())
-			newBullet:setParent(self.bullets)
-			newBullet:setInitMoveState(self.moveDir, self.moveSpeed * 0.3)
-		
-			local orient = self:getWorldOrientation()
-			local faceDir = orient:rotateVec3(vec3(0.0, 1.0, 0.0))
-			newBullet:setMoveDir(faceDir)
-		end
-
-		self.cd:reset("weapon_0")
 	end
 end
 

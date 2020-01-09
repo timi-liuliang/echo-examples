@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node name="root" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 	<node name="hero" class="Box2DBody" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/hero/terminator.lua" Type="Dynamic" FixRotation="false" GravityScale="0.0">
-		<node name="Box2DShapeCircle" class="Box2DShapeCircle" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0" />
-		<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
+		<node name="platform_01" class="Box2DShapeCircle" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
+			<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
+			<node name="weapon" class="Node" path="Res://scene/weapon/weapon.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
+		</node>
+		<node name="platform_02" class="Box2DShapeCircle" path="" Enable="true" Position="50 0 0" Rotation="0 0 -89.999" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
+			<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
+			<node name="weapon" class="Node" path="Res://scene/weapon/weapon.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
+		</node>
+		<node name="platform_03" class="Box2DShapeCircle" path="" Enable="true" Position="-35 20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
+			<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
+			<node name="weapon" class="Node" path="Res://scene/weapon/weapon.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
+		</node>
 	</node>
 	<node name="monsters" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/monster/monster.lua" />
 	<node name="bullets" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
