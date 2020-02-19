@@ -32,6 +32,8 @@
 	<SpineModule name="SpineModule" class="SpineModule" name="SpineModule" class="SpineModule" path="" Enable="true" />
 	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" name="UiEventProcessor" class="UiEventProcessor" path="" />
 	<UiModule name="UiModule" class="UiModule" name="UiModule" class="UiModule" path="" Enable="true" />
+	<VideoModule name="VideoModule" class="VideoModule" name="VideoModule" class="VideoModule" path="" Enable="true" />
+	<WeChatBuildSettings name="WeChatBuildSettings" class="WeChatBuildSettings" name="WeChatBuildSettings" class="WeChatBuildSettings" path="" Icon="" />
 	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" name="WindowsBuildSettings" class="WindowsBuildSettings" path="" Icon="" />
 	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" name="iOSBuildSettings" class="iOSBuildSettings" path="" AppName="terrain" Identifier="com.echo.terrain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>
