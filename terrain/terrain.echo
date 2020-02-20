@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
-	<AIModule name="AIModule" class="AIModule" name="AIModule" class="AIModule" path="" Enable="true" />
-	<AndroidBuildSettings name="AndroidBuildSettings" class="AndroidBuildSettings" name="AndroidBuildSettings" class="AndroidBuildSettings" path="" Icon="" />
-	<AnimModule name="AnimModule" class="AnimModule" name="AnimModule" class="AnimModule" path="" Enable="true" />
-	<AudioDevice name="AudioDevice" class="AudioDevice" name="AudioDevice" class="AudioDevice" path="" />
-	<AudioModule name="AudioModule" class="AudioModule" name="AudioModule" class="AudioModule" path="" Enable="true" />
-	<Box2DModule name="Box2DModule" class="Box2DModule" name="Box2DModule" class="Box2DModule" path="" Enable="true" FramesPerSecond="60" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
-	<BuildModule name="BuildModule" class="BuildModule" name="BuildModule" class="BuildModule" path="" Enable="true" />
-	<CameraModule name="CameraModule" class="CameraModule" name="CameraModule" class="CameraModule" path="" Enable="true" />
-	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" name="EditorCameraSettings" class="EditorCameraSettings" path="" MoveSpeed="200.0" />
-	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" name="EditorSettingsModule" class="EditorSettingsModule" path="" Enable="true" />
-	<EffectModule name="EffectModule" class="EffectModule" name="EffectModule" class="EffectModule" path="" Enable="true" />
-	<Engine name="Engine" class="Engine" name="Engine" class="Engine" path="" />
-	<FrameState name="FrameState" class="FrameState" name="FrameState" class="FrameState" path="" />
-	<GameSettings name="GameSettings" class="GameSettings" name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://scene/four_wheels.scene" />
-	<GeomModule name="GeomModule" class="GeomModule" name="GeomModule" class="GeomModule" path="" Enable="true" />
-	<GltfModule name="GltfModule" class="GltfModule" name="GltfModule" class="GltfModule" path="" Enable="true" />
-	<IO name="IO" class="IO" name="IO" class="IO" path="" />
-	<Input name="Input" class="Input" name="Input" class="Input" path="" />
-	<LightModule name="LightModule" class="LightModule" name="LightModule" class="LightModule" path="" Enable="true" ImageBasedLighting="true" Brdf="" />
-	<Live2DModule name="Live2DModule" class="Live2DModule" name="Live2DModule" class="Live2DModule" path="" Enable="true" />
-	<Log name="Log" class="Log" name="Log" class="Log" path="" />
-	<MacBuildSettings name="MacBuildSettings" class="MacBuildSettings" name="MacBuildSettings" class="MacBuildSettings" path="" Icon="" />
-	<PCGModule name="PCGModule" class="PCGModule" name="PCGModule" class="PCGModule" path="" Enable="true" />
-	<PhysxModule name="PhysxModule" class="PhysxModule" name="PhysxModule" class="PhysxModule" path="" Enable="true" DebugDraw="Editor" />
-	<PhysxWorld name="PhysxWorld" class="PhysxWorld" name="PhysxWorld" class="PhysxWorld" path="" />
-	<PluginSettings name="PluginSettings" class="PluginSettings" name="PluginSettings" class="PluginSettings" path="" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
-	<SRayDevice name="SRayDevice" class="SRayDevice" name="SRayDevice" class="SRayDevice" path="" />
-	<SRayModule name="SRayModule" class="SRayModule" name="SRayModule" class="SRayModule" path="" Enable="true" />
-	<SceneModule name="SceneModule" class="SceneModule" name="SceneModule" class="SceneModule" path="" Enable="true" />
-	<SpineModule name="SpineModule" class="SpineModule" name="SpineModule" class="SpineModule" path="" Enable="true" />
-	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" name="UiEventProcessor" class="UiEventProcessor" path="" />
-	<UiModule name="UiModule" class="UiModule" name="UiModule" class="UiModule" path="" Enable="true" />
-	<VideoModule name="VideoModule" class="VideoModule" name="VideoModule" class="VideoModule" path="" Enable="true" />
-	<WeChatBuildSettings name="WeChatBuildSettings" class="WeChatBuildSettings" name="WeChatBuildSettings" class="WeChatBuildSettings" path="" Icon="" />
-	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" name="WindowsBuildSettings" class="WindowsBuildSettings" path="" Icon="" />
-	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" name="iOSBuildSettings" class="iOSBuildSettings" path="" AppName="terrain" Identifier="com.echo.terrain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
+	<AIModule name="AIModule" class="AIModule" path="" Enable="true" />
+	<AndroidBuildSettings name="AndroidBuildSettings" class="AndroidBuildSettings" path="" Icon="" />
+	<AnimModule name="AnimModule" class="AnimModule" path="" Enable="true" />
+	<AudioDevice name="AudioDevice" class="AudioDevice" path="" />
+	<AudioModule name="AudioModule" class="AudioModule" path="" Enable="true" />
+	<Box2DModule name="Box2DModule" class="Box2DModule" path="" Enable="true" FramesPerSecond="60" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<BuildModule name="BuildModule" class="BuildModule" path="" Enable="true" />
+	<CameraModule name="CameraModule" class="CameraModule" path="" Enable="true" />
+	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" path="" MoveSpeed="200.0" />
+	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" path="" Enable="true" />
+	<EffectModule name="EffectModule" class="EffectModule" path="" Enable="true" />
+	<Engine name="Engine" class="Engine" path="" />
+	<FrameState name="FrameState" class="FrameState" path="" />
+	<GameSettings name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://scene/four_wheels.scene" />
+	<GeomModule name="GeomModule" class="GeomModule" path="" Enable="true" />
+	<GltfModule name="GltfModule" class="GltfModule" path="" Enable="true" />
+	<IO name="IO" class="IO" path="" />
+	<Input name="Input" class="Input" path="" />
+	<LightModule name="LightModule" class="LightModule" path="" Enable="true" ImageBasedLighting="true" Brdf="" />
+	<Live2DModule name="Live2DModule" class="Live2DModule" path="" Enable="true" />
+	<Log name="Log" class="Log" path="" />
+	<MacBuildSettings name="MacBuildSettings" class="MacBuildSettings" path="" Icon="" />
+	<PCGModule name="PCGModule" class="PCGModule" path="" Enable="true" />
+	<PhysxModule name="PhysxModule" class="PhysxModule" path="" Enable="true" DebugDraw="Editor" />
+	<PhysxWorld name="PhysxWorld" class="PhysxWorld" path="" />
+	<PluginSettings name="PluginSettings" class="PluginSettings" path="" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
+	<SRayDevice name="SRayDevice" class="SRayDevice" path="" />
+	<SRayModule name="SRayModule" class="SRayModule" path="" Enable="true" />
+	<SceneModule name="SceneModule" class="SceneModule" path="" Enable="true" />
+	<SpineModule name="SpineModule" class="SpineModule" path="" Enable="true" />
+	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" path="" />
+	<UiModule name="UiModule" class="UiModule" path="" Enable="true" />
+	<VideoModule name="VideoModule" class="VideoModule" path="" Enable="true" />
+	<WeChatBuildSettings name="WeChatBuildSettings" class="WeChatBuildSettings" path="" Icon="" />
+	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" path="" Icon="" />
+	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" path="" AppName="terrain" Identifier="com.echo.terrain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>
