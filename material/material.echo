@@ -9,11 +9,12 @@
 	<BuildModule name="BuildModule" class="BuildModule" path="" Enable="true" />
 	<CameraModule name="CameraModule" class="CameraModule" path="" Enable="true" />
 	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" path="" MoveSpeed="1.0" NearClip="0.2" FarClip="2500.0" />
+	<EditorRenderSettings name="EditorRenderSettings" class="EditorRenderSettings" path="" PolygonMode="Fill" />
 	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" path="" Enable="true" />
 	<EffectModule name="EffectModule" class="EffectModule" path="" Enable="true" />
 	<Engine name="Engine" class="Engine" path="" />
 	<FrameState name="FrameState" class="FrameState" path="" />
-	<GameSettings name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://Root.scene" />
+	<GameSettings name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
 	<GeomModule name="GeomModule" class="GeomModule" path="" Enable="true" />
 	<GltfModule name="GltfModule" class="GltfModule" path="" Enable="true" />
 	<IO name="IO" class="IO" path="" />
