@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="ForceField" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="ProceduralSphere" class="ProceduralSphere" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
+		<property name="Material">
+			<obj name="Material" class="Material" path="" Shader="_echo_default_3d_shader_" />
+		</property>
+	</node>
+</node>
