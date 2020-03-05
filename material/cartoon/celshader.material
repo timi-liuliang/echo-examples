@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<res name="" class="Material" Path="Res://cartoon/celshader.material" Shader="Res://cartoon/celshader.shader" Stage="Opaque" Uniforms.u_CameraDirection="0 0 0" Uniforms.u_CelShaderSampler="Res://cartoon/celshader.png" Uniforms.u_SpecularExp="16.0" />

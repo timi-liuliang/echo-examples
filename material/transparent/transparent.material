@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<res name="" class="Material" Path="Res://transparent/transparent.material" Shader="Res://transparent/transparent.shader" Stage="Transparent" Uniforms.u_BaseColorTexture="Res://gltf/woman/Material #2_baseColor.png" />
