@@ -2,7 +2,7 @@
 <node name="ForceField" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 	<node name="ProceduralSphere" class="ProceduralSphere" path="" Enable="true" Position="0 1 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
 		<property name="Material">
-			<obj name="Material" class="Material" path="" Shader="Res://ForceField/ForceField.shader" Uniforms.Texture_24="" />
+			<obj name="Material" class="Material" path="" Shader="Res://ForceField/ForceField.shader" Uniforms.Texture_25="Res://ForceField/hexagongrid.png" />
 		</property>
 	</node>
 	<node name="ProceduralGird" class="ProceduralGird" path="" Enable="true" Position="0 0.2 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
