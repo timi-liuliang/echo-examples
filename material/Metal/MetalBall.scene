@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="MetalBall" class="ProceduralSphere" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
+	<property name="Material" path="Res://Metal/MetalBall.material" />
+</node>

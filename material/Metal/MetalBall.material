@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res name="Material" class="Material" name="Material" class="Material" path="Res://Metal/MetalBall.material" Shader="Res://Metal/MetalBall.shader" />
