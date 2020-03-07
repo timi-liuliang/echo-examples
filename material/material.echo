@@ -14,7 +14,7 @@
 	<EffectModule name="EffectModule" class="EffectModule" path="" Enable="true" />
 	<Engine name="Engine" class="Engine" path="" />
 	<FrameState name="FrameState" class="FrameState" path="" />
-	<GameSettings name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
+	<GameSettings name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://ForceField/ForceField.scene" />
 	<GeomModule name="GeomModule" class="GeomModule" path="" Enable="true" />
 	<GltfModule name="GltfModule" class="GltfModule" path="" Enable="true" />
 	<IO name="IO" class="IO" path="" />
