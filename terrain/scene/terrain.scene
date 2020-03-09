@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="Terrain" class="Terrain" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Heightmap="Res://scene/heightmap.png" HeightRange="256.0" GridSpacing="1">
-	<property name="Material" path="Res://material/BlueColor.material" />
+<node name="Terrain" class="Terrain" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Data="Res://scene/TerrainData/" HeightRange="256.0" GridSpacing="1">
+	<property name="Material" path="Res://material/Terrain.material" />
 	<node name="Node" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
 </node>
