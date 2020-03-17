@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
-	<AudioDevice name="AudioDevice" class="AudioDevice" />
-	<Box2DWorld name="Box2DWorld" class="Box2DWorld" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
-	<GameSettings name="GameSettings" class="GameSettings" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
-	<Input name="Input" class="Input" />
-	<Light name="Light" class="Light" ImageBasedLighting="true" Brdf="" />
-	<Log name="Log" class="Log" />
-	<PhysxWorld name="PhysxWorld" class="PhysxWorld" DebugDraw="Editor" />
-	<PluginSettings name="PluginSettings" class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
-	<SRayDevice name="SRayDevice" class="SRayDevice" />
+	<AIModule name="AIModule" class="AIModule" path="" Enable="true" />
+	<AndroidBuildSettings name="AndroidBuildSettings" class="AndroidBuildSettings" path="" Icon="" />
+	<AnimModule name="AnimModule" class="AnimModule" path="" Enable="true" />
+	<AudioDevice name="AudioDevice" class="AudioDevice" path="" />
+	<AudioModule name="AudioModule" class="AudioModule" path="" Enable="true" />
+	<Box2DModule name="Box2DModule" class="Box2DModule" path="" Enable="true" FramesPerSecond="60" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<BuildModule name="BuildModule" class="BuildModule" path="" Enable="true" />
+	<CameraModule name="CameraModule" class="CameraModule" path="" Enable="true" />
+	<EditorCameraSettings name="EditorCameraSettings" class="EditorCameraSettings" path="" MoveSpeed="1.0" NearClip="0.2" FarClip="2500.0" />
+	<EditorRenderSettings name="EditorRenderSettings" class="EditorRenderSettings" path="" PolygonMode="Fill" />
+	<EditorSettingsModule name="EditorSettingsModule" class="EditorSettingsModule" path="" Enable="true" />
+	<EffectModule name="EffectModule" class="EffectModule" path="" Enable="true" />
+	<Engine name="Engine" class="Engine" path="" />
+	<FrameState name="FrameState" class="FrameState" path="" />
+	<GameSettings name="GameSettings" class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="" />
+	<GeomModule name="GeomModule" class="GeomModule" path="" Enable="true" />
+	<GltfModule name="GltfModule" class="GltfModule" path="" Enable="true" />
+	<IO name="IO" class="IO" path="" />
+	<Input name="Input" class="Input" path="" />
+	<LightModule name="LightModule" class="LightModule" path="" Enable="true" ImageBasedLighting="true" Brdf="" />
+	<Live2DModule name="Live2DModule" class="Live2DModule" path="" Enable="true" />
+	<Log name="Log" class="Log" path="" />
+	<MacBuildSettings name="MacBuildSettings" class="MacBuildSettings" path="" Icon="" />
+	<PhysxModule name="PhysxModule" class="PhysxModule" path="" Enable="true" DebugDraw="Editor" />
+	<PhysxWorld name="PhysxWorld" class="PhysxWorld" path="" />
+	<PluginSettings name="PluginSettings" class="PluginSettings" path="" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
+	<ProceduralModule name="ProceduralModule" class="ProceduralModule" path="" Enable="true" />
+	<RaytracingModule name="RaytracingModule" class="RaytracingModule" path="" Enable="true" />
+	<RaytracingWorld name="RaytracingWorld" class="RaytracingWorld" path="" />
+	<SceneModule name="SceneModule" class="SceneModule" path="" Enable="true" />
+	<SpineModule name="SpineModule" class="SpineModule" path="" Enable="true" />
+	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" path="" />
+	<UiModule name="UiModule" class="UiModule" path="" Enable="true" />
+	<VideoModule name="VideoModule" class="VideoModule" path="" Enable="true" />
+	<WeChatBuildSettings name="WeChatBuildSettings" class="WeChatBuildSettings" path="" Icon="" />
+	<WindowsBuildSettings name="WindowsBuildSettings" class="WindowsBuildSettings" path="" Icon="" />
+	<iOSBuildSettings name="iOSBuildSettings" class="iOSBuildSettings" path="" AppName="radeonrays" Identifier="com.echo.radeonrays" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>

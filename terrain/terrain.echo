@@ -27,8 +27,8 @@
 	<PhysxWorld name="PhysxWorld" class="PhysxWorld" path="" />
 	<PluginSettings name="PluginSettings" class="PluginSettings" path="" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
 	<ProceduralModule name="ProceduralModule" class="ProceduralModule" path="" Enable="true" />
-	<SRayDevice name="SRayDevice" class="SRayDevice" path="" />
-	<SRayModule name="SRayModule" class="SRayModule" path="" Enable="true" />
+	<RaytracingModule name="RaytracingModule" class="RaytracingModule" path="" Enable="true" />
+	<RaytracingWorld name="RaytracingWorld" class="RaytracingWorld" path="" />
 	<SceneModule name="SceneModule" class="SceneModule" path="" Enable="true" />
 	<SpineModule name="SpineModule" class="SpineModule" path="" Enable="true" />
 	<UiEventProcessor name="UiEventProcessor" class="UiEventProcessor" path="" />

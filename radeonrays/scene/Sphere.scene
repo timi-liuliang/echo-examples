@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="RadeonRays" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+<node name="RadeonRays" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node name="RaytracingMesh" class="RaytracingMesh" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+</node>
