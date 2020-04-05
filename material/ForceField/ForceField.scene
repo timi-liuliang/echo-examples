@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="ForceField" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node name="ProceduralSphere" class="ProceduralSphere" path="" Enable="true" Position="0 1 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
+<node class="Node" path="" name="ForceField" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="ProceduralSphere" path="" name="ProceduralSphere" Enable="true" Position="0 1 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
 		<property name="Material">
-			<obj name="Material" class="Material" path="" Shader="Res://ForceField/ForceField.shader" Uniforms.Texture_27="" />
+			<obj class="Material" path="" Shader="Res://ForceField/ForceField.shader" Uniforms.Diffuse="Res://ForceField/hexagongrid.png" />
 		</property>
 	</node>
 </node>
