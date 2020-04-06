@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res class="Material" class="Material" path="Res://Color/Color.material" Shader="Res://Color/Color.shader" Uniforms.Albedo="0 0 0 0 " />
