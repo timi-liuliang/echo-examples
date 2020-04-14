@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<atlas texture="Res://Texture/trump_run.png">
+	<atla name="atla_0_0" viewport="0 0 100 100" />
+	<atla name="atla_0_1" viewport="100 0 100 100" />
+	<atla name="atla_0_2" viewport="200 0 100 100" />
+	<atla name="atla_0_3" viewport="300 0 100 100" />
+	<atla name="atla_0_4" viewport="400 0 100 100" />
+	<atla name="atla_0_5" viewport="500 0 100 100" />
+	<atla name="atla_1_0" viewport="0 100 100 100" />
+	<atla name="atla_1_1" viewport="100 100 100 100" />
+	<atla name="atla_1_2" viewport="200 100 100 100" />
+	<atla name="atla_1_3" viewport="300 100 100 100" />
+	<atla name="atla_1_4" viewport="400 100 100 100" />
+	<atla name="atla_1_5" viewport="500 100 100 100" />
+	<atla name="atla_2_0" viewport="0 200 100 100" />
+	<atla name="atla_2_1" viewport="100 200 100 100" />
+	<atla name="atla_2_2" viewport="200 200 100 100" />
+	<atla name="atla_2_3" viewport="300 200 100 100" />
+	<atla name="atla_2_4" viewport="400 200 100 100" />
+	<atla name="atla_2_5" viewport="500 200 100 100" />
+	<atla name="atla_3_0" viewport="0 300 100 100" />
+	<atla name="atla_3_1" viewport="100 300 100 100" />
+	<atla name="atla_3_2" viewport="200 300 100 100" />
+	<atla name="atla_3_3" viewport="300 300 100 100" />
+	<atla name="atla_3_4" viewport="400 300 100 100" />
+	<atla name="atla_3_5" viewport="500 300 100 100" />
+</atlas>
