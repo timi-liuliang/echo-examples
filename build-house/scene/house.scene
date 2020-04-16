@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="house" class="Box2DBody" path="" Enable="true" Position="0 0 1" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic" FixRotation="false" GravityScale="1.0">
-	<node name="Sprite" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="150" Height="100" Texture="Res://texture/house01.png" />
-	<node name="Box2DShapeBox" class="Box2DShapeBox" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.0" Width="140.0" Height="98.0" />
+<node class="Box2DBody" path="" name="house" Enable="true" Position="0 0 1" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic" FixRotation="false" GravityScale="1.0">
+	<node class="Sprite" path="" name="Sprite" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="150" Height="100">
+		<property name="Material">
+			<obj class="Material" path="" Shader="Res://shader/Sprite.shader" Uniforms.Albedo="Res://texture/house01.png" />
+		</property>
+	</node>
+	<node class="Box2DShapeBox" path="" name="Box2DShapeBox" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.0" CategoryBits="1" MaskBits="65535" IsSensor="false" Width="140.0" Height="98.0" />
 </node>

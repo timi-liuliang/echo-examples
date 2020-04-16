@@ -1,37 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="main" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/game.lua">
-	<node name="ground" class="Box2DBody" path="Res://scene/ground.scene" Enable="true" Position="0 -445 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" GravityScale="1.0" />
-	<node name="bgs" class="Node" path="" Enable="true" Position="0 0 -2" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="bg0" class="Sprite" path="" Enable="true" Position="0 -60 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="1080" Texture="Res://texture/backgroud01_01.PNG" />
-		<node name="bg1" class="Sprite" path="" Enable="true" Position="0 959 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_02.PNG" />
-		<node name="bg2" class="Sprite" path="" Enable="true" Position="0 1918 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960" Texture="Res://texture/backgroud01_03.PNG" />
-	</node>
-	<node name="houses" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
-	<node name="camera" class="Camera2D" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
-	<node name="crane" class="Node" path="" Enable="true" Position="0 250 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="crane" class="Node" path="" Enable="true" Position="500 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-			<node name="crane" class="Sprite" path="" Enable="true" Position="0 180 -1" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="30" Height="300" Texture="Res://texture/crane.png" />
-			<node name="dropHouse" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="150" Height="100" Texture="Res://texture/house01.png" />
-			<node name="timeline" class="Timeline" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" TimeScale="1.0" Anim="move" AnimData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGNsaXBzPgoJPGNsaXAgbmFtZT0ibW92ZSIgbGVuZ3RoPSIzMDAwIj4KCQk8b2JqZWN0IHR5cGU9Ik5vZGUiIHBhdGg9Ii4uLyI+CgkJCTxwcm9wZXJ0eSBuYW1lPSJQb3NpdGlvbiIgdHlwZT0iVmVjdG9yMyIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGN1cnZlIGluZGV4PSIwIj4KCQkJCQk8a2V5IHRpbWU9IjEiIHZhbHVlPSItNTAwIiAvPgoJCQkJCTxrZXkgdGltZT0iMjk5NSIgdmFsdWU9IjUwMCIgLz4KCQkJCTwvY3VydmU+CgkJCQk8Y3VydmUgaW5kZXg9IjEiIC8+CgkJCQk8Y3VydmUgaW5kZXg9IjIiIC8+CgkJCTwvcHJvcGVydHk+CgkJPC9vYmplY3Q+CgkJPG9iamVjdCB0eXBlPSJOb2RlIiBwYXRoPSIuLi9kcm9wSG91c2UiPgoJCQk8cHJvcGVydHkgbmFtZT0iVmlzaWJsZSIgdHlwZT0iQm9vbCIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGtleSB0aW1lPSI4IiB2YWx1ZT0idHJ1ZSIgLz4KCQkJPC9wcm9wZXJ0eT4KCQk8L29iamVjdD4KCTwvY2xpcD4KPC9jbGlwcz4K" />
+<node class="Node" path="" name="main" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/game.lua">
+	<node class="Box2DBody" path="Res://scene/ground.scene" name="ground" Enable="true" Position="0 -445 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static" FixRotation="false" GravityScale="1.0" />
+	<node class="Node" path="" name="bgs" Enable="true" Position="0 0 -2" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="Sprite" path="" name="bg0" Enable="true" Position="0 -60 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="1080">
+			<property name="Material">
+				<obj class="Material" path="" Shader="Res://shader/Sprite.shader" Uniforms.Albedo="Res://texture/backgroud01_01.PNG" />
+			</property>
+		</node>
+		<node class="Sprite" path="" name="bg1" Enable="true" Position="0 959 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960">
+			<property name="Material">
+				<obj class="Material" path="" Shader="Res://shader/Sprite.shader" Uniforms.Albedo="Res://texture/backgroud01_02.PNG" />
+			</property>
+		</node>
+		<node class="Sprite" path="" name="bg2" Enable="true" Position="0 1918 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="640" Height="960">
+			<property name="Material">
+				<obj class="Material" path="" Shader="Res://shader/Sprite.shader" Uniforms.Albedo="Res://texture/backgroud01_03.PNG" />
+			</property>
 		</node>
 	</node>
-	<node name="ui" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="score" class="UiText" path="" Enable="true" Position="-260 360 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="48" Height="48" Text="0" Font="Res://font/zig.ttf" FontSize="48" />
-		<node name="failed" class="UiImage" path="" Enable="true" Position="0 50 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Width="232" Height="174" Alpha="1.0" Texture="Res://texture/ui/begin_button01.PNG">
-			<node name="restart" class="UiEventRegionRect" path="" Enable="false" Position="0 -20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="ui" Width="194" Height="108">
+	<node class="Node" path="" name="houses" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="Camera2D" path="" name="camera" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="Node" path="" name="crane" Enable="true" Position="0 250 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="Node" path="" name="crane" Enable="true" Position="500 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+			<node class="Sprite" path="" name="crane" Enable="true" Position="0 180 -1" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="30" Height="300">
+				<property name="Material">
+					<obj class="Material" path="" Shader="Res://shader/Sprite.shader" Uniforms.Albedo="Res://texture/crane.png" />
+				</property>
+			</node>
+			<node class="Sprite" path="" name="dropHouse" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="150" Height="100">
+				<property name="Material">
+					<obj class="Material" path="" Shader="Res://shader/Sprite.shader" Uniforms.Albedo="Res://texture/house01.png" />
+				</property>
+			</node>
+			<node class="Timeline" path="" name="timeline" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" TimeScale="1.0" Anim="move" AnimData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGNsaXBzPgoJPGNsaXAgbmFtZT0ibW92ZSIgbGVuZ3RoPSIzMDAwIj4KCQk8b2JqZWN0IHR5cGU9Ik5vZGUiIHBhdGg9Ii4uLyI+CgkJCTxwcm9wZXJ0eSBuYW1lPSJQb3NpdGlvbiIgdHlwZT0iVmVjdG9yMyIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGN1cnZlIGluZGV4PSIwIj4KCQkJCQk8a2V5IHRpbWU9IjEiIHZhbHVlPSItNTAwIiAvPgoJCQkJCTxrZXkgdGltZT0iMjk5NSIgdmFsdWU9IjUwMCIgLz4KCQkJCTwvY3VydmU+CgkJCQk8Y3VydmUgaW5kZXg9IjEiIC8+CgkJCQk8Y3VydmUgaW5kZXg9IjIiIC8+CgkJCTwvcHJvcGVydHk+CgkJPC9vYmplY3Q+CgkJPG9iamVjdCB0eXBlPSJOb2RlIiBwYXRoPSIuLi9kcm9wSG91c2UiPgoJCQk8cHJvcGVydHkgbmFtZT0iVmlzaWJsZSIgdHlwZT0iQm9vbCIgaW50ZXJwb2xhdGlvbl90eXBlPSJMaW5lYXIiPgoJCQkJPGtleSB0aW1lPSI4IiB2YWx1ZT0idHJ1ZSIgLz4KCQkJPC9wcm9wZXJ0eT4KCQk8L29iamVjdD4KCTwvY2xpcD4KPC9jbGlwcz4K" />
+		</node>
+	</node>
+	<node class="Node" path="" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="UiText" path="" name="score" Enable="true" Position="-260 360 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="48" Height="48" Text="0" Font="Res://font/zig.ttf" FontSize="48" />
+		<node class="UiImage" path="" name="failed" Enable="true" Position="0 50 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="false" Alpha="1.0" Width="232" Height="174" Texture="Res://texture/ui/begin_button01.PNG">
+			<node class="UiEventRegionRect" path="" name="restart" Enable="false" Position="0 -20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="ui" Width="194" Height="108">
 				<signal name="onMouseButtonDown">
 					<connect target="../../../" method="on_clicked_restart" />
 				</signal>
 				<channel name="Enable" expression="ch(&quot;../&quot;, &quot;Visible&quot;)" />
 			</node>
-			<node name="scores_bg" class="UiImage" path="" Enable="false" Position="0 -25 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="0" Height="0" Alpha="1.0" Texture="">
+			<node class="UiImage" path="" name="scores_bg" Enable="false" Position="0 -25 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="0" Height="0" Texture="">
 				<channel name="Enable" expression="ch(&quot;../&quot;, &quot;Visible&quot;)" />
-				<node name="score" class="UiText" path="" Enable="true" Position="-135 -140 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="36" Height="36" Text="0" Font="Res://font/zig.ttf" FontSize="36" />
-				<node name="bestscore" class="UiText" path="" Enable="true" Position="-135 -210 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="36" Height="36" Text="0" Font="Res://font/zig.ttf" FontSize="36" />
+				<node class="UiText" path="" name="score" Enable="true" Position="-135 -140 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="36" Height="36" Text="0" Font="Res://font/zig.ttf" FontSize="36" />
+				<node class="UiText" path="" name="bestscore" Enable="true" Position="-135 -210 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="36" Height="36" Text="0" Font="Res://font/zig.ttf" FontSize="36" />
 			</node>
 		</node>
 	</node>
-	<node name="audio" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="bg_music" class="AudioPlayer" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Loop="true" PlayOnAwake="true" Volume="1.0" Audio="Res://audio/bg_main.mp3" />
+	<node class="Node" path="" name="audio" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="AudioPlayer" path="" name="bg_music" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="true" Loop="true" PlayOnAwake="true" Volume="1.0" Audio="Res://audio/bg_main.mp3" />
 	</node>
 </node>
