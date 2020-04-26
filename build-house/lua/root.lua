@@ -6,6 +6,7 @@ end
 
 -- update
 function object:update()
+	--Log:error(FrameState:getFps())
 end
 
 function object:onRestartGame()

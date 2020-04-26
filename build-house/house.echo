@@ -29,7 +29,7 @@
 	<ProceduralModule class="ProceduralModule" path="" Enable="true" />
 	<RaytracingModule class="RaytracingModule" path="" Enable="true" />
 	<RaytracingWorld class="RaytracingWorld" path="" />
-	<SceneModule class="SceneModule" path="" Enable="true" />
+	<SceneModule class="SceneModule" path="" Enable="false" />
 	<ShaderEditorModule class="ShaderEditorModule" path="" Enable="true" />
 	<SpineModule class="SpineModule" path="" Enable="false" />
 	<UiEventProcessor class="UiEventProcessor" path="" />
@@ -37,5 +37,5 @@
 	<VideoModule class="VideoModule" path="" Enable="true" />
 	<WeChatBuildSettings class="WeChatBuildSettings" path="" Icon="" />
 	<WindowsBuildSettings class="WindowsBuildSettings" path="" Icon="" />
-	<iOSBuildSettings class="iOSBuildSettings" path="" AppName="Build House" Identifier="com.echo.house" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="false" LandscapeRight="false" />
+	<iOSBuildSettings class="iOSBuildSettings" path="" AppName="Build House" Identifier="com.echo.buildhouse" Version="1.1.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="false" LandscapeRight="false" />
 </settings>
