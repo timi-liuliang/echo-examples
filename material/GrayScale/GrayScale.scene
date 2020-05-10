@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="ProceduralGird" path="" name="GrayScale" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
 	<property name="Material">
-		<obj class="Material" path="" Shader="Res://GrayScale/GrayScale.shader" Uniforms.Albedo="Res://GrayScale/Mario.png" />
+		<obj class="Material" path="" Shader="Res://GrayScale/GrayScale.shader" Uniforms.Strength="0.0" />
 	</property>
 </node>
