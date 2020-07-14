@@ -21,20 +21,22 @@
 	<Input class="Input" path="" />
 	<LightModule class="LightModule" path="" Enable="false" ImageBasedLighting="true" Brdf="" />
 	<Live2DModule class="Live2DModule" path="" Enable="false" />
+	<Localization class="Localization" path="" />
 	<Log class="Log" path="" />
 	<MacBuildSettings class="MacBuildSettings" path="" Icon="" />
 	<PhysxModule class="PhysxModule" path="" Enable="false" DebugDraw="Editor" />
 	<PhysxWorld class="PhysxWorld" path="" />
 	<PluginSettings class="PluginSettings" path="" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
-	<ProceduralModule class="ProceduralModule" path="" Enable="true" />
-	<RaytracingModule class="RaytracingModule" path="" Enable="true" />
+	<ProceduralModule class="ProceduralModule" path="" Enable="false" />
+	<RaytracingModule class="RaytracingModule" path="" Enable="false" />
 	<RaytracingWorld class="RaytracingWorld" path="" />
 	<SceneModule class="SceneModule" path="" Enable="false" />
 	<ShaderEditorModule class="ShaderEditorModule" path="" Enable="true" />
 	<SpineModule class="SpineModule" path="" Enable="false" />
+	<SplineModule class="SplineModule" path="" Enable="false" />
 	<UiEventProcessor class="UiEventProcessor" path="" />
 	<UiModule class="UiModule" path="" Enable="true" />
-	<VideoModule class="VideoModule" path="" Enable="true" />
+	<VideoModule class="VideoModule" path="" Enable="false" />
 	<WeChatBuildSettings class="WeChatBuildSettings" path="" Icon="" />
 	<WindowsBuildSettings class="WindowsBuildSettings" path="" Icon="" />
 	<iOSBuildSettings class="iOSBuildSettings" path="" AppName="Build House" Identifier="com.echo.buildhouse" Version="1.1.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="false" LandscapeRight="false" />
