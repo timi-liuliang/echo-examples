@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
 	<AIModule class="AIModule" path="" Enable="false" />
-	<AndroidBuildSettings class="AndroidBuildSettings" path="" Icon="" />
+	<AndroidBuildSettings class="AndroidBuildSettings" path="" AppName="Build House" Icon="" />
 	<AnimModule class="AnimModule" path="" Enable="true" />
 	<AudioDevice class="AudioDevice" path="" />
 	<AudioModule class="AudioModule" path="" Enable="true" />
