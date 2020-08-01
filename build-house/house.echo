@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
 	<AIModule class="AIModule" path="" Enable="false" />
-	<AndroidBuildSettings class="AndroidBuildSettings" path="" AppName="Build House" Icon="" />
+	<AndroidBuildSettings class="AndroidBuildSettings" path="" AppName="house" IconBackground="Res://icon.png" IconForeground="Res://icon.png" Fullscreen="true" />
 	<AnimModule class="AnimModule" path="" Enable="true" />
 	<AudioDevice class="AudioDevice" path="" />
 	<AudioModule class="AudioModule" path="" Enable="true" />
@@ -17,6 +17,7 @@
 	<GameSettings class="GameSettings" path="" Background="0.298 0.298 0.322 1 " DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" LaunchScene="Res://scene/root.scene" />
 	<GeomModule class="GeomModule" path="" Enable="false" />
 	<GltfModule class="GltfModule" path="" Enable="false" />
+	<Html5BuildSettings class="Html5BuildSettings" path="" Icon="" />
 	<IO class="IO" path="" />
 	<Input class="Input" path="" />
 	<LightModule class="LightModule" path="" Enable="false" ImageBasedLighting="true" Brdf="" />
@@ -38,6 +39,7 @@
 	<UiModule class="UiModule" path="" Enable="true" />
 	<VideoModule class="VideoModule" path="" Enable="false" />
 	<WeChatBuildSettings class="WeChatBuildSettings" path="" Icon="" />
+	<WebAssemblyBuildSettings class="WebAssemblyBuildSettings" path="" Icon="" />
 	<WindowsBuildSettings class="WindowsBuildSettings" path="" Icon="" />
 	<iOSBuildSettings class="iOSBuildSettings" path="" AppName="Build House" Identifier="com.echo.buildhouse" Version="1.1.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="false" LandscapeRight="false" />
 </settings>
