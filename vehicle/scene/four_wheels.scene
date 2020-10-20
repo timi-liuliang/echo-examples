@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" path="" name="sphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="Camera3D" path="" name="Camera3D" Enable="true" Position="0 7.406 -21.572" Rotation="19.983 0 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+	<node class="Camera3D" path="" name="Camera3D" Enable="true" Position="0 7.406 -21.572" Rotation="19.982 0 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	<node class="PhysxBody" path="" name="PhysxBody" Enable="true" Position="0 10 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic">
-		<node class="PhysxShapeCapsule" path="" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="1.966 0 89.962" Scale="1 1 1" Script="" />
+		<node class="PhysxShapeCapsule" path="" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="1.965 0 89.961" Scale="1 1 1" Script="" />
 	</node>
 	<node class="PhysxBody" path="" name="PxStaticPlane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-		<node class="PhysxShapePlane" path="" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.983" Scale="1 1 1" Script="" />
-		<node class="ProceduralGeometry" path="" name="Display" Enable="true" Position="-0.008 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIHBhdGg9IiIgaXNGaW5hbD0iZmFsc2UiIFBvc2l0aW9uPSIwIDAiPgoJCTxwZ19ub2RlIGNsYXNzPSJQR1NwaGVyZSIgcGF0aD0iIiBpc0ZpbmFsPSJmYWxzZSIgUG9zaXRpb249IjAgMCIgLz4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBwYXRoPSIiIGlzRmluYWw9InRydWUiIFBvc2l0aW9uPSIwIDAiIFJvd3M9IjMyIiBDb2x1bW5zPSIzMiIgLz4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBwYXRoPSIiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iLTI3NSAxMjkiIFJvd3M9IjExIiBDb2x1bW5zPSIxMSIgLz4KCTwvcGdfbm9kZT4KCTxwZ19jb25uZWN0cyAvPgo8L3BnX2dlb21ldHJ5Pgo=">
+		<node class="PhysxShapePlane" path="" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.982" Scale="1 1 1" Script="" />
+		<node class="ProceduralGeometry" path="" name="Display" Enable="true" Position="-0.008 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIHBhdGg9IiIgaXNGaW5hbD0iZmFsc2UiIFBvc2l0aW9uPSIwIDAiPgoJCTxwZ19ub2RlIGNsYXNzPSJQR1NwaGVyZSIgcGF0aD0iIiBpc0ZpbmFsPSJmYWxzZSIgUG9zaXRpb249Ii0xOSAxMCIgLz4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBwYXRoPSIiIGlzRmluYWw9InRydWUiIFBvc2l0aW9uPSItMjAgMTQ2IiBSb3dzPSIzMiIgQ29sdW1ucz0iMzIiIC8+CgkJPHBnX25vZGUgY2xhc3M9IlBHR3JpZCIgcGF0aD0iIiBpc0ZpbmFsPSJmYWxzZSIgUG9zaXRpb249Ii0xODkgOTUiIFJvd3M9IjExIiBDb2x1bW5zPSIxMSIgLz4KCTwvcGdfbm9kZT4KCTxwZ19jb25uZWN0cyAvPgo8L3BnX2dlb21ldHJ5Pgo=">
 			<property name="Material">
 				<obj class="Material" path="" Shader="Res://Material/ChessBoard/ChessBoard.shader" />
 			</property>
