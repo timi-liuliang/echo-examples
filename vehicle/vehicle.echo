@@ -15,7 +15,6 @@
 	<Engine class="Engine" path="" />
 	<FrameState class="FrameState" path="" />
 	<GameSettings class="GameSettings" path="" Background="0.298 0.298 0.322 1 " FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" LaunchScene="Res://scene/four_wheels.scene" />
-	<GeomModule class="GeomModule" path="" Enable="true" />
 	<GltfModule class="GltfModule" path="" Enable="true" />
 	<Html5BuildSettings class="Html5BuildSettings" path="" Icon="" />
 	<IO class="IO" path="" />

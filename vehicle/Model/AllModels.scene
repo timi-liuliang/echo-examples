@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="MeshRender" path="" name="MeshRender" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
+	<property name="Mesh" path="Res://Model/SM_Buildings_Floor_5x5_01.mesh" />
+	<property name="Material">
+		<obj class="Material" path="" Shader="_echo_default_3d_shader_HAS_NORMALS" />
+	</property>
+</node>
