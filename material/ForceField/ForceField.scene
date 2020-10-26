@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" path="" name="ForceField" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="ProceduralSphere" path="" name="ProceduralSphere" Enable="true" Position="0 1 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true">
+	<node class="ProceduralGeometry" path="" name="Sphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIHBhdGg9IiIgaXNGaW5hbD0iZmFsc2UiIFBvc2l0aW9uPSIwIDAiPgoJCTxwZ19ub2RlIGNsYXNzPSJQR1NwaGVyZSIgcGF0aD0iIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSYWRpdXM9IjEuMCIgLz4KCTwvcGdfbm9kZT4KCTxwZ19jb25uZWN0cyAvPgo8L3BnX2dlb21ldHJ5Pgo=">
 		<property name="Material">
-			<obj class="Material" path="" Shader="Res://ForceField/ForceField.shader" />
+			<obj class="Material" path="" Shader="Res://ForceField/ForceField.shader" Uniforms.Diffuse="Res://ForceField/hexagongrid.png" />
 		</property>
 	</node>
 </node>
