@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="Spline" path="" name="Spline" Enable="true" Position="0 0 -0.173" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="SplinePoint" path="" name="SplinePoint" Enable="true" Position="-2.917 0 0.711" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="1" />
-	<node class="SplinePoint" path="" name="SplinePoint2" Enable="true" Position="1.455 0 1.964" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="2" />
-	<node class="SplinePoint" path="" name="SplinePoint3" Enable="true" Position="4.692 0 0.967" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="3" />
+<node class="Spline" path="" name="Spline" Enable="true" Position="0 0 -0.172" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="SplinePoint" path="" name="SplinePoint" Enable="true" Position="-1.539 0 7.063" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="1" />
+	<node class="SplinePoint" path="" name="SplinePoint2" Enable="true" Position="1.455 0 1.963" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="2" />
+	<node class="SplinePoint" path="" name="SplinePoint3" Enable="true" Position="4.691 0 0.967" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="3" />
 	<node class="SplinePoint" path="" name="SplinePoint4" Enable="true" Position="-0.178 0 -2.048" Rotation="0 0 0" Scale="1 1 1" Script="" PointId="4" />
-	<node class="SplineSegment" path="" name="SplineSegment" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" EndPointA="1" EndPointB="2" />
-	<node class="SplineSegment" path="" name="SplineSegment2" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" EndPointA="2" EndPointB="3" />
-	<node class="SplineSegment" path="" name="SplineSegment3" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" EndPointA="2" EndPointB="4" />
+	<node class="SplineSegment" path="" name="SplineSegment" Enable="true" Position="-0.042 0 4.513" Rotation="0 0 0" Scale="1 1 1" Script="" EndPointA="1" EndPointB="2">
+		<node class="SplineControlPoint" path="" name="SplineControlPoint" Enable="true" Position="1.083 0 3.362" Rotation="0 0 0" Scale="1 1 1" Script="" />
+		<node class="SplineControlPoint" path="" name="SplineControlPoint2" Enable="true" Position="2.83 0 1.343" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	</node>
+	<node class="SplineSegment" path="" name="SplineSegment2" Enable="true" Position="3.073 0 1.465" Rotation="0 0 0" Scale="1 1 1" Script="" EndPointA="2" EndPointB="3">
+		<node class="SplineControlPoint" path="" name="SplineControlPoint" Enable="true" Position="-0.26 -0 0.973" Rotation="0 0 0" Scale="1 1 1" Script="" />
+		<node class="SplineControlPoint" path="" name="SplineControlPoint2" Enable="true" Position="0.702 0 0.762" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	</node>
+	<node class="SplineSegment" path="" name="SplineSegment3" Enable="true" Position="0.638 0 -0.042" Rotation="0 0 0" Scale="1 1 1" Script="" EndPointA="2" EndPointB="4">
+		<node class="SplineControlPoint" path="" name="SplineControlPoint" Enable="true" Position="-0.805 0 1.082" Rotation="0 0 0" Scale="1 1 1" Script="" />
+		<node class="SplineControlPoint" path="" name="SplineControlPoint2" Enable="true" Position="-1.972 0 -0.719" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	</node>
 </node>
