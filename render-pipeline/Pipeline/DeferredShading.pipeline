@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<pipeline>
+	<stage name="Final">
+		<queue class="RenderQueue" Name="Opaque" Enable="true" Sort="false" />
+		<queue class="RenderQueue" Name="Transparent" Enable="true" Sort="true" />
+		<framebuffer id="0" />
+	</stage>
+</pipeline>
