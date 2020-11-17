@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="ProceduralGeometry" name="ProceduralGeometry" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIxMSIgQ29sdW1ucz0iMTEiIC8+Cgk8L3BnX25vZGU+Cgk8cGdfY29ubmVjdHMgLz4KPC9wZ19nZW9tZXRyeT4K">
+	<property name="Material">
+		<obj class="Material" Shader="Res://Scene/UseTextureRender.shader" Uniforms.Albedo="Res://Pipeline/TextureRender/GBufferColor0.rt" />
+	</property>
+</node>
