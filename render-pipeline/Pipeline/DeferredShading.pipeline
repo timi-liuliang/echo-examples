@@ -10,4 +10,7 @@
 		</queue>
 		<framebuffer id="0" />
 	</stage>
+	<stage name="New Stage">
+		<framebuffer id="4294967295" />
+	</stage>
 </pipeline>
