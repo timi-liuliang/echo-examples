@@ -32,6 +32,7 @@
 	<RaytracingModule class="RaytracingModule" Enable="false" />
 	<RaytracingWorld class="RaytracingWorld" />
 	<RecastModule class="RecastModule" Enable="true" />
+	<Renderer class="Renderer" />
 	<SceneModule class="SceneModule" Enable="false" />
 	<ShaderEditorModule class="ShaderEditorModule" Enable="true" />
 	<SpineModule class="SpineModule" Enable="false" />
