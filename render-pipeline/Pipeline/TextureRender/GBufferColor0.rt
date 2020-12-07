@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<res class="TextureRender" path="Res://Pipeline/TextureRender/GBufferColor0.rt" MipMap="true" Width="514" Height="427" ClearColor="0.831373 0.258824 0.258824 1 ">
+<res class="TextureRender" path="Res://Pipeline/TextureRender/GBufferColor0.rt" MipMap="true" Width="2828" Height="909" ClearColor="0.831373 0.258824 0.258824 1 " Format="PF_RGBA8_UNORM">
 	<channel name="Height" expression="Renderer:getWindowHeight()" />
 	<channel name="Width" expression="Renderer:getWindowWidth()" />
 </res>
