@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="ProceduralGeometry" name="ProceduralGeometry" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJmYWxzZSIgUG9zaXRpb249IjAgMCIgUm93cz0iMTEiIENvbHVtbnM9IjExIiAvPgoJCTxwZ19ub2RlIGNsYXNzPSJQR1NwaGVyZSIgaXNGaW5hbD0idHJ1ZSIgUG9zaXRpb249IjAgMCIgUmFkaXVzPSIxLjAiIC8+Cgk8L3BnX25vZGU+Cgk8cGdfY29ubmVjdHMgLz4KPC9wZ19nZW9tZXRyeT4K">
+<node class="ProceduralGeometry" name="ProceduralGeometry" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJmYWxzZSIgUG9zaXRpb249IjAgMCIgUm93cz0iMTEiIENvbHVtbnM9IjExIiAvPgoJCTxwZ19ub2RlIGNsYXNzPSJQR1NwaGVyZSIgaXNGaW5hbD0iZmFsc2UiIFBvc2l0aW9uPSIwIDAiIFJhZGl1cz0iMS4wIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+Cg==">
 	<property name="Material">
 		<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
 	</property>

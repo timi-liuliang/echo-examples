@@ -11,9 +11,9 @@
 		<property name="FrameBuffer">
 			<obj class="FrameBufferWindow" IsClearColor="true" IsClearDepth="true" />
 		</property>
-		<queue class="ImageFilter" Name="Snow Effect" Enable="true">
+		<queue class="ImageFilter" Name="Gray Scale" Enable="true">
 			<property name="Material">
-				<obj class="Material" Shader="Res://Pipeline/ImageEffect/GrayScale.shader" />
+				<obj class="Material" Shader="Res://Pipeline/ImageEffect/GrayScale.shader" Uniforms.Albedo="Res://Pipeline/TextureRender/GBufferColor0.rt" />
 			</property>
 		</queue>
 	</stage>
