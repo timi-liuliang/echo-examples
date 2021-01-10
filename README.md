@@ -13,3 +13,9 @@ gltf and light prob test
 
 ### Live2d
 ![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/live2d.gif?raw=true)
+
+### GaussianBlur
+![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/gaussianblur.png?raw=true)
+
+### RadialBlur
+![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/radialblur.png?raw=true)
