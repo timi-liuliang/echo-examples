@@ -17,5 +17,5 @@ gltf and light prob test
 ### GaussianBlur
 ![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/gaussianblur.png?raw=true)
 
-### RadialBlur
-![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/radialblur.png?raw=true)
+### ZoomBlur
+![](https://github.com/timi-liuliang/echo-examples/blob/master/ads/zoomblur.png?raw=true)
