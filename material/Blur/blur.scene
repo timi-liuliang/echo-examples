@@ -10,9 +10,14 @@
 			<obj class="Material" Shader="Res://Blur/zoom-blur.shader" />
 		</property>
 	</node>
-	<node class="ProceduralGeometry" name="SpinBlur" Enable="true" Position="28.569 0 0" Rotation="0 0 0" Scale="10 1 10" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIyIiBDb2x1bW5zPSIyIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+CgA=">
+	<node class="ProceduralGeometry" name="SpinBlur" Enable="true" Position="24 0 0" Rotation="0 0 0" Scale="10 1 10" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIyIiBDb2x1bW5zPSIyIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+CgA=">
 		<property name="Material">
-			<obj class="Material" Shader="Res://Blur/spin-blur.shader" Uniforms.Albedo="Res://Blur/wheel.png" />
+			<obj class="Material" Shader="Res://Blur/spin-blur.shader" />
+		</property>
+	</node>
+	<node class="ProceduralGeometry" name="FlowBlur" Enable="true" Position="36 0 0" Rotation="0 0 0" Scale="10 1 10" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIyIiBDb2x1bW5zPSIyIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+CgA=">
+		<property name="Material">
+			<obj class="Material" Shader="Res://Blur/flow-blur.shader" Uniforms.Albedo="Res://Blur/wheel.png" />
 		</property>
 	</node>
 </node>
