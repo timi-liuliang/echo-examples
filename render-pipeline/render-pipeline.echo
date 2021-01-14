@@ -34,7 +34,6 @@
 	<RecastModule class="RecastModule" Enable="true" />
 	<Renderer class="Renderer" />
 	<SceneModule class="SceneModule" Enable="true" />
-	<ShaderEditorModule class="ShaderEditorModule" Enable="true" />
 	<SpineModule class="SpineModule" Enable="true" />
 	<SplineModule class="SplineModule" Enable="true" />
 	<UiEventProcessor class="UiEventProcessor" />
