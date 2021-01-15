@@ -2,28 +2,28 @@
 <pipeline>
 	<stage class="RenderStage" Name="GBuffer">
 		<property name="FrameBuffer">
-			<obj class="FrameBufferOffScreen" IsClearColor="true" IsClearDepth="true" Color0="Res://Pipeline/TextureRender/GBufferColor0.rt" DepthStencil="Res://Pipeline/TextureRender/GBufferDepth.rt" />
+			<obj class="FrameBufferOffScreen" IsClearColor="true" IsClearDepth="true" Color0="Res://pipeline/gbuffer/GBufferColor0.rt" DepthStencil="Res://pipeline/gbuffer/GBufferDepth.rt" />
 		</property>
 		<queue class="RenderQueue" Name="Opaque" Enable="true" Sort="false" />
 		<queue class="RenderQueue" Name="Transparent" Enable="true" Sort="true" />
 	</stage>
 	<stage class="RenderStage" Name="Bloom">
 		<property name="FrameBuffer">
-			<obj class="FrameBufferOffScreen" IsClearColor="false" IsClearDepth="false" Color0="Res://Pipeline/ImageEffect/bloom/BloomBrightColor.rt" DepthStencil="Res://Pipeline/ImageEffect/bloom/BloomBrightDepth.rt" />
+			<obj class="FrameBufferOffScreen" IsClearColor="true" IsClearDepth="true" Color0="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" DepthStencil="Res://pipeline/postprocess/bloom/BloomBrightDepth.rt" />
 		</property>
+		<queue class="ImageFilter" Name="BrightPass" Enable="true">
+			<property name="Material">
+				<obj class="Material" Shader="Res://pipeline/postprocess/bloom/BrightPass.shader" Uniforms.Albedo="Res://pipeline/gbuffer/GBufferColor0.rt" />
+			</property>
+		</queue>
 	</stage>
 	<stage class="RenderStage" Name="Screen Window">
 		<property name="FrameBuffer">
 			<obj class="FrameBufferWindow" IsClearColor="true" IsClearDepth="true" />
 		</property>
-		<queue class="ImageFilter" Name="Gray Scale" Enable="false">
+		<queue class="ImageFilter" Name="Final Process" Enable="true">
 			<property name="Material">
-				<obj class="Material" Shader="Res://Pipeline/ImageEffect/GrayScale.shader" Uniforms.Albedo="Res://Pipeline/TextureRender/GBufferColor0.rt" />
-			</property>
-		</queue>
-		<queue class="ImageFilter" Name="BrightPass" Enable="true">
-			<property name="Material">
-				<obj class="Material" Shader="Res://Pipeline/ImageEffect/bloom/BrightPass.shader" />
+				<obj class="Material" Shader="Res://pipeline/postprocess/FinalProcess.shader" Uniforms.Albedo="Res://pipeline/gbuffer/GBufferColor0.rt" Uniforms.BloomBright="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" />
 			</property>
 		</queue>
 	</stage>
