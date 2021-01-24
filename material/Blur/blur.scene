@@ -2,12 +2,12 @@
 <node class="Node" name="blur" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 	<node class="ProceduralGeometry" name="GaussianBlur" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="10 1 10" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIyIiBDb2x1bW5zPSIyIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+CgA=">
 		<property name="Material">
-			<obj class="Material" Shader="Res://Blur/gaussian-blur.shader" Uniforms.Albedo="Res://Blur/albedo.png" />
+			<obj class="Material" Shader="Res://Blur/gaussian-blur.shader" />
 		</property>
 	</node>
 	<node class="ProceduralGeometry" name="ZoomBlur" Enable="true" Position="12 0 0" Rotation="0 0 0" Scale="10 1 10" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIyIiBDb2x1bW5zPSIyIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+CgA=">
 		<property name="Material">
-			<obj class="Material" Shader="Res://Blur/zoom-blur.shader" />
+			<obj class="Material" Shader="Res://Blur/zoom-blur.shader" Uniforms.Albedo="Res://Blur/albedo.png" Uniforms.Mask="Res://Blur/circle-mask.png" />
 		</property>
 	</node>
 	<node class="ProceduralGeometry" name="SpinBlur" Enable="true" Position="24 0 0" Rotation="0 0 0" Scale="10 1 10" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdHcmlkIiBpc0ZpbmFsPSJ0cnVlIiBQb3NpdGlvbj0iMCAwIiBSb3dzPSIyIiBDb2x1bW5zPSIyIiAvPgoJPC9wZ19ub2RlPgoJPHBnX2Nvbm5lY3RzIC8+CjwvcGdfZ2VvbWV0cnk+CgA=">
