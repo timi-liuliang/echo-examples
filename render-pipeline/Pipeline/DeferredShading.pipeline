@@ -1,29 +1,27 @@
 <?xml version="1.0"?>
 <pipeline>
-	<stage class="RenderStage" Name="GBuffer">
-		<property name="FrameBuffer">
-			<obj class="FrameBufferOffScreen" IsClearColor="true" IsClearDepth="true" Color0="Res://pipeline/gbuffer/GBufferColor0.rt" DepthStencil="Res://pipeline/gbuffer/GBufferDepth.rt" />
-		</property>
+	<stage class="RenderStage" Name="GBuffer" Enable="true">
+		<property name="FrameBuffer" path="Res://pipeline/final/final.fbws" />
 		<queue class="RenderQueue" Name="Opaque" Enable="true" Sort="false" />
 		<queue class="RenderQueue" Name="Transparent" Enable="true" Sort="true" />
 	</stage>
-	<stage class="RenderStage" Name="Bloom">
+	<stage class="RenderStage" Name="Bloom" Enable="false">
 		<property name="FrameBuffer">
 			<obj class="FrameBufferOffScreen" IsClearColor="true" IsClearDepth="true" Color0="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" DepthStencil="Res://pipeline/postprocess/bloom/BloomBrightDepth.rt" />
 		</property>
 		<queue class="ImageFilter" Name="BrightPass" Enable="true">
 			<property name="Material">
-				<obj class="Material" Shader="Res://pipeline/postprocess/bloom/BrightPass.shader" Uniforms.Albedo="Res://pipeline/gbuffer/GBufferColor0.rt" />
+				<obj class="Material" Shader="Res://pipeline/postprocess/bloom/BrightPass.shader" />
 			</property>
 		</queue>
 	</stage>
-	<stage class="RenderStage" Name="Screen Window">
+	<stage class="RenderStage" Name="Screen Window" Enable="false">
 		<property name="FrameBuffer">
 			<obj class="FrameBufferWindow" IsClearColor="true" IsClearDepth="true" />
 		</property>
 		<queue class="ImageFilter" Name="Final Process" Enable="true">
 			<property name="Material">
-				<obj class="Material" Shader="Res://pipeline/postprocess/FinalProcess.shader" Uniforms.Albedo="Res://pipeline/gbuffer/GBufferColor0.rt" Uniforms.BloomBright="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" />
+				<obj class="Material" Shader="Res://pipeline/postprocess/FinalProcess.shader" />
 			</property>
 		</queue>
 	</stage>
