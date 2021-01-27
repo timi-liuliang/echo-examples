@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res class="FrameBufferOffScreen" path="Res://pipeline/postprocess/bloom/BloomBright.fbos" IsClearColor="true" IsClearDepth="true" Color0="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" DepthStencil="Res://pipeline/postprocess/bloom/BloomBrightDepth.rt" />

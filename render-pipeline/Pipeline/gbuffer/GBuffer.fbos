@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<res class="FrameBufferOffScreen" path="Res://pipeline/gbuffer/NewFrameBufferOffScreen_0.fbos" IsClearColor="true" IsClearDepth="true" Color0="" DepthStencil="" />
+<res class="FrameBufferOffScreen" path="Res://pipeline/gbuffer/GBuffer.fbos" IsClearColor="true" IsClearDepth="true" Color0="Res://pipeline/gbuffer/GBufferColor0.rt" DepthStencil="Res://pipeline/gbuffer/GBufferDepth.rt" />
