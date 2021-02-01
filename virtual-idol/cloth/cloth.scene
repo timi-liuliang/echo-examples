@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Node" name="cloth" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="ProceduralGeometry" name="plane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Content="PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxwZ19nZW9tZXRyeT4KCTxwZ19ub2RlIGNsYXNzPSJQR05vZGUiIGlzRmluYWw9ImZhbHNlIiBQb3NpdGlvbj0iMCAwIj4KCQk8cGdfbm9kZSBjbGFzcz0iUEdCb3giIGlzRmluYWw9InRydWUiIFBvc2l0aW9uPSIwIDAiIFNpemU9IjEwIDAuMyAxMCIgLz4KCTwvcGdfbm9kZT4KCTxwZ19jb25uZWN0cyAvPgo8L3BnX2dlb21ldHJ5PgoA">
+		<property name="Material">
+			<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
+		</property>
+	</node>
+</node>
