@@ -23,14 +23,14 @@
 	</stage>
 	<stage class="RenderStage" Name="Debug" Enable="false" EditorOnly="true">
 		<property name="FrameBuffer" path="Res://pipeline/final/final.fbws" />
-		<queue class="ImageFilter" Name="Show Bloom Bright" Enable="true">
-			<property name="Material">
-				<obj class="Material" Shader="Res://pipeline/postprocess/debug/copy.shader" Uniforms.Base="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" />
-			</property>
-		</queue>
 		<queue class="ImageFilter" Name="Show Gbuffer Color0" Enable="true">
 			<property name="Material">
 				<obj class="Material" Shader="Res://pipeline/postprocess/debug/copy.shader" Uniforms.Base="Res://pipeline/gbuffer/GBufferColor0.rt" />
+			</property>
+		</queue>
+		<queue class="ImageFilter" Name="Show Bloom Bright" Enable="true">
+			<property name="Material">
+				<obj class="Material" Shader="Res://pipeline/postprocess/debug/copy.shader" Uniforms.Base="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" />
 			</property>
 		</queue>
 	</stage>
