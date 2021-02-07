@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <pipeline>
+	<stage class="RenderStage" Name="Shadow Map" Enable="true" EditorOnly="false" />
 	<stage class="RenderStage" Name="GBuffer" Enable="true" EditorOnly="false">
 		<property name="FrameBuffer" path="Res://pipeline/gbuffer/GBuffer.fbos" />
 		<queue class="RenderQueue" Name="Opaque" Enable="true" Sort="false" />
