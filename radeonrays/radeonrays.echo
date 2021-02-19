@@ -14,7 +14,7 @@
 	<EffectModule class="EffectModule" Enable="true" />
 	<Engine class="Engine" />
 	<FrameState class="FrameState" />
-	<GameSettings class="GameSettings" Background="0.298 0.298 0.322 1 " FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="Res://pipeline/hybrid.pipeline" LaunchScene="" />
+	<GameSettings class="GameSettings" Background="0.0901961 0.0901961 0.843137 1 " FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="Res://pipeline/hybrid.pipeline" LaunchScene="" />
 	<GltfModule class="GltfModule" Enable="true" />
 	<HLodModule class="HLodModule" Enable="true" />
 	<HitProxyModule class="HitProxyModule" Enable="true" />
