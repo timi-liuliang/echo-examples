@@ -5,4 +5,5 @@
 			<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
 		</property>
 	</node>
+	<node class="PCGFlowGraph" name="PCGFlowGraph" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
 </node>
