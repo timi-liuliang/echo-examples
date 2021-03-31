@@ -14,7 +14,7 @@
 	<EffectModule class="EffectModule" Enable="true" />
 	<Engine class="Engine" />
 	<FrameState class="FrameState" />
-	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="" LaunchScene="Res://island/heart/heart.scene" />
+	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="" LaunchScene="Res://scene/root.scene" />
 	<GltfModule class="GltfModule" Enable="true" />
 	<HLodModule class="HLodModule" Enable="true" />
 	<HitProxyModule class="HitProxyModule" Enable="true" />
