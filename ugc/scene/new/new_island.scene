@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Node" name="NewIsland" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="PCGFlowGraph" name="Heightmap" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+</node>
