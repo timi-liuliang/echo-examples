@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" name="NewIsland" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="PCGFlowGraph" name="Heightmap" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="PCGFlowGraph" name="Heightmap" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Graph="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;PCGFlowGraph&gt;&#10;	&lt;node class=&quot;PCGImagePerlinNoise&quot; Name=&quot;&quot; Position=&quot;0 0&quot; Width=&quot;128&quot; Height=&quot;128&quot; Amplitude=&quot;1.0&quot; GridSize=&quot;32.0&quot; Offset=&quot;0 0&quot; /&gt;&#10;	&lt;node class=&quot;PCGImageSave&quot; Name=&quot;&quot; Position=&quot;0 0&quot; PathName=&quot;&quot; /&gt;&#10;	&lt;node class=&quot;PCGImagePerlinNoise&quot; Name=&quot;&quot; Position=&quot;0 0&quot; Width=&quot;128&quot; Height=&quot;128&quot; Amplitude=&quot;1.0&quot; GridSize=&quot;32.0&quot; Offset=&quot;0 0&quot; /&gt;&#10;	&lt;connect from=&quot;&quot; fidx=&quot;0&quot; to=&quot;&quot; tidx=&quot;0&quot; /&gt;&#10;&lt;/PCGFlowGraph&gt;&#10;" />
 </node>
