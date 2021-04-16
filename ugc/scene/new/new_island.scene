@@ -9,6 +9,6 @@
 				</signal>
 			</node>
 		</node>
-		<node class="UiImage" name="map" Enable="true" Position="-377.088 142.132 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="128" Height="128" Texture="" />
+		<node class="UiImage" name="map" Enable="true" Position="-221.138 12.178 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="600" Height="600" Texture="Res://scene/new/map_preview.png" />
 	</node>
 </node>
