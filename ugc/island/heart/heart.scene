@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="Node" name="Scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+<node class="Node" name="island" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 	<node class="Terrain" name="Terrain" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Data="Res://island/heart/terrain/" HeightRange="256.0" GridSpacing="1">
 		<property name="Material">
 			<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
 		</property>
 	</node>
-	<node class="PCGFlowGraph" name="PCGFlowGraph" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="PCGFlowGraph" name="PCGFlowGraph" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Graph="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;PCGFlowGraph /&gt;&#10;" />
+	<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.997 44.998 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+	<node class="PointLight" name="hero" Enable="true" Position="256 -100 257.286" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false">
+		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.997 44.998 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+	</node>
+	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
+			<signal name="onMouseButtonDown">
+				<connect target="" method="onMouseButtonDown" />
+			</signal>
+			<signal name="onMouseButtonLeave">
+				<connect target="" method="onMouseButtonLeave" />
+			</signal>
+			<signal name="onMouseButtonMove">
+				<connect target="" method="onMouseButtonMove" />
+			</signal>
+			<signal name="onMouseButtonUp">
+				<connect target="" method="onMouseButtonUp" />
+			</signal>
+		</node>
+	</node>
 </node>
