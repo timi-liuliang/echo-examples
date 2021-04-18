@@ -23,6 +23,21 @@ function lobby:onNewGame()
 	self:queueFree()
 end
 
+-- continue
+function lobby:onContinue()
+	-- log info
+	Log:info("continue game")
+	
+	-- load new game scene
+	local newScene = Node.load("Res://scene/island/heart/heart.scene")
+	if newScene~=nil then
+		newScene:setParent(self:getParent())
+	end	
+		
+	-- quit self
+	self:queueFree()
+end
+
 -- quit game
 function lobby:onQuitGame()
 end
