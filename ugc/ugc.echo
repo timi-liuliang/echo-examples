@@ -3,6 +3,7 @@
 	<AIModule class="AIModule" Enable="true" />
 	<AndroidBuildSettings class="AndroidBuildSettings" AppName="ugc" IconBackground="Res://icon.png" IconForeground="Res://icon.png" Fullscreen="true" />
 	<AnimModule class="AnimModule" Enable="true" />
+	<Application class="Application" Enable="true" />
 	<AudioDevice class="AudioDevice" />
 	<AudioModule class="AudioModule" Enable="true" />
 	<Box2DModule class="Box2DModule" Enable="true" FramesPerSecond="60" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />

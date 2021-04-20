@@ -15,8 +15,10 @@ function object:onBackHome()
 end
 
 -- quit
-function object:onQuit()
+function object:onQuitGame()
 	Log:error("quit game")
+	
+	Application:quit()
 end
 
 return setmetatable(object, Object)

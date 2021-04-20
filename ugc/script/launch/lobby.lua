@@ -40,6 +40,7 @@ end
 
 -- quit game
 function lobby:onQuitGame()
+	Application:quit()
 end
 
 return setmetatable(lobby, Object)

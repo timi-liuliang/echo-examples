@@ -9,7 +9,7 @@ end
 -- update
 function ui:update()
 	if Input:isKeyDown(27) then
-		Log:error("esc clicked")
+		Log:info("esc clicked")
 		ui.esc:setEnable(not ui.esc:isEnable())
 	end
 end
