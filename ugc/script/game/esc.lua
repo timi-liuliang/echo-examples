@@ -2,6 +2,7 @@ local object ={}
 
 -- start
 function object:start()
+
 end
 
 -- update
