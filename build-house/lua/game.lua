@@ -43,6 +43,7 @@ function main:start()
 
 	-- connect
 	Object.connect(Input, "onMouseButtonDown", self, "dropHouse")
+	Object.connect(Input, "onKeyDown", self, "onKeyDown")
 
 	-- load score
 	self:loadScore()
@@ -104,6 +105,13 @@ function main:update()
 				self.bgs:setWorldPositionY(bgsY)
 			end
 		end
+	end
+end
+
+-- key down
+function main:onKeyDown(key)
+	if key == 32 then
+		self:dropHouse()
 	end
 end
 
