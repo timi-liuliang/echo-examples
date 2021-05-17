@@ -12,12 +12,12 @@ end
 
 -- back home
 function object:onBackHome()
-	Log:error("back home")
+	Log:info("back home")
 end
 
 -- quit
 function object:onQuitGame()
-	Log:error("quit game")
+	Log:info("quit game")
 	
 	Application:quit()
 end
