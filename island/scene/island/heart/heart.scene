@@ -5,8 +5,8 @@
 			<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
 		</property>
 	</node>
-	<node class="PointLight" name="hero" Enable="true" Position="256 -100 257.286" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Is2D="false">
-		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.986 44.986 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+	<node class="PointLight" name="hero" Enable="true" Position="256 100 257.286" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Is2D="false">
+		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.985 44.985 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
