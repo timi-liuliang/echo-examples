@@ -29,7 +29,7 @@ function lobby:onContinue()
 	Log:info("continue game")
 	
 	-- load new game scene
-	local newScene = Node.load("Res://scene/island/heart/heart.scene")
+	local newScene = Node.load("Res://scene/island/template/a/template.scene")
 	if newScene~=nil then
 		newScene:setParent(self:getParent())
 	end	
