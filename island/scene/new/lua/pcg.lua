@@ -1,5 +1,6 @@
 local object ={}
 object.perlineNode = nil
+object.size = 1
 
 -- start
 function object:start()
@@ -11,10 +12,14 @@ function object:update()
 end
 
 function object:onBigger()
-	Log:info("bigger")
+	self.size = self.size + 1
+	self.size = math.fmod(self.size, 4)
 	
-	self.perlineNode:setWidth(512)
-	self.perlineNode:setHeight(512)
+	local finalSize = (self.size + 1) * 256
+	self.perlineNode:setWidth(finalSize)
+	self.perlineNode:setHeight(finalSize)
+	
+	Log:info("set scene size" .. finalSize)
 end
 
 return setmetatable(object, Object)
