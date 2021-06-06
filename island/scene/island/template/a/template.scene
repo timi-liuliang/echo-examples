@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" name="island" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://scene/island/template/a/lua/root.lua">
-	<node class="Terrain" name="Terrain" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Data="User://island/a/terrain/" HeightRange="256.0" GridSpacing="1">
+	<node class="Terrain" name="terrain" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Data="User://island/a/terrain/" HeightRange="256.0" GridSpacing="1">
 		<property name="Material">
 			<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
 		</property>
@@ -8,8 +8,8 @@
 			<node class="PhysxShapeHeightfield" name="PhysxShapeHeightfield" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Data="User://island/a/terrain/" />
 		</node>
 	</node>
-	<node class="PointLight" name="hero" Enable="true" Position="256 100 257.286" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Is2D="false">
-		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.981 44.981 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+	<node class="PointLight" name="hero" Enable="true" Position="245.891 87.12 209.63" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Is2D="false">
+		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.955 -124.16 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
@@ -42,6 +42,15 @@
 					</signal>
 				</node>
 			</node>
+		</node>
+	</node>
+	<node class="Node" name="test" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="PhysxBody" name="sphere" Enable="true" Position="189.658 47.054 174.093" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic">
+			<node class="PhysxShapeSphere" name="PhysxShapeSphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Radius="10.0" />
+		</node>
+		<node class="PhysxBody" name="capsule" Enable="true" Position="6.236 25.701 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
+			<node class="PhysxShapeCapsule" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Radius="1.0" Height="3.0" />
+			<node class="PhysxShapeBox" name="PhysxShapeBox" Enable="true" Position="0 -2.515 0" Rotation="0 0 0" Scale="1 1 1" Script="" HalfExtents="2 4 8" />
 		</node>
 	</node>
 </node>

@@ -29,7 +29,7 @@
 	<MacBuildSettings class="MacBuildSettings" AppName="ugc" Identifier="com.echo.ugc" Version="1.0.0" Icon="Res://icon.png" />
 	<ModelModule class="ModelModule" Enable="true" />
 	<PCGModule class="PCGModule" Enable="true" />
-	<PhysxModule class="PhysxModule" Enable="true" DebugDraw="Editor" Gravity="0 -9.8 0" Shift="0 0 0" />
+	<PhysxModule class="PhysxModule" Enable="true" DebugDraw="All" Gravity="0 -9.8 0" Shift="0 0 0" />
 	<PluginSettings class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
 	<RaytracingModule class="RaytracingModule" Enable="true" />
 	<RaytracingWorld class="RaytracingWorld" />
