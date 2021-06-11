@@ -38,6 +38,7 @@
 	<SceneModule class="SceneModule" Enable="true" />
 	<SpineModule class="SpineModule" Enable="true" />
 	<SplineModule class="SplineModule" Enable="true" />
+	<Terminal class="Terminal" />
 	<UiEventProcessor class="UiEventProcessor" />
 	<UiModule class="UiModule" Enable="true" />
 	<VideoModule class="VideoModule" Enable="true" />
