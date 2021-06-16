@@ -28,7 +28,8 @@ end
 function object:move(moveDir)
 	if moveDir~=nil then
 		self.moveDir = moveDir:normalize()		
-		self:setWorldPosition(self:getWorldPosition() + self.moveDir * self.moveSpeed)
+		--self:setWorldPosition(self:getWorldPosition() + self.moveDir * self.moveSpeed)
+		self:setLinearVelocity(self.moveDir * self.moveSpeed)
 	end	
 end
 

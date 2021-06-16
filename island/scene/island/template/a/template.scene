@@ -8,9 +8,9 @@
 			<node class="PhysxShapeHeightfield" name="PhysxShapeHeightfield" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Data="User://island/a/terrain/" />
 		</node>
 	</node>
-	<node class="PhysxBody" name="hero" Enable="true" Position="42.069 13.586 89.439" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic">
-		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.953 -124.158 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
-		<node class="PhysxShapeCapsule" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="89.98 0 0" Scale="1 1 1" Script="" Radius="1.0" Height="2.0" />
+	<node class="PhysxBody" name="hero" Enable="true" Position="42.069 13.586 89.439" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Type="Dynamic">
+		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.951 -124.156 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+		<node class="PhysxShapeCapsule" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="0 0 89.998" Scale="1 1 1" Script="" Radius="1.0" Height="2.0" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
