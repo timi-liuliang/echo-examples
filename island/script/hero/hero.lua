@@ -24,15 +24,6 @@ function object:fire()
 	end
 end
 
--- move
-function object:move(moveDir)
-	if moveDir~=nil then
-		self.moveDir = moveDir:normalize()		
-		--self:setWorldPosition(self:getWorldPosition() + self.moveDir * self.moveSpeed)
-		self:setLinearVelocity(self.moveDir * self.moveSpeed)
-	end	
-end
-
 -- direction
 function object:setDir(inDir)
 	if inDir ~= nil and inDir:length() > 0.5 then
@@ -75,7 +66,12 @@ function object:moveByKeyEvent()
 		moveDir = moveDir + self:horizonDir(backDir)
 	end
 
-	self:move(moveDir)
+	if moveDir~=nil then
+		self.moveDir = moveDir:normalize()		
+		--self:setWorldPosition(self:getWorldPosition() + self.moveDir * self.moveSpeed)
+		--self:setLinearVelocity(self.moveDir * self.moveSpeed)
+		self:move(self.moveDir * self.moveSpeed)
+	end	
 end
 
 return setmetatable(object, Object)

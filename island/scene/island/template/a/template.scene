@@ -8,9 +8,8 @@
 			<node class="PhysxShapeHeightfield" name="PhysxShapeHeightfield" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Data="User://island/a/terrain/" />
 		</node>
 	</node>
-	<node class="PhysxBody" name="hero" Enable="true" Position="42.069 13.586 89.439" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Type="Dynamic">
-		<node class="Camera3D" name="main" Enable="true" Position="0 10 0" Rotation="44.951 -124.156 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
-		<node class="PhysxShapeCapsule" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="0 0 89.998" Scale="1 1 1" Script="" Radius="1.0" Height="2.0" />
+	<node class="PhysxControllerCapsule" name="hero" Enable="true" Position="25.86 9.88 19.985" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Radius="1.0" Height="3.0">
+		<node class="Camera3D" name="main" Enable="true" Position="6.072 9.998 8.767" Rotation="44.946 -124.151 -0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
@@ -48,10 +47,6 @@
 	<node class="Node" name="test" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node class="PhysxBody" name="sphere" Enable="true" Position="189.658 47.054 174.093" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic">
 			<node class="PhysxShapeSphere" name="PhysxShapeSphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Radius="10.0" />
-		</node>
-		<node class="PhysxBody" name="capsule" Enable="true" Position="6.236 25.701 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-			<node class="PhysxShapeCapsule" name="PhysxShapeCapsule" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Radius="1.0" Height="3.0" />
-			<node class="PhysxShapeBox" name="PhysxShapeBox" Enable="true" Position="0 -2.515 0" Rotation="0 0 0" Scale="1 1 1" Script="" HalfExtents="2 4 8" />
 		</node>
 	</node>
 </node>
