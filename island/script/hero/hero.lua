@@ -70,7 +70,7 @@ function object:moveByKeyEvent()
 		self.moveDir = moveDir:normalize()		
 		--self:setWorldPosition(self:getWorldPosition() + self.moveDir * self.moveSpeed)
 		--self:setLinearVelocity(self.moveDir * self.moveSpeed)
-		self:move(self.moveDir * self.moveSpeed)
+		self:move(self.moveDir * self.moveSpeed * 0.02)
 	end	
 end
 
