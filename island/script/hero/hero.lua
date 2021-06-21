@@ -67,10 +67,14 @@ function object:moveByKeyEvent()
 	end
 
 	if moveDir~=nil then
-		self.moveDir = moveDir:normalize()		
-		--self:setWorldPosition(self:getWorldPosition() + self.moveDir * self.moveSpeed)
-		--self:setLinearVelocity(self.moveDir * self.moveSpeed)
-		self:move(self.moveDir * self.moveSpeed * 0.02)
+		self.moveDir = moveDir:normalize()
+		
+		local moveDistance = self.moveDir * self.moveSpeed * 0.035
+		if not self:overlap() then
+			moveDistance = moveDistance + vec3(0.0, -0.8, 0.0)
+		end
+
+		self:move(moveDistance)
 	end	
 end
 
