@@ -1,7 +1,16 @@
+-- Enum
+local EMoveState = {
+	Normal  = 0,
+	Fall    = 1,
+	Slide   = 2,
+}
+
 local object ={}
 object.camera = nil
 object.moveSpeed = 3.5
 object.moveDir = vec3(0.0, 0.0, 0.0)
+object.moveState = EMoveState.Normal
+object.verticalSpeed = vec3(0.0, 0.0, 0.0)
 
 -- start
 function object:start()
@@ -9,7 +18,10 @@ function object:start()
 end
 
 -- update
-function object:update()	
+function object:update()
+	-- update movestate
+	self:updateMoveState()
+			
 	-- move by key event
 	self:moveByKeyEvent()
 end
@@ -38,6 +50,17 @@ end
 function object:horizonDir(inDir)
 	local dir = vec3(inDir.x, 0.0, inDir.z)
 	return dir:normalize()
+end
+
+-- update move state
+function object:updateMoveState()
+	if not self:overlap() then
+		self.moveState = EMoveState.Fall
+		Log:error(EMoveState.Fall)
+	else
+		self.moveState = EMoveState.Normal
+		self.verticalSpeed = vec3(0.0, 0.0, 0.0)
+	end
 end
 
 -- move based on key event
@@ -70,8 +93,12 @@ function object:moveByKeyEvent()
 		self.moveDir = moveDir:normalize()
 		
 		local moveDistance = self.moveDir * self.moveSpeed * 0.035
-		if not self:overlap() then
-			moveDistance = moveDistance + vec3(0.0, -0.8, 0.0)
+		if self.moveState == EMoveState.Fall then
+			local t = Engine:getFrameTime()
+			moveDistance = moveDistance + self.verticalSpeed * t + 0.5 * vec3(0.0, -9.8, 0.0) * t * t
+			
+			-- update horizonal speed
+			self.verticalSpeed = self.verticalSpeed + vec3(0.0, -9.8, 0.0) * t
 		end
 
 		self:move(moveDistance)
