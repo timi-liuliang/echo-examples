@@ -20,7 +20,7 @@ end
 -- update
 function object:update()
 	-- update movestate
-	--self:updateMoveState()
+	self:updateMoveState()
 			
 	-- move by key event
 	self:moveByKeyEvent()
@@ -54,11 +54,12 @@ end
 
 -- update move state
 function object:updateMoveState()
-	if not self:overlap() then
-		--self.moveState = EMoveState.Fall
+	local unitDir = vec3(0.0, -1.0, 0.0)
+	if not self:sweep( unitDir, 1.01) then
+		self.moveState = EMoveState.Fall
 	else
-		--self.moveState = EMoveState.Normal
-		--self.verticalSpeed = vec3(0.0, 0.0, 0.0)
+		self.moveState = EMoveState.Normal
+		self.verticalSpeed = 0.0
 	end
 end
 
@@ -94,11 +95,11 @@ function object:moveByKeyEvent()
 		local moveDistance = self.moveDir * self.moveSpeed * 0.035
 		if self.moveState == EMoveState.Fall then
 			local t = Engine:getFrameTime()
-			
-			--moveDistance = moveDistance + self.verticalSpeed * t + 0.5 * vec3(0.0, -9.8, 0.0) * t * t
+			local verticalDistance = self.verticalSpeed * t + 0.5 * (-9.8) * t * t
+			moveDistance = moveDistance + vec3(0.0, verticalDistance, 0.0)
 			
 			-- update horizonal speed
-			--self.verticalSpeed = self.verticalSpeed + vec3(0.0, -9.8, 0.0) * t
+			self.verticalSpeed = self.verticalSpeed + (-9.8) * t
 		end
 
 		self:move(moveDistance)
