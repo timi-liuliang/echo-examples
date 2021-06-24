@@ -9,8 +9,8 @@ local object ={}
 object.camera = nil
 object.moveSpeed = 3.5
 object.moveDir = vec3(0.0, 0.0, 0.0)
-object.moveState = EMoveState.Normal
-object.verticalSpeed = vec3(0.0, 0.0, 0.0)
+object.moveState = EMoveState.Fall
+object.verticalSpeed = 0.0
 
 -- start
 function object:start()
@@ -20,7 +20,7 @@ end
 -- update
 function object:update()
 	-- update movestate
-	self:updateMoveState()
+	--self:updateMoveState()
 			
 	-- move by key event
 	self:moveByKeyEvent()
@@ -55,11 +55,10 @@ end
 -- update move state
 function object:updateMoveState()
 	if not self:overlap() then
-		self.moveState = EMoveState.Fall
-		Log:error(EMoveState.Fall)
+		--self.moveState = EMoveState.Fall
 	else
-		self.moveState = EMoveState.Normal
-		self.verticalSpeed = vec3(0.0, 0.0, 0.0)
+		--self.moveState = EMoveState.Normal
+		--self.verticalSpeed = vec3(0.0, 0.0, 0.0)
 	end
 end
 
@@ -95,10 +94,11 @@ function object:moveByKeyEvent()
 		local moveDistance = self.moveDir * self.moveSpeed * 0.035
 		if self.moveState == EMoveState.Fall then
 			local t = Engine:getFrameTime()
-			moveDistance = moveDistance + self.verticalSpeed * t + 0.5 * vec3(0.0, -9.8, 0.0) * t * t
+			
+			--moveDistance = moveDistance + self.verticalSpeed * t + 0.5 * vec3(0.0, -9.8, 0.0) * t * t
 			
 			-- update horizonal speed
-			self.verticalSpeed = self.verticalSpeed + vec3(0.0, -9.8, 0.0) * t
+			--self.verticalSpeed = self.verticalSpeed + vec3(0.0, -9.8, 0.0) * t
 		end
 
 		self:move(moveDistance)
