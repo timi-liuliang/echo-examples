@@ -8,8 +8,8 @@
 			<node class="PhysxShapeHeightfield" name="PhysxShapeHeightfield" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Data="User://island/a/terrain/" />
 		</node>
 	</node>
-	<node class="PhysxControllerCapsule" name="hero" Enable="true" Position="25.86 1 19.985" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" Radius="0.5" Height="1.0">
-		<node class="Camera3D" name="main" Enable="true" Position="6.072 9.998 8.767" Rotation="44.93 -124.135 -0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+	<node class="PhysxControllerCapsule" name="hero" Enable="true" Position="25.86 1 19.985" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" ContactOffset="0.1" Radius="0.5" Height="1.0">
+		<node class="Camera3D" name="main" Enable="true" Position="6.072 9.998 8.767" Rotation="44.924 -124.129 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
@@ -47,6 +47,9 @@
 	<node class="Node" name="test" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
 		<node class="PhysxBody" name="sphere" Enable="true" Position="189.658 47.054 174.093" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic">
 			<node class="PhysxShapeSphere" name="PhysxShapeSphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Radius="10.0" />
+		</node>
+		<node class="PhysxBody" name="plane" Enable="false" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
+			<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.994" Scale="1 1 1" Script="" />
 		</node>
 	</node>
 </node>

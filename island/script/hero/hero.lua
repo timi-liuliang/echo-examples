@@ -55,7 +55,8 @@ end
 -- update move state
 function object:updateMoveState()
 	local unitDir = vec3(0.0, -1.0, 0.0)
-	if not self:sweep( unitDir, 1.01) then
+	local distance = self:getContactOffset()* 1.05
+	if not self:sweep( unitDir, distance) then
 		self.moveState = EMoveState.Fall
 	else
 		self.moveState = EMoveState.Normal
