@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="Node" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+<node class="Node" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/root/root.lua">
 	<node class="Node" path="Res://scene/lobby/lobby.scene" name="lobby" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/launch/lobby.lua" />
 </node>

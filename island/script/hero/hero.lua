@@ -1,24 +1,30 @@
--- Enum
+require "script.util.keys"
+
+-- Enum move state
 local EMoveState = {
 	Normal  = 0,
 	Fall    = 1,
 	Slide   = 2,
+	Jump    = 3,
 }
 
-local object ={}
-object.camera = nil
-object.moveSpeed = 3.5
-object.moveDir = vec3(0.0, 0.0, 0.0)
-object.moveState = EMoveState.Fall
-object.verticalSpeed = 0.0
+local hero ={}
+hero.camera = nil
+hero.moveSpeed = 3.5
+hero.moveDir = vec3(0.0, 0.0, 0.0)
+hero.moveState = EMoveState.Fall
+hero.verticalSpeed = 0.0
 
 -- start
-function object:start()
+function hero:start()
 	self.camera = self:getNode("main")
+	
+	-- key down
+	Object.connect(Input, "onKeyDown", self, "onKeyDown")
 end
 
 -- update
-function object:update()
+function hero:update()
 	-- update movestate
 	self:updateMoveState()
 			
@@ -27,7 +33,7 @@ function object:update()
 end
 
 -- fire
-function object:fire()
+function hero:fire()
 	for i=0, self:getChildNum()-1 do
 		local platform = self:getChildByIndex(i)
 		local weapon = platform:getNode("weapon")
@@ -37,7 +43,7 @@ function object:fire()
 end
 
 -- direction
-function object:setDir(inDir)
+function hero:setDir(inDir)
 	if inDir ~= nil and inDir:length() > 0.5 then
 		local fromDir = vec3(1.0, 0.0, 0.0)
 		local toDir = inDir:normalize()
@@ -47,17 +53,21 @@ function object:setDir(inDir)
 end
 
 -- horizon dir
-function object:horizonDir(inDir)
+function hero:horizonDir(inDir)
 	local dir = vec3(inDir.x, 0.0, inDir.z)
 	return dir:normalize()
 end
 
 -- update move state
-function object:updateMoveState()
+function hero:updateMoveState()
 	local unitDir = vec3(0.0, -1.0, 0.0)
 	local distance = self:getContactOffset()* 1.05
 	if not self:sweep( unitDir, distance) then
-		self.moveState = EMoveState.Fall
+		if self.verticalSpeed < 0.0 then
+			self.moveState = EMoveState.Fall
+		else
+			self.moveState = EMoveState.Jump
+		end
 	else
 		self.moveState = EMoveState.Normal
 		self.verticalSpeed = 0.0
@@ -65,7 +75,7 @@ function object:updateMoveState()
 end
 
 -- move based on key event
-function object:moveByKeyEvent()
+function hero:moveByKeyEvent()
 	-- camera dir
 	local orient = self.camera:getWorldOrientation()
 	
@@ -94,7 +104,7 @@ function object:moveByKeyEvent()
 		self.moveDir = moveDir:normalize()
 		
 		local moveDistance = self.moveDir * self.moveSpeed * 0.035
-		if self.moveState == EMoveState.Fall then
+		if self.moveState == EMoveState.Fall or self.moveState == EMoveState.Jump then
 			local t = Engine:getFrameTime()
 			local verticalDistance = self.verticalSpeed * t + 0.5 * (-9.8) * t * t
 			moveDistance = moveDistance + vec3(0.0, verticalDistance, 0.0)
@@ -107,4 +117,17 @@ function object:moveByKeyEvent()
 	end	
 end
 
-return setmetatable(object, Object)
+function hero:onKeyDown(key)
+	if key == Keys.Space then	
+		if self.moveState == EMoveState.Normal then
+			-- jump
+			Log:info("hero jump")
+			self.verticalSpeed = 6.0
+			
+			-- move up a little
+			self:move(vec(0.0, 0.1, 0.0))
+		end
+	end
+end
+
+return setmetatable(hero, Object)
