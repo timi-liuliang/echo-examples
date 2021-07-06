@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res class="Material" path="Res://model/material/terrain.material" Shader="Res://model/material/terrain.shader" />
