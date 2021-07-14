@@ -14,10 +14,12 @@ hero.moveSpeed = 3.5
 hero.moveDir = vec3(0.0, 0.0, 0.0)
 hero.moveState = EMoveState.Fall
 hero.verticalSpeed = 0.0
+hero.spine = nil
 
 -- start
 function hero:start()
 	self.camera = self:getNode("main")
+	self.spine = self:getNode("Spine")
 	
 	-- key down
 	Object.connect(Input, "onKeyDown", self, "onKeyDown")
@@ -87,16 +89,22 @@ function hero:moveByKeyEvent()
 	
 	local moveDir = vec3(0.0, 0.0, 0.0)
 	
-	if Input:isKeyDown(65) then
+	if Input:isKeyDown(Keys.A) then
 		moveDir = moveDir + self:horizonDir(leftDir)
+		
+		-- face left
+		self.spine:setLocalScaling(vec3(0.004, 0.004, 1.0))
 	end
-	if Input:isKeyDown(68) then
+	if Input:isKeyDown(Keys.D) then
 		moveDir = moveDir + self:horizonDir(rightDir)
+		
+		-- face right
+		self.spine:setLocalScaling(vec3(-0.004, 0.004, 1.0))
 	end
-	if Input:isKeyDown(87) then
+	if Input:isKeyDown(Keys.W) then
 		moveDir = moveDir + self:horizonDir(forwardDir)
 	end
-	if Input:isKeyDown(83) then
+	if Input:isKeyDown(Keys.S) then
 		moveDir = moveDir + self:horizonDir(backDir)
 	end
 
@@ -114,6 +122,13 @@ function hero:moveByKeyEvent()
 		end
 
 		self:move(moveDistance)
+		
+		-- play animation
+		if moveDistance:length() > 0.01 then
+			self.spine:playAnim("run", true)
+		else
+			self.spine:playAnim("idle", true)
+		end
 	end	
 end
 
@@ -127,6 +142,10 @@ function hero:onKeyDown(key)
 			-- move up a little
 			self:move(vec(0.0, 0.1, 0.0))
 		end
+	end
+
+	if key == Keys.F then
+		self.spine:playAnim("attack", false)
 	end
 end
 
