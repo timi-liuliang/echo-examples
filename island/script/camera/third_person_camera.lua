@@ -2,9 +2,9 @@ local object ={}
 
 object.lookAtPosition = nil
 object.length = 10.0
-object.pitch = 0.0
+object.pitch = 45.0
 object.pitchSpeed = 0.3
-object.yaw = 0.0
+object.yaw = 45.0
 object.yawSpeed = 0.7
 object.currentDir = vec3(0.0, 0.0, 1.0)
 

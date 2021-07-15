@@ -147,6 +147,11 @@ function hero:onKeyDown(key)
 	if key == Keys.F then
 		self.spine:playAnim("attack", false)
 	end
+
+	Log:error(key)
+	if key == Keys.Tab then
+		self.camera:rotatePitchYaw(0.0, 90.0)
+	end
 end
 
 return setmetatable(hero, Object)

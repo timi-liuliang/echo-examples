@@ -30,7 +30,8 @@ function object:onMouseButtonMove()
 		local offset = curPos - self.clickPos	
 		
 		-- rotate camera
-		self.mainCamera:rotatePitchYaw(offset.y, offset.x)
+		self.mainCamera:rotatePitchYaw(0.0, 0.0)
+		--self.mainCamera:rotatePitchYaw(offset.y, offset.x)
 		
 		self.clickPos = curPos
 	end
