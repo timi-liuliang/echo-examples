@@ -6,9 +6,10 @@
 			<node class="PhysxShapeHeightfield" name="PhysxShapeHeightfield" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Data="User://island/a/terrain/" />
 		</node>
 	</node>
+	<node class="PCGFlowGraph" name="tree" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/pcg/tree_generation.lua" Graph="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;PCGFlowGraph /&gt;&#10;" />
 	<node class="PhysxControllerCapsule" name="hero" Enable="true" Position="25.86 1 19.985" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" ContactOffset="0.1" Radius="0.5" Height="1.0">
-		<node class="Camera3D" name="main" Enable="true" Position="0.305 6.459 -2.828" Rotation="59.998 0 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
-		<node class="Spine" path="Res://model/character/hero/hero.scene" name="Spine" Enable="true" Position="0 -1 0" Rotation="44.999 -179.999 0" Scale="0.004 0.004 1" Script="" RenderType="3d" Visible="true" Billboard="ViewDir" Spin="Res://model/character/hero/hero.json" Atlas="Res://model/character/hero/hero.atlas" Anim="idle" />
+		<node class="Camera3D" name="main" Enable="true" Position="0.305 6.459 -2.828" Rotation="59.988 0 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+		<node class="Spine" path="Res://model/character/hero/hero.scene" name="Spine" Enable="true" Position="0 -1 0" Rotation="54.966 -153.593 0" Scale="0.004 0.004 1" Script="" RenderType="3d" Visible="true" Billboard="ViewDir" Spin="Res://model/character/hero/hero.json" Atlas="Res://model/character/hero/hero.atlas" Anim="idle" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
@@ -41,14 +42,6 @@
 					</signal>
 				</node>
 			</node>
-		</node>
-	</node>
-	<node class="Node" name="test" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node class="PhysxBody" name="sphere" Enable="true" Position="189.658 47.054 174.093" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Dynamic">
-			<node class="PhysxShapeSphere" name="PhysxShapeSphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Radius="10.0" />
-		</node>
-		<node class="PhysxBody" name="plane" Enable="false" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-			<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.974" Scale="1 1 1" Script="" />
 		</node>
 	</node>
 </node>

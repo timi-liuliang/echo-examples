@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Sprite" name="pine_tree_a" Enable="true" Position="0 0 0" Rotation="28.84 -177.065 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" Billboard="ViewDir" Width="2.0" Height="4.0" Offset="0 2">
+	<property name="Material">
+		<obj class="Material" Shader="ECHO_DEFAULT_2D_SHADER_" Uniforms.BaseColor="Res://model/tree/Horse_Race_Stadium_p2_17.png" />
+	</property>
+</node>
