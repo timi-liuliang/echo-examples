@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="Spine" name="Spine" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.001 0.001 1" Script="" RenderType="3d" Visible="true" Spin="Res://model/character/hero/hero.json" Atlas="Res://model/character/hero/hero.atlas" Anim="idle" />
+<node class="Spine" name="Spine" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.004 0.004 1" Script="" RenderType="3d" Visible="true" Billboard="ViewDir" Spin="Res://model/character/hero/hero.json" Atlas="Res://model/character/hero/hero.atlas" Anim="idle" />
