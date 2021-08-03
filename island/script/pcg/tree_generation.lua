@@ -2,7 +2,10 @@ local TreeGenerator ={}
 
 -- start
 function TreeGenerator:start()
-	self:generateTrees("Res://model/tree/pine_tree_a.scene", 128)
+	self:generateTrees("Res://model/tree/pine_tree_a.scene", 128, os.time())
+	self:generateTrees("Res://model/tree/small_tree.scene", 64, os.time() * 2.0)
+	self:generateTrees("Res://model/grass/grass_1.scene", 64, os.time() * 3.0)
+	self:generateTrees("Res://model/stone/flint.scene", 64, os.time() * 4.0)
 end
 
 -- update
@@ -10,9 +13,9 @@ function TreeGenerator:update()
 end
 
 -- generate trees
-function TreeGenerator:generateTrees(treePathName, count)	
+function TreeGenerator:generateTrees(treePathName, count, seed)	
 	-- set random seed
-	math.randomseed(os.time())
+	math.randomseed(seed)
 	
 	-- count
 	for i=1, count, 1 do

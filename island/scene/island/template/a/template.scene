@@ -8,8 +8,8 @@
 	</node>
 	<node class="PCGFlowGraph" name="tree" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/pcg/tree_generation.lua" Graph="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;PCGFlowGraph /&gt;&#10;" />
 	<node class="PhysxControllerCapsule" name="hero" Enable="true" Position="0 1 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/hero/hero.lua" ContactOffset="0.1" Radius="0.5" Height="1.0">
-		<node class="Camera3D" name="main" Enable="true" Position="0.305 6.459 -2.828" Rotation="59.981 0 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
-		<node class="Spine" path="Res://model/character/hero/hero.scene" name="Spine" Enable="true" Position="0 -1 0" Rotation="5.121 58.257 0" Scale="0.004 0.004 1" Script="" RenderType="3d" Visible="true" Billboard="ViewDir" Spin="Res://model/character/hero/hero.json" Atlas="Res://model/character/hero/hero.atlas" Anim="idle" />
+		<node class="Camera3D" name="main" Enable="true" Position="0.305 6.459 -2.828" Rotation="59.978 0 0" Scale="1 1 1" Script="Res://script/camera/third_person_camera.lua" Near="0.3" Far="1500.0" />
+		<node class="Spine" path="Res://model/character/hero/hero.scene" name="Spine" Enable="true" Position="0 -1 0" Rotation="5.118 58.254 0" Scale="0.004 0.004 1" Script="" RenderType="3d" Visible="true" Billboard="ViewDir" Spin="Res://model/character/hero/hero.json" Atlas="Res://model/character/hero/hero.atlas" Anim="idle" />
 	</node>
 	<node class="Node" name="ui" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/game/ui.lua">
 		<node class="UiEventRegionRect" name="center_region" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://script/camera/ui_center_region.lua" Type="ui" Width="1536" Height="900">
