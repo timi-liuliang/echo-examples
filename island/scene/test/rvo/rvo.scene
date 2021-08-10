@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Node" name="rvo" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="RvoAgent" name="RvoAgent" Enable="true" Position="0 0 -3.812" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="RvoAgent" name="RvoAgent2" Enable="true" Position="0 0 4.152" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="RvoAgent" name="RvoAgent3" Enable="true" Position="4.263 0 3.607" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="RvoAgent" name="RvoAgent4" Enable="true" Position="5.835 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="RvoAgent" name="RvoAgent5" Enable="true" Position="-6.462 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="RvoAgent" name="RvoAgent6" Enable="true" Position="-6.699 0 -4.671" Rotation="0 0 0" Scale="1 1 1" Script="" />
+</node>
