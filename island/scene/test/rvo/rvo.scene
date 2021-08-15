@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" name="rvo" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="RvoAgent" name="RvoAgent" Enable="true" Position="-1.57 0 -0.025" Rotation="0 0 3.808" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="0 0 0" />
-	<node class="RvoAgent" name="RvoAgent2" Enable="true" Position="6.269 0 1.445" Rotation="0 0 -4.147" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="0 0 0" />
-	<node class="RvoAgent" name="RvoAgent3" Enable="true" Position="0.367 0 -0.523" Rotation="-4.258 0 -3.603" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="0 0 0" />
-	<node class="RvoAgent" name="RvoAgent4" Enable="true" Position="-1.006 0 -1.978" Rotation="-5.796 0 0" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="0 0 0" />
-	<node class="RvoAgent" name="RvoAgent5" Enable="true" Position="0.391 0 -1.924" Rotation="6.456 0 0" Scale="1 1 1" Script="" Radius="0.4" Speed="5.0" Goal="0 0 0" />
-	<node class="RvoAgent" name="RvoAgent6" Enable="true" Position="-1.228 0 1.945" Rotation="6.693 0 4.666" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="0 0 0" />
-	<node class="Camera3D" name="Camera3D" Enable="true" Position="-5.126 31.656 -5.859" Rotation="76.994 0 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+	<node class="RvoAgent" name="RvoAgent" Enable="true" Position="-1.57 0 -0.025" Rotation="0 0 3.803" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="1.57 0 0.05" />
+	<node class="RvoAgent" name="RvoAgent2" Enable="true" Position="6.269 0 1.445" Rotation="0 0 -4.142" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="-6.269 0 0" />
+	<node class="RvoAgent" name="RvoAgent3" Enable="true" Position="3.937 0 -0.523" Rotation="-4.253 -0 -3.598" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="-4 0 0.5" />
+	<node class="RvoAgent" name="RvoAgent4" Enable="true" Position="-1.006 0 -1.978" Rotation="-5.791 0 0" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="2 0 3" />
+	<node class="RvoAgent" name="RvoAgent5" Enable="true" Position="0.391 0 -1.924" Rotation="6.451 0 0" Scale="1 1 1" Script="" Radius="0.4" Speed="5.0" Goal="-0.5 0 1.899" />
+	<node class="RvoAgent" name="RvoAgent6" Enable="true" Position="-1.228 0 1.945" Rotation="6.688 -0 4.661" Scale="1 1 1" Script="" Radius="1.0" Speed="1.0" Goal="1.299 0 -2" />
+	<node class="Camera3D" name="Camera3D" Enable="true" Position="-5.125 31.656 -5.859" Rotation="76.989 0 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 </node>
