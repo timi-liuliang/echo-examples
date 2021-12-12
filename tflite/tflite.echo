@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<AIModule class="AIModule" Enable="true" />
+	<AndroidBuildSettings class="AndroidBuildSettings" AppName="tflite" IconBackground="Res://icon.png" IconForeground="Res://icon.png" Fullscreen="true" />
+	<AnimModule class="AnimModule" Enable="true" />
+	<Application class="Application" Enable="true" />
+	<AudioDevice class="AudioDevice" />
+	<AudioModule class="AudioModule" Enable="true" />
+	<Box2DModule class="Box2DModule" Enable="true" FramesPerSecond="60" DebugDraw="Editor" PixelsPerMeter="32.0" Gravity="0 -9.8" />
+	<BuildModule class="BuildModule" Enable="true" />
+	<CameraModule class="CameraModule" Enable="true" />
+	<EditorCameraSettings class="EditorCameraSettings" MoveSpeed="1.0" NearClip="0.2" FarClip="2500.0" />
+	<EditorGeneralSettings class="EditorGeneralSettings" Show3dGrid="true" />
+	<EditorRenderSettings class="EditorRenderSettings" PolygonMode="Fill" />
+	<EditorSettingsModule class="EditorSettingsModule" Enable="true" />
+	<EffectModule class="EffectModule" Enable="true" />
+	<Engine class="Engine" />
+	<FrameState class="FrameState" />
+	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="Engine://Render/Pipeline/DeferredShading.pipeline" LaunchScene="" />
+	<GltfModule class="GltfModule" Enable="true" />
+	<HLodModule class="HLodModule" Enable="true" />
+	<HitProxyModule class="HitProxyModule" Enable="true" />
+	<Html5BuildSettings class="Html5BuildSettings" Icon="" />
+	<HttpModule class="HttpModule" Enable="true" />
+	<IO class="IO" />
+	<Input class="Input" />
+	<LightModule class="LightModule" Enable="true" ImageBasedLighting="true" Brdf="" />
+	<Live2DModule class="Live2DModule" Enable="true" />
+	<Localization class="Localization" />
+	<Log class="Log" />
+	<MacBuildSettings class="MacBuildSettings" AppName="tflite" Identifier="com.echo.tflite" Version="1.0.0" Icon="Res://icon.png" />
+	<ModelModule class="ModelModule" Enable="true" />
+	<OpenDriveModule class="OpenDriveModule" Enable="true" />
+	<PCGModule class="PCGModule" Enable="true" />
+	<PhysxModule class="PhysxModule" Enable="true" DebugDraw="Editor" Gravity="0 -9.8 0" Shift="0 0 0" />
+	<PluginSettings class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
+	<RaytracingModule class="RaytracingModule" Enable="true" />
+	<RaytracingWorld class="RaytracingWorld" />
+	<RecastModule class="RecastModule" Enable="true" />
+	<Renderer class="Renderer" />
+	<RvoModule class="RvoModule" Enable="true" DebugDraw="Editor" />
+	<SceneModule class="SceneModule" Enable="true" />
+	<SpineModule class="SpineModule" Enable="true" />
+	<SplineModule class="SplineModule" Enable="true" />
+	<TFLiteModule class="TFLiteModule" Enable="true" />
+	<Terminal class="Terminal" />
+	<UiEventProcessor class="UiEventProcessor" />
+	<UiModule class="UiModule" Enable="true" />
+	<VideoModule class="VideoModule" Enable="true" />
+	<WeChatBuildSettings class="WeChatBuildSettings" Icon="" />
+	<WebAssemblyBuildSettings class="WebAssemblyBuildSettings" Icon="" />
+	<WindowsBuildSettings class="WindowsBuildSettings" Icon="" />
+	<iOSBuildSettings class="iOSBuildSettings" AppName="tflite" Identifier="com.echo.tflite" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
+</settings>
