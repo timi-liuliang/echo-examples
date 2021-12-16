@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="TFLiteModel" name="TFLiteModel" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" InputCount="1" OutputCount="1" Model="Res://model/mobilenet_v1_1.0_224_quant.tflite" />
+<node class="TFLiteModel" name="TFLiteModel" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://model/image_classification.lua" InputCount="1" OutputCount="1" Model="Res://model/mobilenet_v1_1.0_224_quant.tflite" />
