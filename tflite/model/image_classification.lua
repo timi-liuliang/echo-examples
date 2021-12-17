@@ -8,7 +8,6 @@ function object:start()
 	self:invoke()
 	
 	local output = self:getOutput(0)
-	output:print()
 end
 
 -- update
