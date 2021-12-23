@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node name="weapon" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua">
+	<node name="Sprite" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="2d" Visible="true" Width="32" Height="32" Texture="Res://imagesets/bullet/bullet.png" />
+</node>
