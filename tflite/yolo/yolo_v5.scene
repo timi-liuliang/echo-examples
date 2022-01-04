@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Node" name="YoloV5" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://yolo/yolo_v5.lua">
+	<node class="TFLiteModel" name="TFLiteModel" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" InputCount="1" OutputCount="1" Model="Res://yolo/yolo_v5.tflite" />
+	<node class="VideoCapture" name="VideoCapture" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderTarget="Res://yolo/video_capture.rt" />
+</node>
