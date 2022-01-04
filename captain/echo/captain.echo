@@ -21,7 +21,6 @@
 	<HLodModule class="HLodModule" Enable="true" />
 	<HitProxyModule class="HitProxyModule" Enable="true" />
 	<Html5BuildSettings class="Html5BuildSettings" Icon="" />
-	<HttpModule class="HttpModule" Enable="true" />
 	<IO class="IO" />
 	<Input class="Input" />
 	<LightModule class="LightModule" Enable="true" ImageBasedLighting="true" Brdf="" />
@@ -30,6 +29,7 @@
 	<Log class="Log" />
 	<MacBuildSettings class="MacBuildSettings" AppName="captain" Identifier="com.echo.captain" Version="1.0.0" Icon="Res://icon.png" />
 	<ModelModule class="ModelModule" Enable="true" />
+	<NetModule class="NetModule" Enable="true" />
 	<OpenDriveModule class="OpenDriveModule" Enable="true" />
 	<PCGModule class="PCGModule" Enable="true" />
 	<PhysxModule class="PhysxModule" Enable="true" DebugDraw="Editor" Gravity="0 -9.8 0" Shift="0 0 0" />
