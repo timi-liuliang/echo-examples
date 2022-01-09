@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<res class="TextureRender" path="Res://yolo/NewTextureRender_0.rt" MipMap="true" Width="0" Height="0" ClearColor="0 0 0 1 " Format="PF_RGBA8_UNORM" />
+<res class="TextureRenderTarget2D" path="Res://yolo/NewTextureRender_0.rt" MipMap="true" Width="0" Height="0" ClearColor="0 0 0 1 " Format="PF_RGBA8_UNORM" />

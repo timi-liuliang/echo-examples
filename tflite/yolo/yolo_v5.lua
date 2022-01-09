@@ -1,12 +1,20 @@
-local object ={}
+local YoloV5 ={}
+YoloV5.videoCapture = nil
 
 -- start
-function object:start()
-
+function YoloV5:start()
+	self.videoCapture = self:getNode("VideoCapture")
+	self.videoCapture:openDevice()
+	Log:info("start video capture")
 end
 
 -- update
-function object:update()
+function YoloV5:update()
 end
 
-return setmetatable(object, Object)
+-- on click start button
+function YoloV5:onMouseButtonDownStartButton()
+	
+end
+
+return setmetatable(YoloV5, Object)

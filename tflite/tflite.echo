@@ -16,7 +16,7 @@
 	<EffectModule class="EffectModule" Enable="true" />
 	<Engine class="Engine" />
 	<FrameState class="FrameState" />
-	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="Engine://Render/Pipeline/DeferredShading.pipeline" LaunchScene="Res://scene/HttpTest.scene" />
+	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="1366" DesignHeight="768" WindowWidth="1366" WindowHeight="768" Aspect="stretch" RenderPipeline="Engine://Render/Pipeline/DeferredShading.pipeline" LaunchScene="Res://yolo/yolo_v5.scene" />
 	<GltfModule class="GltfModule" Enable="true" />
 	<HLodModule class="HLodModule" Enable="true" />
 	<HitProxyModule class="HitProxyModule" Enable="true" />
