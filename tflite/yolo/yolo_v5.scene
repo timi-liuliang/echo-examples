@@ -8,9 +8,9 @@
 				<connect target="../../" method="onMouseButtonDownStartButton" />
 			</signal>
 		</node>
-		<node class="UiImage" name="UiImage" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="640" Height="480" Texture="Res://yolo/video_capture.rt">
+		<node class="UiImage" name="UiImage" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="640" Height="480" Texture="Res://yolo/video_capture.rt" Color="0.933333 1 0 1 ">
 			<property name="Material">
-				<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://yolo/video_capture.rt" />
+				<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcColor="0.933333 1 0 1 " Uniforms.SrcTexture="Res://yolo/video_capture.rt" />
 			</property>
 		</node>
 	</node>

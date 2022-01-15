@@ -45,7 +45,7 @@
 	<TFLiteModule class="TFLiteModule" Enable="true" />
 	<Terminal class="Terminal" />
 	<UiEventProcessor class="UiEventProcessor" />
-	<UiModule class="UiModule" Enable="true" UiImageDefaultMaterial="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" />
+	<UiModule class="UiModule" Enable="true" UiImageDefaultShader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" />
 	<VideoModule class="VideoModule" Enable="true" />
 	<WeChatBuildSettings class="WeChatBuildSettings" Icon="" />
 	<WebAssemblyBuildSettings class="WebAssemblyBuildSettings" Icon="" />
