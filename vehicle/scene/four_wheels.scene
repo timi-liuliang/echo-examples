@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" name="sphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="Camera3D" name="Camera3D" Enable="true" Position="0 7.406 -21.572" Rotation="19.966 0 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+	<node class="Camera3D" name="Camera3D" Enable="true" Position="-20 7.406 0" Rotation="20.995 89.976 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	<node class="PhysxBody" name="PxStaticPlane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.966" Scale="1 1 1" Script="" />
+		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.944" Scale="1 1 1" Script="" />
 	</node>
-	<node class="PhysxVehicleDrive4W" name="PhysxVehicleDrive4W" Enable="true" Position="0 2.365 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel" Enable="true" Position="-3.453 -1.508 -2.864" Rotation="0 0 0" Scale="1 1 1" Script="" />
-		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel2" Enable="true" Position="-2.789 -0.56 3.687" Rotation="0 0 0" Scale="1 1 1" Script="" />
-		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel3" Enable="true" Position="4.256 -0.939 -3.328" Rotation="0 0 0" Scale="1 1 1" Script="" />
-		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel4" Enable="true" Position="5.342 -1.378 2.97" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="PhysxVehicleDrive4W" name="PhysxVehicleDrive4W" Enable="true" Position="0 4.445 0" Rotation="0 0 0" Scale="1 1 1" Script="" AutoGears="true">
+		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel" Enable="true" Position="2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
+		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel2" Enable="true" Position="2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
+		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel3" Enable="true" Position="-2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
+		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel4" Enable="true" Position="-2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 	</node>
 </node>
