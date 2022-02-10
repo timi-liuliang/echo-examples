@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" name="sphere" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="Camera3D" name="Camera3D" Enable="true" Position="-20 7.406 0" Rotation="20.995 89.976 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+	<node class="Camera3D" name="Camera3D" Enable="true" Position="-20 7.406 0" Rotation="20.991 89.972 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	<node class="PhysxBody" name="PxStaticPlane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.944" Scale="1 1 1" Script="" />
+		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.94" Scale="1 1 1" Script="" />
 	</node>
 	<node class="PhysxVehicleDrive4W" name="PhysxVehicleDrive4W" Enable="true" Position="0 4.445 0" Rotation="0 0 0" Scale="1 1 1" Script="" AutoGears="true">
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel" Enable="true" Position="2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel2" Enable="true" Position="2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel3" Enable="true" Position="-2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel4" Enable="true" Position="-2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	</node>
+	<node class="OpenDrive" name="OpenDrive" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Xodr="Res://scene/xodr/CulDeSac.xodr">
+		<property name="DebugDraw">
+			<obj class="OpenDriveDebugDraw" />
+		</property>
+		<node class="OpenDriveDynamicMesh" name="LaneDriving" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" StepLength="3.0">
+			<property name="Material" path="Res://scene/xodr/material/lanedrive.material" />
+		</node>
+		<node class="OpenDriveDynamicMesh" name="LaneBorder" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" StepLength="3.0">
+			<property name="Material">
+				<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
+			</property>
+		</node>
+		<node class="OpenDriveDynamicMesh" name="Lane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" StepLength="3.0">
+			<property name="Material">
+				<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
+			</property>
+		</node>
+		<node class="OpenDriveDynamicMesh" name="LaneNone" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="3d" Visible="true" StepLength="3.0">
+			<property name="Material">
+				<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
+			</property>
+		</node>
 	</node>
 </node>

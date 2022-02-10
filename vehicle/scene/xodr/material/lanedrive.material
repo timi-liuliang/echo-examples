@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<res class="Material" path="Res://scene/xodr/material/lanedrive.material" Shader="Res://scene/xodr/material/lanedrive.shader" />
