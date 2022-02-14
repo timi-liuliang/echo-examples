@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="Node" name="TestScene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="Camera3D" name="Camera3D" Enable="true" Position="-62.365 7.433 0" Rotation="20.968 89.95 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+<node class="Node" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="Camera3D" name="Camera3D" Enable="true" Position="-62.365 7.433 0" Rotation="20.964 89.946 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	<node class="PhysxBody" name="PxStaticPlane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.929" Scale="1 1 1" Script="" />
+		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.925" Scale="1 1 1" Script="" />
 	</node>
-	<node class="PhysxVehicleDrive4W" name="PhysxVehicleDrive4W" Enable="true" Position="0 4.445 0" Rotation="0 0 0" Scale="1 1 1" Script="" AutoGears="true">
+	<node class="PhysxVehicleDrive4W" name="car" Enable="true" Position="0 4.445 0" Rotation="0 0 0" Scale="1 1 1" Script="" AutoGears="true">
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel" Enable="true" Position="2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel2" Enable="true" Position="2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel3" Enable="true" Position="-2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="PhysxVehicleWheel4" Enable="true" Position="-2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
-		<node class="Camera3D" name="Camera3D" Enable="true" Position="-32 18 0" Rotation="24.998 89.997 -0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+		<node class="Camera3D" name="Camera3D" Enable="true" Position="-32 18 0" Rotation="24.994 89.993 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	</node>
 	<node class="OpenDrive" name="OpenDrive" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Xodr="Res://scene/xodr/CulDeSac.xodr">
 		<property name="DebugDraw">
@@ -32,6 +32,56 @@
 			<property name="Material">
 				<obj class="Material" Shader="_echo_default_3d_shader_HAS_NORMALS" />
 			</property>
+		</node>
+	</node>
+	<node class="Node" name="gamepad" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="UiEventRegionRect" name="left" Enable="true" Position="-360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua" Type="ui" Width="600" Height="520">
+			<signal name="onMouseButtonDown">
+				<connect target="" method="onMouseButtonDown_left" />
+			</signal>
+			<signal name="onMouseButtonLeave">
+				<connect target="" method="onMouseButtonLeave" />
+			</signal>
+			<signal name="onMouseButtonMove">
+				<connect target="" method="onMouseButtonMove_left" />
+			</signal>
+			<signal name="onMouseButtonUp">
+				<connect target="" method="onMouseButtonUp_left" />
+			</signal>
+			<node class="UiImage" name="bg" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.2" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png" Color="1 1 1 1 ">
+				<property name="Material">
+					<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_bg.png" />
+				</property>
+				<node class="UiImage" name="ball" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.69998" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" Color="1 1 1 1 ">
+					<property name="Material">
+						<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_ball.png" />
+					</property>
+				</node>
+			</node>
+		</node>
+		<node class="UiEventRegionRect" name="right" Enable="true" Position="360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/right_control.lua" Type="ui" Width="600" Height="520">
+			<signal name="onMouseButtonDown">
+				<connect target="" method="onMouseButtonDown" />
+			</signal>
+			<signal name="onMouseButtonLeave">
+				<connect target="" method="onMouseButtonLeave" />
+			</signal>
+			<signal name="onMouseButtonMove">
+				<connect target="" method="onMouseButtonMove" />
+			</signal>
+			<signal name="onMouseButtonUp">
+				<connect target="" method="onMouseButtonUp" />
+			</signal>
+			<node class="UiImage" name="bg" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.2" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png" Color="1 1 1 1 ">
+				<property name="Material">
+					<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_bg.png" />
+				</property>
+				<node class="UiImage" name="ball" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.69998" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" Color="1 1 1 1 ">
+					<property name="Material">
+						<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_ball.png" />
+					</property>
+				</node>
+			</node>
 		</node>
 	</node>
 </node>

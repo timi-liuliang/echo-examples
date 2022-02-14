@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Node" name="gamepad" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="UiEventRegionRect" name="left" Enable="true" Position="-360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua" Type="ui" Width="600" Height="520">
+		<signal name="onMouseButtonDown">
+			<connect target="" method="onMouseButtonDown_left" />
+		</signal>
+		<signal name="onMouseButtonLeave">
+			<connect target="" method="onMouseButtonLeave" />
+		</signal>
+		<signal name="onMouseButtonMove">
+			<connect target="" method="onMouseButtonMove_left" />
+		</signal>
+		<signal name="onMouseButtonUp">
+			<connect target="" method="onMouseButtonUp_left" />
+		</signal>
+		<node class="UiImage" name="bg" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.2" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png" Color="1 1 1 1 ">
+			<property name="Material">
+				<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_bg.png" />
+			</property>
+			<node class="UiImage" name="ball" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.69998" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" Color="1 1 1 1 ">
+				<property name="Material">
+					<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_ball.png" />
+				</property>
+			</node>
+		</node>
+	</node>
+	<node class="UiEventRegionRect" name="right" Enable="true" Position="360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/right_control.lua" Type="ui" Width="600" Height="520">
+		<signal name="onMouseButtonDown">
+			<connect target="" method="onMouseButtonDown" />
+		</signal>
+		<signal name="onMouseButtonLeave">
+			<connect target="" method="onMouseButtonLeave" />
+		</signal>
+		<signal name="onMouseButtonMove">
+			<connect target="" method="onMouseButtonMove" />
+		</signal>
+		<signal name="onMouseButtonUp">
+			<connect target="" method="onMouseButtonUp" />
+		</signal>
+		<node class="UiImage" name="bg" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.2" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png" Color="1 1 1 1 ">
+			<property name="Material">
+				<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_bg.png" />
+			</property>
+			<node class="UiImage" name="ball" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.69998" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" Color="1 1 1 1 ">
+				<property name="Material">
+					<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_ball.png" />
+				</property>
+			</node>
+		</node>
+	</node>
+</node>
