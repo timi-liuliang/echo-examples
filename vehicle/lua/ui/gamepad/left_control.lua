@@ -17,7 +17,9 @@ end
 -- update
 function object:update()
 	if self.isMoveing then
-		--self.car:move(self.moveDir)
+		self.car:setSteer(1)
+	else
+		self.car:setSteer(0)
 	end
 end
 
