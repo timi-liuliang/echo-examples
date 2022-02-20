@@ -16,12 +16,13 @@ end
 
 -- update
 function object:update()
-	if self.isMoveing then
-		self.car:setAccel(1.0)
-		--self.terminator:fire()
-	else
-		self.car:setAccel(0.0)
+	local accel = 0.0
+	
+	if self.isMoveing or Input:isKeyDown(Keys.W) then
+		accel = 1.0
 	end
+
+	self.car:setAccel(accel)
 end
 
 -- on click region

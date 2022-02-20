@@ -1,3 +1,5 @@
+require "lua.util.keys"
+
 local object ={}
 
 object.bg = nil
@@ -16,11 +18,19 @@ end
 
 -- update
 function object:update()
-	if self.isMoveing then
-		self.car:setSteer(1)
-	else
-		self.car:setSteer(0)
+	local steer = 0.0
+		
+	--Input:isKeyDown(Keys.A)
+	if self.isMoveing or Input:isKeyDown(Keys.A) then	
+		-- turn left
+		steer = 1.0
 	end
+	if Input:isKeyDown(Keys.D) then	
+		-- trun right
+		steer = -1.0
+	end
+
+	self.car:setSteer(steer)
 end
 
 -- on click region
