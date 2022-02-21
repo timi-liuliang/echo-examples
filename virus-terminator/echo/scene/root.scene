@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node name="root" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node name="hero" class="Box2DBody" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/hero/terminator.lua" Type="Dynamic" FixRotation="false" GravityScale="0.0">
-		<node name="platform_01" class="Box2DShapeCircle" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
-			<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
-			<node name="weapon" class="Node" path="Res://scene/weapon/weapon.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
+<node class="Node" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="Box2DBody" name="hero" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/hero/terminator.lua" Type="Dynamic" FixRotation="false" GravityScale="0.0">
+		<node class="Box2DShapeCircle" name="platform_01" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
+			<node class="Sprite" name="body" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Billboard="None" Width="256.0" Height="256.0" Offset="0 0">
+				<property name="Material">
+					<obj class="Material" Shader="_echo_default_2d_shader_" />
+				</property>
+			</node>
+			<node class="Node" path="Res://scene/weapon/weapon.scene" name="weapon" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
 		</node>
-		<node name="platform_02" class="Box2DShapeCircle" path="" Enable="true" Position="50 0 0" Rotation="0 0 -89.999" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
-			<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
-			<node name="weapon" class="Node" path="Res://scene/weapon/weapon.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
+		<node class="Box2DShapeCircle" name="platform_02" Enable="true" Position="50 0 0" Rotation="0 0 -89.998" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
+			<node class="Sprite" name="body" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Billboard="None" Width="256.0" Height="256.0" Offset="0 0">
+				<property name="Material">
+					<obj class="Material" Shader="_echo_default_2d_shader_" />
+				</property>
+			</node>
+			<node class="Node" path="Res://scene/weapon/weapon.scene" name="weapon" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
 		</node>
-		<node name="platform_03" class="Box2DShapeCircle" path="" Enable="true" Position="-35 20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
-			<node name="body" class="Sprite" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Width="256" Height="256" Texture="Res://imagesets/hero/platform_block.png" />
-			<node name="weapon" class="Node" path="Res://scene/weapon/weapon.scene" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
+		<node class="Box2DShapeCircle" name="platform_03" Enable="true" Position="-35 20 0" Rotation="0 0 0" Scale="1 1 1" Script="" Density="1.0" Friction="1.0" Restitution="0.5" CategoryBits="1" MaskBits="2" IsSensor="false" Radius="24.0">
+			<node class="Sprite" name="body" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="0.2 0.2 0.2" Script="" RenderType="2d" Visible="true" Billboard="None" Width="256.0" Height="256.0" Offset="0 0">
+				<property name="Material">
+					<obj class="Material" Shader="_echo_default_2d_shader_" />
+				</property>
+			</node>
+			<node class="Node" path="Res://scene/weapon/weapon.scene" name="weapon" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/weapon/weapon.lua" />
 		</node>
 	</node>
-	<node name="monsters" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/monster/monster.lua" />
-	<node name="bullets" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
-	<node name="ui" class="Node" path="" Enable="true" Position="0 0 200" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node name="gamepad" class="Node" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-			<node name="left" class="UiEventRegionRect" path="" Enable="true" Position="-360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua" Type="ui" Width="600" Height="520">
+	<node class="Node" name="monsters" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/monster/monster.lua" />
+	<node class="Node" name="bullets" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" />
+	<node class="Node" name="ui" Enable="true" Position="0 0 200" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="Node" name="gamepad" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+			<node class="UiEventRegionRect" name="left" Enable="true" Position="-360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/left_control.lua" Type="ui" Width="600" Height="520">
 				<signal name="onMouseButtonDown">
 					<connect target="" method="onMouseButtonDown_left" />
 				</signal>
@@ -31,11 +43,18 @@
 				<signal name="onMouseButtonUp">
 					<connect target="" method="onMouseButtonUp_left" />
 				</signal>
-				<node name="bg" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="256" Height="256" Alpha="0.2" Texture="Res://imagesets/ui/left_control_bg.png">
-					<node name="ball" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="80" Height="80" Alpha="0.69998" Texture="Res://imagesets/ui/left_control_ball.png" />
+				<node class="UiImage" name="bg" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.2" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png" Color="1 1 1 1 ">
+					<property name="Material">
+						<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_bg.png" />
+					</property>
+					<node class="UiImage" name="ball" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.69998" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" Color="1 1 1 1 ">
+						<property name="Material">
+							<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_ball.png" />
+						</property>
+					</node>
 				</node>
 			</node>
-			<node name="right" class="UiEventRegionRect" path="" Enable="true" Position="360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/right_control.lua" Type="ui" Width="600" Height="520">
+			<node class="UiEventRegionRect" name="right" Enable="true" Position="360 -100 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/ui/gamepad/right_control.lua" Type="ui" Width="600" Height="520">
 				<signal name="onMouseButtonDown">
 					<connect target="" method="onMouseButtonDown" />
 				</signal>
@@ -48,8 +67,15 @@
 				<signal name="onMouseButtonUp">
 					<connect target="" method="onMouseButtonUp" />
 				</signal>
-				<node name="bg" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="256" Height="256" Alpha="0.2" Texture="Res://imagesets/ui/left_control_bg.png">
-					<node name="ball" class="UiImage" path="" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Width="80" Height="80" Alpha="0.69998" Texture="Res://imagesets/ui/left_control_ball.png" />
+				<node class="UiImage" name="bg" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.2" Width="256" Height="256" Texture="Res://imagesets/ui/left_control_bg.png" Color="1 1 1 1 ">
+					<property name="Material">
+						<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_bg.png" />
+					</property>
+					<node class="UiImage" name="ball" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="0.69998" Width="80" Height="80" Texture="Res://imagesets/ui/left_control_ball.png" Color="1 1 1 1 ">
+						<property name="Material">
+							<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://imagesets/ui/left_control_ball.png" />
+						</property>
+					</node>
 				</node>
 			</node>
 		</node>
