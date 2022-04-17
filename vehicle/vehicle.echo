@@ -39,6 +39,7 @@
 	<RecastModule class="RecastModule" Enable="true" />
 	<Renderer class="Renderer" />
 	<RvoModule class="RvoModule" Enable="true" DebugDraw="Editor" />
+	<SceneCaptureModule class="SceneCaptureModule" Enable="true" />
 	<SceneModule class="SceneModule" Enable="true" />
 	<SpineModule class="SpineModule" Enable="true" />
 	<SplineModule class="SplineModule" Enable="true" />

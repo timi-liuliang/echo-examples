@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <node class="Node" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-	<node class="Camera3D" name="Camera3D" Enable="true" Position="-62.365 7.433 0" Rotation="20.957 89.939 -0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+	<node class="Camera3D" name="Camera3D" Enable="true" Position="-62.365 7.433 0" Rotation="20.956 89.938 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	<node class="PhysxBody" name="PxStaticPlane" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Type="Static">
-		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.918" Scale="1 1 1" Script="" />
+		<node class="PhysxShapePlane" name="PhysxShapePlane" Enable="true" Position="0 0 0" Rotation="0 0 89.917" Scale="1 1 1" Script="" />
 	</node>
 	<node class="PhysxVehicleDrive4W" name="car" Enable="true" Position="0 4.445 0" Rotation="0 0 0" Scale="1 1 1" Script="" AutoGears="true">
 		<node class="PhysxVehicleChassis" name="chassis" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Mass="500.0" />
@@ -10,7 +10,7 @@
 		<node class="PhysxVehicleWheel" name="wheel_front_right" Enable="true" Position="2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="wheel_rear_left" Enable="true" Position="-2.5 -1.6 -2" Rotation="0 0 0" Scale="1 1 1" Script="" />
 		<node class="PhysxVehicleWheel" name="wheel_rear_right" Enable="true" Position="-2.5 -1.6 2" Rotation="0 0 0" Scale="1 1 1" Script="" />
-		<node class="Camera3D" name="Camera3D" Enable="true" Position="-32 18 0" Rotation="24.987 89.986 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
+		<node class="Camera3D" name="Camera3D" Enable="true" Position="-32 18 0" Rotation="24.986 89.985 0" Scale="1 1 1" Script="" Near="0.3" Far="150.0" />
 	</node>
 	<node class="OpenDrive" name="OpenDrive" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Xodr="Res://scene/xodr/CulDeSac.xodr">
 		<property name="DebugDraw">
@@ -85,4 +85,5 @@
 			</node>
 		</node>
 	</node>
+	<node class="DirectionLight" name="DirectionLight" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Is2D="false" />
 </node>
