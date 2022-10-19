@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="MeshRender" name="MeshRender" Enable="true" Position="0.187 0.268 0.583" Rotation="0 0 0" Scale="5 5 5" Script="" RenderType="3d" Visible="true">
+<node class="MeshRender" name="MeshRender" Enable="true" Position="0 0.648 0" Rotation="0 0 0" Scale="5 5 5" Script="" RenderType="3d" Visible="true">
 	<property name="Mesh" path="Res://brick/WaterBottle.mesh" />
 	<property name="Material">
 		<obj class="Material" Shader="Res://brick/WaterBottle.shader" />

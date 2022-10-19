@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<res class="ShaderProgram" Type="glsl" Domain="Surface" CullMode="CULL_BACK" BlendMode="Opaque">
+<res class="ShaderProgram" Type="glsl" Domain="Surface" CullMode="CULL_NONE" BlendMode="Opaque">
 	<property name="VertexShader"><![CDATA[#version 450
 
 struct Position
@@ -51,20 +51,22 @@ layout(binding = 1, std140) uniform UBO
 layout(location = 3) in vec3 v_Normal;
 layout(location = 0) out vec4 o_FragColor;
 layout(location = 1) out vec4 o_FragNormal;
+layout(location = 2) out vec4 o_FragMetalicRoughnessShadingModelID;
 layout(location = 0) in Position v_Position;
 layout(location = 4) in vec3 v_NormalLocal;
 
 void main()
 {
-    vec4 Color_247_Value = vec4(0.5859730243682861328125, 0.5859730243682861328125, 0.5859730243682861328125, 1.0);
+    vec4 Color_247_Value = vec4(0.315762996673583984375, 0.315762996673583984375, 0.5924379825592041015625, 1.0);
     vec3 _BaseColor = Color_247_Value.xyz;
     vec3 _Normal = v_Normal;
     float _Opacity = 1.0;
     float _Metalic = 0.20000000298023223876953125;
     float _PerceptualRoughness = 0.5;
     o_FragColor = vec4(_BaseColor, _Opacity);
-    vec3 _40 = (_Normal + vec3(1.0)) * 0.5;
-    o_FragNormal = vec4(_40.x, _40.y, _40.z, o_FragNormal.w);
+    vec3 _41 = (_Normal + vec3(1.0)) * 0.5;
+    o_FragNormal = vec4(_41.x, _41.y, _41.z, o_FragNormal.w);
+    o_FragMetalicRoughnessShadingModelID = vec4(_Metalic, _PerceptualRoughness, 1.0, 1.0);
 }
 
 ]]></property>
@@ -72,14 +74,14 @@ void main()
     "connections": [
         {
             "in_id": "{d70b0349-bb41-40e7-95c1-a22d0e012a12}",
-            "in_index": 0,
-            "out_id": "{e99debbb-8f6c-4552-b65a-415d2e8b0890}",
+            "in_index": 2,
+            "out_id": "{4edc5472-997f-44e8-82f7-74a5840f1da5}",
             "out_index": 0
         },
         {
             "in_id": "{d70b0349-bb41-40e7-95c1-a22d0e012a12}",
-            "in_index": 2,
-            "out_id": "{4edc5472-997f-44e8-82f7-74a5840f1da5}",
+            "in_index": 0,
+            "out_id": "{e99debbb-8f6c-4552-b65a-415d2e8b0890}",
             "out_index": 0
         }
     ],
@@ -98,7 +100,7 @@ void main()
         {
             "id": "{e99debbb-8f6c-4552-b65a-415d2e8b0890}",
             "model": {
-                "Color": "0.784314 0.784314 0.784314 1 ",
+                "Color": "0.592157 0.592157 0.788235 1 ",
                 "Uniform": "false",
                 "Variable": "Color_247",
                 "name": "Color"
