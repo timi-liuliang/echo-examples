@@ -57,15 +57,15 @@ layout(location = 4) in vec3 v_NormalLocal;
 
 void main()
 {
-    vec4 Color_247_Value = vec4(0.315762996673583984375, 0.315762996673583984375, 0.5924379825592041015625, 1.0);
+    vec4 Color_247_Value = vec4(1.0);
     vec3 _BaseColor = Color_247_Value.xyz;
     vec3 _Normal = v_Normal;
     float _Opacity = 1.0;
     float _Metalic = 0.20000000298023223876953125;
     float _PerceptualRoughness = 0.5;
     o_FragColor = vec4(_BaseColor, _Opacity);
-    vec3 _41 = (_Normal + vec3(1.0)) * 0.5;
-    o_FragNormal = vec4(_41.x, _41.y, _41.z, o_FragNormal.w);
+    vec3 _39 = (_Normal + vec3(1.0)) * 0.5;
+    o_FragNormal = vec4(_39.x, _39.y, _39.z, o_FragNormal.w);
     o_FragMetalicRoughnessShadingModelID = vec4(_Metalic, _PerceptualRoughness, 1.0, 1.0);
 }
 
@@ -100,7 +100,7 @@ void main()
         {
             "id": "{e99debbb-8f6c-4552-b65a-415d2e8b0890}",
             "model": {
-                "Color": "0.592157 0.592157 0.788235 1 ",
+                "Color": "1 1 1 1 ",
                 "Uniform": "false",
                 "Variable": "Color_247",
                 "name": "Color"
