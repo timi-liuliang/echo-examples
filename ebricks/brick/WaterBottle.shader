@@ -50,9 +50,10 @@ layout(binding = 1, std140) uniform UBO
 
 layout(location = 3) in vec3 v_Normal;
 layout(location = 0) out vec4 o_FragColor;
-layout(location = 1) out vec4 o_FragNormal;
-layout(location = 2) out vec4 o_FragMetalicRoughnessShadingModelID;
+layout(location = 1) out vec4 o_FragPosition;
 layout(location = 0) in Position v_Position;
+layout(location = 2) out vec4 o_FragNormal;
+layout(location = 3) out vec4 o_FragMetalicRoughnessShadingModelID;
 layout(location = 4) in vec3 v_NormalLocal;
 
 void main()
@@ -63,10 +64,12 @@ void main()
     float _Opacity = 1.0;
     float _Metalic = 0.20000000298023223876953125;
     float _PerceptualRoughness = 0.5;
+    float _AmbientOcclusion = 1.0;
     o_FragColor = vec4(_BaseColor, _Opacity);
-    vec3 _39 = (_Normal + vec3(1.0)) * 0.5;
-    o_FragNormal = vec4(_39.x, _39.y, _39.z, o_FragNormal.w);
-    o_FragMetalicRoughnessShadingModelID = vec4(_Metalic, _PerceptualRoughness, 1.0, 1.0);
+    o_FragPosition = vec4(v_Position.world.x, v_Position.world.y, v_Position.world.z, o_FragPosition.w);
+    vec3 _50 = (_Normal + vec3(1.0)) * 0.5;
+    o_FragNormal = vec4(_50.x, _50.y, _50.z, o_FragNormal.w);
+    o_FragMetalicRoughnessShadingModelID = vec4(_Metalic, _PerceptualRoughness, 1.0, _AmbientOcclusion);
 }
 
 ]]></property>
@@ -74,14 +77,14 @@ void main()
     "connections": [
         {
             "in_id": "{d70b0349-bb41-40e7-95c1-a22d0e012a12}",
-            "in_index": 2,
-            "out_id": "{4edc5472-997f-44e8-82f7-74a5840f1da5}",
+            "in_index": 0,
+            "out_id": "{e99debbb-8f6c-4552-b65a-415d2e8b0890}",
             "out_index": 0
         },
         {
             "in_id": "{d70b0349-bb41-40e7-95c1-a22d0e012a12}",
-            "in_index": 0,
-            "out_id": "{e99debbb-8f6c-4552-b65a-415d2e8b0890}",
+            "in_index": 2,
+            "out_id": "{4edc5472-997f-44e8-82f7-74a5840f1da5}",
             "out_index": 0
         }
     ],
