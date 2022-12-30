@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<res class="TextureRender" path="Res://pipeline/postprocess/bloom/BloomBrightColor.rt" MipMap="true" Width="1414" Height="454" ClearColor="0 0 0 1 " Format="PF_RGBA16_FLOAT">
-	<channel name="Width" expression="Renderer:getWindowWidth() * 0.5" />
-	<channel name="Height" expression="Renderer:getWindowHeight() * 0.5" />
-</res>
