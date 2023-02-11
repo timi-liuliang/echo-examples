@@ -10,12 +10,13 @@
 	<BuildModule class="BuildModule" Enable="true" />
 	<CameraModule class="CameraModule" Enable="true" />
 	<EditorCameraSettings class="EditorCameraSettings" MoveSpeed="1.0" NearClip="0.2" FarClip="2500.0" />
+	<EditorGeneralSettings class="EditorGeneralSettings" Show3dGrid="true" />
 	<EditorRenderSettings class="EditorRenderSettings" PolygonMode="Fill" />
 	<EditorSettingsModule class="EditorSettingsModule" Enable="true" />
 	<EffectModule class="EffectModule" Enable="true" />
 	<Engine class="Engine" />
 	<FrameState class="FrameState" />
-	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" RenderPipeline="" LaunchScene="Res://scene/root.scene" />
+	<GameSettings class="GameSettings" FullScreen="false" DesignWidth="640" DesignHeight="960" WindowWidth="320" WindowHeight="480" Aspect="keep width" RenderPipeline="Engine://Render/Pipeline/DeferredShading.pipeline" LaunchScene="Res://scene/root.scene" />
 	<GltfModule class="GltfModule" Enable="false" />
 	<HLodModule class="HLodModule" Enable="true" />
 	<HitProxyModule class="HitProxyModule" Enable="true" />
@@ -28,6 +29,9 @@
 	<Log class="Log" />
 	<MacBuildSettings class="MacBuildSettings" AppName="house" Identifier="com.echo.house" Version="1.0.0" Icon="Res://icon.png" />
 	<ModelModule class="ModelModule" Enable="true" />
+	<NetModule class="NetModule" Enable="true" />
+	<OpenDriveModule class="OpenDriveModule" Enable="true" />
+	<OpenLabelModule class="OpenLabelModule" Enable="true" />
 	<PCGModule class="PCGModule" Enable="true" />
 	<PhysxModule class="PhysxModule" Enable="false" DebugDraw="Editor" Gravity="0 -9.8 0" Shift="0 0 0" />
 	<PluginSettings class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
@@ -35,11 +39,15 @@
 	<RaytracingWorld class="RaytracingWorld" />
 	<RecastModule class="RecastModule" Enable="true" />
 	<Renderer class="Renderer" />
+	<RvoModule class="RvoModule" Enable="true" DebugDraw="Editor" />
+	<SceneCaptureModule class="SceneCaptureModule" Enable="true" />
 	<SceneModule class="SceneModule" Enable="false" />
 	<SpineModule class="SpineModule" Enable="false" />
 	<SplineModule class="SplineModule" Enable="false" />
+	<TFLiteModule class="TFLiteModule" Enable="true" />
+	<Terminal class="Terminal" />
 	<UiEventProcessor class="UiEventProcessor" />
-	<UiModule class="UiModule" Enable="true" />
+	<UiModule class="UiModule" Enable="true" UiImageDefaultShader="Module://ui/Transparent.shader" />
 	<VideoModule class="VideoModule" Enable="false" />
 	<WeChatBuildSettings class="WeChatBuildSettings" Icon="" />
 	<WebAssemblyBuildSettings class="WebAssemblyBuildSettings" Icon="" />

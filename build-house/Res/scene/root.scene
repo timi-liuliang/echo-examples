@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<node class="Node" path="" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/root.lua">
-	<node class="Node" path="" name="scenes" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
-		<node class="Node" path="Res://scene/game.scene" name="main" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/game.lua" />
+<node class="Node" name="root" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/root.lua">
+	<node class="Node" name="scenes" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="Node" name="main" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="Res://lua/game.lua" />
 	</node>
 </node>
