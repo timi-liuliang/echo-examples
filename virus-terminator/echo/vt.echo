@@ -31,6 +31,7 @@
 	<ModelModule class="ModelModule" Enable="true" />
 	<NetModule class="NetModule" Enable="true" />
 	<OpenDriveModule class="OpenDriveModule" Enable="true" />
+	<OpenLabelModule class="OpenLabelModule" Enable="true" />
 	<PCGModule class="PCGModule" Enable="true" />
 	<PhysxModule class="PhysxModule" Enable="true" DebugDraw="Editor" Gravity="0 -9.8 0" Shift="0 0 0" />
 	<PluginSettings class="PluginSettings" SearchPath="${EchoDir}/plugins/;${ProjectDir}/plugins/;" />
@@ -39,6 +40,7 @@
 	<RecastModule class="RecastModule" Enable="true" />
 	<Renderer class="Renderer" />
 	<RvoModule class="RvoModule" Enable="true" DebugDraw="Editor" />
+	<SceneCaptureModule class="SceneCaptureModule" Enable="true" />
 	<SceneModule class="SceneModule" Enable="true" />
 	<SpineModule class="SpineModule" Enable="true" />
 	<SplineModule class="SplineModule" Enable="true" />
@@ -50,5 +52,5 @@
 	<WeChatBuildSettings class="WeChatBuildSettings" Icon="" />
 	<WebAssemblyBuildSettings class="WebAssemblyBuildSettings" Icon="" />
 	<WindowsBuildSettings class="WindowsBuildSettings" Icon="" />
-	<iOSBuildSettings class="iOSBuildSettings" AppName="captain" Identifier="com.echo.captain" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
+	<iOSBuildSettings class="iOSBuildSettings" AppName="vt" Identifier="com.echo.vt" Version="1.0.0" Icon="Res://icon.png" HiddenStatusBar="true" Portrait="true" PortraitUpsideDown="true" LandscapeLeft="true" LandscapeRight="true" />
 </settings>
